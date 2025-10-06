@@ -1,4 +1,23 @@
 ﻿<!-- BPC:STATUS-BEGIN -->
+
+ <!-- BPC:OVERVIEW-BEGIN -->
+## Live & status
+
+- **Live site:** https://www.beeplanetconnection.org  
+- **Blog JSON:** https://www.beeplanetconnection.org/blog/posts.json  
+- **RSS:** https://www.beeplanetconnection.org/blog/rss.xml  
+- **Build:** [![Pages Deploy](https://github.com/itshenryrhodes/legendary-octo-garbanzo/actions/workflows/pages.yml/badge.svg)](https://github.com/itshenryrhodes/legendary-octo-garbanzo/actions/workflows/pages.yml)
+
+### Local dev
+Static only. Open files under `/site`. To preview search/build behaviours, run:
+```bash
+node scripts/expand-includes.js
+node scripts/build-search.js
+node scripts/build-blog.js
+# (optional) inject GTM + meta if you’re inspecting the built HTML locally
+node scripts/inject-meta.js
+node scripts/inject-gtm.js
+
 [![Pages Deploy](https://github.com/itshenryrhodes/legendary-octo-garbanzo/actions/workflows/pages.yml/badge.svg)](https://github.com/itshenryrhodes/legendary-octo-garbanzo/actions/workflows/pages.yml)
 [![Latest Release](https://img.shields.io/github/v/release/itshenryrhodes/=tag&sort=semver)](https://github.com/itshenryrhodes/legendary-octo-garbanzo/releases/latest)
 
