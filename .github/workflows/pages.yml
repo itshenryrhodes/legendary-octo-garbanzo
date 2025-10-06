@@ -32,7 +32,11 @@ jobs:
       - name: Expand partials
         run: node scripts/expand-includes.js
 
-      - name: Configure Pages
+      
+
+      - name: Build wiki search index
+        run: node scripts/build-search.js
+- name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
@@ -49,3 +53,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
