@@ -19,32 +19,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Expand partials (SSI-style includes)
-        run: |
-          node -e "
-          const fs=require('fs'), path=require('path');
-          function expand(file, anchor){
-            let html=fs.readFileSync(file,'utf8');
-            html=html.replace(/<!--#include file=\\"(.*?)\\" -->/g,(m,p)=>{
-              const inc=path.resolve(anchor,p);
-              return fs.existsSync(inc)?fs.readFileSync(inc,'utf8'):m;
-            });
-            fs.writeFileSync(file,html);
-          }
-          function walk(dir){
-            for(const f of fs.readdirSync(dir)){
-              const p=path.join(dir,f);
-              const st=fs.statSync(p);
-              if(st.isDirectory()) walk(p);
-              else if(p.endsWith('.html')){
-                const rel=p.includes(path.sep+'wiki'+path.sep) ? 'site/wiki' : 'site';
-                expand(p,rel);
-              }
-            }
-          }
-          walk('site');
-          "
-      - uses: actions/upload-pages-artifact@v3
+
+      # (optional) show structure for debugging
+      - name: Show tree
+        run: ls -la && ls -la site || true
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Expand partials
+        run: node scripts/expand-includes.js
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
