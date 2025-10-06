@@ -1,12 +1,7 @@
-﻿# Default to LF
-* text=auto eol=lf
-
-# Windows scripts
+﻿* text=auto eol=lf
 *.ps1 eol=crlf
 *.bat eol=crlf
 *.cmd eol=crlf
-
-# Keep binaries untouched
 *.png binary
 *.jpg binary
 *.ico binary
