@@ -50,6 +50,10 @@ jobs:
         run: node scripts/inject-gtm.js
 - name: Build blog feed
         run: node scripts/build-blog.js
+
+
+      - name: Build sitemap.xml
+        run: node scripts/build-sitemap.js
 - name: Build wiki search index
         run: node scripts/build-search.js
 - name: Configure Pages
@@ -69,6 +73,7 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
 
 
 
