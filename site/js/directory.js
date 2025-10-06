@@ -7,7 +7,6 @@
   const all = await res.json();
 
   const uniq = (arr) => [...new Set(arr)].sort();
-
   function renderOptions() {
     const types = uniq(all.map(x=>x.type).filter(Boolean));
     const regs  = uniq(all.map(x=>x.region).filter(Boolean));
@@ -19,15 +18,14 @@
     return `
       <a class="card" href="${x.url}" target="_blank" rel="noopener">
         <strong>${x.name}</strong><br>
-        <span class="badge">${x.type}</span>
-        <span class="badge">${x.region}</span>
+        <span class="badge">${x.type||""}</span>
+        <span class="badge">${x.region||""}</span>
         ${x.country ? `<span class="badge">${x.country}</span>` : ""}
         <div style="margin-top:6px;color:#475569;font-size:.95rem;">
           ${(x.tags||[]).slice(0,3).map(t=>`#${t}`).join(" ")}
         </div>
       </a>`;
   }
-
   function applyFilters(items, term, type, region) {
     const t = (term||"").toLowerCase();
     return items.filter(x => {
@@ -37,15 +35,32 @@
       return inText && okType && okReg;
     });
   }
-
   function render(items) { list.innerHTML = items.map(card).join(""); }
 
+  function syncToURL(){
+    const u = new URL(location.href);
+    q?.value ? u.searchParams.set("q", q.value) : u.searchParams.delete("q");
+    selType?.value ? u.searchParams.set("type", selType.value) : u.searchParams.delete("type");
+    selRegion?.value ? u.searchParams.set("region", selRegion.value) : u.searchParams.delete("region");
+    history.replaceState(null,"",u);
+  }
+  function hydrateFromURL(){
+    const u = new URL(location.href);
+    if(q && u.searchParams.has("q")) q.value = u.searchParams.get("q");
+    if(selType && u.searchParams.has("type")) selType.value = u.searchParams.get("type");
+    if(selRegion && u.searchParams.has("region")) selRegion.value = u.searchParams.get("region");
+  }
+
   renderOptions();
+  hydrateFromURL();
   render(all);
 
-  function update() { render(applyFilters(all, q?.value, selType?.value, selRegion?.value)); }
-
+  function update() {
+    render(applyFilters(all, q?.value, selType?.value, selRegion?.value));
+    syncToURL();
+  }
   q?.addEventListener("input", update);
   selType?.addEventListener("change", update);
   selRegion?.addEventListener("change", update);
+  update();
 })();
