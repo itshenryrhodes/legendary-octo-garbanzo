@@ -1,0 +1,11 @@
+﻿.DS_Store
+Thumbs.db
+*.log
+*.zip
+node_modules/
+__pycache__/
+.vscode/
+.idea/
+dist/
+out/
+!docs/BPC_Summary.pdf
