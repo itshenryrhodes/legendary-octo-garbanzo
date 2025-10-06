@@ -40,7 +40,11 @@ jobs:
         run: node scripts/inject-meta.js
 
 
-      - name: Build blog feed
+      
+
+      - name: Inject Google Tag Manager
+        run: node scripts/inject-gtm.js
+- name: Build blog feed
         run: node scripts/build-blog.js
 - name: Build wiki search index
         run: node scripts/build-search.js
@@ -61,6 +65,7 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
 
 
 
