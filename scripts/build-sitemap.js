@@ -1,11 +1,10 @@
-﻿/**
- * build-sitemap.js — auto-generates sitemap.xml from /site
- * Includes .html pages (excludes partials, hidden, 404, draft/test pages)
- */
-const fs = require("fs"), path = require("path");
+﻿const fs = require("fs");
+const path = require("path");
+
 const ROOT = "site";
 const BASE = "https://www.beeplanetconnection.org";
-const OUT = "site/sitemap.xml";
+const OUT_SITEMAP = path.join(ROOT, "sitemap.xml");
+const ROBOTS = path.join(ROOT, "robots.txt");
 
 function walk(dir) {
   let results = [];
@@ -18,18 +17,49 @@ function walk(dir) {
   return results;
 }
 
+function toUrl(p) {
+  // /site/index.html → /
+  // /site/wiki/index.html → /wiki/
+  // /site/foo/bar.html → /foo/bar.html
+  const rel = p.replace(/^site[\/\\]?/, "").replace(/\\/g, "/");
+  return BASE + "/" + rel.replace(/^index\.html$/, "").replace(/\/index\.html$/, "/");
+}
+
 const pages = walk(ROOT)
   .filter(p => !/partials|404|draft|test/i.test(p))
   .map(p => {
-    const url = p.replace(/^site[\/\\]?/, "/").replace(/\\/g, "/");
-    return `${BASE}${url.replace(/index\.html$/, "")}`;
-  });
+    const st = fs.statSync(p);
+    return { url: toUrl(p), lastmod: st.mtime.toISOString() };
+  })
+  // Sort newest first (not required, but nice)
+  .sort((a, b) => (a.lastmod < b.lastmod ? 1 : -1));
 
-const now = new Date().toISOString();
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(u=>`  <url><loc>${u}</loc><lastmod>${now}</lastmod></url>`).join("\n")}
+${pages
+  .map(
+    (u) => `  <url>
+    <loc>${u.url}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+  </url>`
+  )
+  .join("\n")}
 </urlset>`;
 
-fs.writeFileSync(OUT, xml);
-console.log(`✅ sitemap.xml written (${pages.length} URLs) → ${OUT}`);
+fs.writeFileSync(OUT_SITEMAP, xml);
+console.log(`✅ sitemap.xml written (${pages.length} URLs) → ${OUT_SITEMAP}`);
+
+// --- Ensure robots.txt has a single Sitemap: line
+const sitemapLine = `Sitemap: ${BASE}/sitemap.xml`;
+let robots = "";
+if (fs.existsSync(ROBOTS)) {
+  robots = fs.readFileSync(ROBOTS, "utf8");
+  // remove any existing Sitemap lines (dedupe/refresh)
+  robots = robots.replace(/^\s*Sitemap:\s*.*$/gmi, "").trim();
+  robots = (robots ? robots + "\n" : "") + sitemapLine + "\n";
+} else {
+  robots = `User-agent: *\nAllow: /\n${sitemapLine}\n`;
+}
+fs.writeFileSync(ROBOTS, robots);
+console.log("✅ robots.txt updated with Sitemap:");
+console.log(`   ${sitemapLine}`);
