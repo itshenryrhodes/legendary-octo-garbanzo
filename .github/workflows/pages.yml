@@ -38,6 +38,10 @@ jobs:
 
       - name: Inject SEO/OG meta
         run: node scripts/inject-meta.js
+
+
+      - name: Build blog feed
+        run: node scripts/build-blog.js
 - name: Build wiki search index
         run: node scripts/build-search.js
 - name: Configure Pages
@@ -57,5 +61,6 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
 
 
