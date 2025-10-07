@@ -59,3 +59,10 @@ header nav a:hover {
   
 /* guard: ensure logo link never shows text nodes */
 .home-logo{ line-height:0; }
+
+/* --- guard: ensure the logo link never shows text nodes --- */
+.home-logo{ font-size:0; color:transparent; }   /* hides any text nodes */
+.home-logo img{ font-size:initial; color:inherit; }  /* keep the image normal */
+
+/* If any legacy brand-title markup still exists anywhere, hide it */
+header .brand-title{ display:none !important; }
