@@ -44,3 +44,15 @@
 body{ font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight:400; }
 h1,h2,h3,h4,h5,h6{ font-weight:600; }
 .brand-green{ color:#2e7d32; } /* adjust if you switch brand tone */
+
+/* brand header/nav colours */
+:root { --brand-green: #2e7d32; --brand-green-dark: #245a24; }
+header nav a,
+header nav a:visited {
+  color: var(--brand-green);
+  text-decoration: none;
+}
+header nav a:hover {
+  color: var(--brand-green-dark);
+  text-decoration: underline;
+}
