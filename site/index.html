@@ -27,13 +27,21 @@
 
   <main class="container">
 <!-- Home-only logo (top-left) -->
-<a class="home-logo" href="/" aria-label="Bee Planet Connection — Home">
+<a class="home-logo" href="/" aria-label="Bee Planet Connection – Home">
   <img
     src="/img/logo/logo-128.png"
-    srcset="/img/logo/logo-128.png 1x, /img/logo/logo-256.png 2x, /img/logo/logo-512.png 4x"
-    width="128" height="128"
-    fetchpriority="high" decoding="async"
-    alt="Bee Planet Connection logo">
+    srcset="/img/logo/logo-16.png 16w,
+            /img/logo/logo-32.png 32w,
+            /img/logo/logo-64.png 64w,
+            /img/logo/logo-128.png 128w,
+            /img/logo/logo-192.png 192w,
+            /img/logo/logo-256.png 256w,
+            /img/logo/logo-512.png 512w"
+    sizes="(max-width: 640px) 120px, 160px"
+    alt="Bee Planet Connection logo"
+    width="160" height="160"
+    loading="eager" decoding="async"
+  />
 </a>
 
 <section class="hero">
@@ -73,5 +81,6 @@
 
 </body>
 </html>
+
 
 
