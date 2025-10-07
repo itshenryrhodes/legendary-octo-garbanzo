@@ -86,3 +86,8 @@ header .brand-title{ display:none !important; }
   content:none !important;   /* nuke pseudo-elements that might show text */
 }
 /* End guard */
+
+/* Kill any text home link next to the logo (keep only .home-logo) */
+header > a[href="/"]:not(.home-logo){
+  display: none !important;
+}
