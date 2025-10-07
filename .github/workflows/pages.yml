@@ -1,4 +1,4 @@
-﻿name: Deploy static site
+name: Deploy static site
 
 on:
   push:
@@ -39,12 +39,15 @@ jobs:
 
       - name: Inject SEO/OG meta
         run: node scripts/inject-meta.js
+        continue-on-error: true
 
       - name: Inject Organization JSON-LD
         run: node scripts/inject-ld.js
+        continue-on-error: true
 
       - name: Inject Google Tag Manager
         run: node scripts/inject-gtm.js
+        continue-on-error: true
 
       - name: Build blog feed
         run: node scripts/build-blog.js
