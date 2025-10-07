@@ -66,3 +66,23 @@ header nav a:hover {
 
 /* If any legacy brand-title markup still exists anywhere, hide it */
 header .brand-title{ display:none !important; }
+
+/* === Hard guard for duplicate brand text around the logo === */
+.home-logo{ 
+  line-height:0;         /* collapse stray inline text height */
+  font-size:0;           /* make any stray text 0px */
+  color:transparent;     /* and invisible just in case */
+  display:inline-block; 
+  vertical-align:middle;
+}
+.home-logo > img{ 
+  display:block;         /* treat the image as the only visible child */
+}
+.home-logo > :not(img){
+  display:none !important;   /* hide any spans/text that slip in */
+}
+.home-logo::before, 
+.home-logo::after{
+  content:none !important;   /* nuke pseudo-elements that might show text */
+}
+/* End guard */
