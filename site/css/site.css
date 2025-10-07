@@ -56,3 +56,6 @@ header nav a:hover {
   color: var(--brand-green-dark);
   text-decoration: underline;
 }
+  
+/* guard: ensure logo link never shows text nodes */
+.home-logo{ line-height:0; }
