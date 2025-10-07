@@ -31,3 +31,10 @@
 /* Optional offset variable
 :root { --home-logo-offset: 16px; }
 .home-logo { top: var(--home-logo-offset); } */
+
+/* --- force surface render of home-logo --- */
+.home-logo{position:fixed; top:18px; left:18px; z-index:1000; display:inline-block}
+.home-logo img{height:80px; width:auto; max-width:40vw}
+@media (min-width: 640px){ .home-logo img{height:96px} }
+@media (min-width:1024px){ .home-logo img{height:112px} }
+/* --- end patch --- */
