@@ -38,3 +38,8 @@
 @media (min-width: 640px){ .home-logo img{height:96px} }
 @media (min-width:1024px){ .home-logo img{height:112px} }
 /* --- end patch --- */
+
+/* --- Montserrat defaults --- */
+body{ font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight:400; }
+h1,h2,h3,h4,h5,h6{ font-weight:600; }
+.brand-green{ color:#2e7d32; } /* adjust if you switch brand tone */
