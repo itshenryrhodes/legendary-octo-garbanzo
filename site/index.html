@@ -9,8 +9,32 @@
   <link href="/css/site.css" rel="stylesheet">
 </head>
 <body>
-  <!--#include file="partials/header.html" -->
+  <header class="site-header container">
+  <a href="/" class="brand">
+    <img class="logo" src="/img/logo-256.png" alt="Bee Planet Connection">
+    <span class="brand-title">Bee Planet Connection</span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="/wiki/">Wiki</a>
+    <a href="/tools/">Tools</a>
+    <a href="/directory/">Directory</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/forum/">Forum</a>
+  </nav>
+</header>
+
   <main class="container">
+<!-- Home-only logo (top-left) -->
+<a class="home-logo" href="/" aria-label="Bee Planet Connection — Home">
+  <img
+    src="/img/logo/logo-128.png"
+    srcset="/img/logo/logo-128.png 1x, /img/logo/logo-256.png 2x, /img/logo/logo-512.png 4x"
+    width="128" height="128"
+    fetchpriority="high" decoding="async"
+    alt="Bee Planet Connection logo">
+</a>
 
 <section class="hero">
   <h1>Connecting beekeepers worldwide with knowledge, tools, and community.</h1>
@@ -42,7 +66,12 @@
 </section>
 
   </main>
-  <!--#include file="partials/footer.html" -->
+  <footer class="container">
+  <p>&copy; <span id="y"></span> Bee Planet Connection — For bees, for people, for planet.</p>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>
+
 
