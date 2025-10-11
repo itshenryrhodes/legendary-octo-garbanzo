@@ -11,3 +11,6 @@ body{margin:0;color:var(--ink);background:var(--bg-soft);font:16px/1.6 system-ui
 .nav{margin-left:auto;display:flex;align-items:center;gap:clamp(10px,2vw,20px)}
 .nav a,.nav a:visited{color:var(--brand-green);text-decoration:none;font-weight:500}
 .nav a:hover{text-decoration:underline}
+/* Guard: hide any Bee Planet logo images outside the header; keep header logo visible */
+body img[src^="/img/logo"], body img[src^="img/logo"] { display:none !important; }
+.site-header img[src^="/img/logo"], .site-header img[src^="img/logo"] { display:inline-block !important; }
