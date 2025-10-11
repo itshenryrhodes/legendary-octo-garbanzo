@@ -80,15 +80,15 @@ header > a[href="/"]:not(.home-logo){
 /* === Header layout (brand left, nav right) === */
 /* small screens */
 
-/* === Header layout ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ final (appended to win the cascade) === */
+/* === Header layout ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ final (appended to win the cascade) === */
 }
 /* === end header layout === */
 
-/* === Header layout Ã¢â‚¬â€ brand left, nav right === */
+/* === Header layout ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â brand left, nav right === */
 /* small screens */
 /* === end header layout === */
 
-/* === Header layout â€” brand left, nav right (authoritative) === */
+/* === Header layout ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â brand left, nav right (authoritative) === */
 .brand-lockup{ height:40px; width:auto; display:block; }
 .main-nav{ margin-left:auto; display:flex; gap:20px; align-items:center; }
 .main-nav a, .main-nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
@@ -100,12 +100,16 @@ header > a[href="/"]:not(.home-logo){
 }
 /* === end header layout === */
 
- /* === Header layout — brand left, nav right (authoritative) === */
+ /* === Header layout Ã¢â‚¬â€ brand left, nav right (authoritative) === */
+@media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
+ /* === end header layout === */
+
+ /* === Header layout â€” brand left, nav right (authoritative) === */
  .site-header{ background:#fff; border-bottom:1px solid #e2e8f0; position:relative; z-index:10; }
  .site-header .container{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:16px; }
  .brand{ display:inline-flex; align-items:center; text-decoration:none; }
  .brand-logo{ display:block; height:40px; width:auto; }
- .nav{ margin-left:auto; display:flex; align-items:center; }
+ .nav{ margin-left:auto; display:flex; align-items:center; gap:20px; }
  .nav a, .nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
  .nav a:hover{ text-decoration:underline; }
  @media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
