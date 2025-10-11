@@ -1,8 +1,14 @@
-﻿* text=auto eol=lf
-*.ps1 eol=crlf
-*.bat eol=crlf
-*.cmd eol=crlf
-*.png binary
-*.jpg binary
-*.ico binary
-*.zip binary
+# Keep text files normalized to LF in the repo
+*.html text eol=lf
+*.htm  text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.svg  text eol=lf
+*.md   text eol=lf
+
+# Treat everything else as binary unless listed
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
