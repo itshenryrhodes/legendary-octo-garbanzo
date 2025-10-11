@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem;">
     <a class="brand" href="/" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
-      <img class="brand-logo" src="/img/logo/logo-lockup.svg" alt="Bee Planet Connection" height="44" decoding="async" style="display:block;height:44px;width:auto;" />
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" height="44" decoding="async" style="display:block;height:44px;width:auto;" />
       <span class="brand-text" style="font-weight:600;font-family:Inter,system-ui,sans-serif;">Bee Planet Connection</span>
     </a>
     <nav class="nav" role="navigation" aria-label="Primary">
@@ -19,7 +19,7 @@
 </header>
 <link rel="stylesheet" href="/css/site.css" />
 <!doctype html><meta charset="utf-8">
-<title>Blog â€” Bee Planet Connection</title>
+<title>Blog Ã¢â‚¬â€ Bee Planet Connection</title>
 <!--#include file="/partials/header.html" -->
 <main class="container">
   <h1>Blog</h1>
@@ -32,7 +32,7 @@ fetch("/blog/posts.json",{cache:"no-store"})
    const html = items.map(p=>`
      <a class="card" href="${p.url}">
        <strong>${p.title}</strong>
-       <p>${(p.excerpt||"").slice(0,180)}â€¦</p>
+       <p>${(p.excerpt||"").slice(0,180)}Ã¢â‚¬Â¦</p>
        <small>${p.date}</small>
      </a>`).join("");
    document.getElementById("blog-list").innerHTML = html;
