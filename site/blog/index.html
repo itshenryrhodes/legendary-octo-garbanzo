@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/site.css?v=20251011152805"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/site.css?v=20251011152805">  <script src="/js/site.js" defer></script>
+</head>
 <body>
 <header class="site-header" role="banner">
   <div class="container">
@@ -22,7 +23,7 @@
 </header>
 <link rel="stylesheet" href="/css/site.css" />
 <!doctype html><meta charset="utf-8">
-<title>Blog ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Bee Planet Connection</title>
+<title>Blog ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Bee Planet Connection</title>
 <!--#include file="/partials/header.html" -->
 <main class="container">
   <h1>Blog</h1>
@@ -35,7 +36,7 @@ fetch("/blog/posts.json",{cache:"no-store"})
    const html = items.map(p=>`
      <a class="card" href="${p.url}">
        <strong>${p.title}</strong>
-       <p>${(p.excerpt||"").slice(0,180)}ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦</p>
+       <p>${(p.excerpt||"").slice(0,180)}ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦</p>
        <small>${p.date}</small>
      </a>`).join("");
    document.getElementById("blog-list").innerHTML = html;
