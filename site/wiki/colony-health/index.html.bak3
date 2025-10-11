@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Foundations ? Bee Planet Connection</title>
+  <title>Colony Health Ã¢â‚¬â€ Bee Planet Connection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Foundations pillar overview ? Bee Planet Connection.">
+  <meta name="description" content="Colony Health pillar overview Ã¢â‚¬â€ Bee Planet Connection.">
   <link rel="stylesheet" href="/css/site.css?v=20251011152805">
   <link rel="stylesheet" href="/css/site.css?v=20251011152805">
   <script src="/js/site.js" defer></script>
@@ -32,13 +32,13 @@
   <main class="container">
 
 <section class="hero">
-  <h1>Foundations</h1>
-  <p>Bee biology, anatomy, lifecycle, castes, pollination, races and glossary.</p>
+  <h1>Colony Health</h1>
+  <p>Diseases, pests, nutrition and forage, queen and brood, stressors, biosecurity.</p>
 </section>
 <section class="article">
   <h2>Start here</h2>
   <p>Read the cornerstone article for a structured overview and practical tips.</p>
-  <p><a class="badge" href="/wiki/foundations/cornerstone.html">Read the cornerstone</a></p>
+  <p><a class="badge" href="/wiki/colony-health/cornerstone.html">Read the cornerstone</a></p>
 </section>
 
   </main>

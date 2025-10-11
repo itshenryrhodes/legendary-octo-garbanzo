@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?ï¿½Ã¢ï¿½,ï¿½ï¿½"ï¿½ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½,ï¿½Å¡ï¿½,Â¬ï¿½fï¿½?ï¿½ï¿½,Â¡ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½?sÂ¬ï¿½.Â¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â Bee Planet Connection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Bee Planet Connection ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?ï¿½Ã¢ï¿½,ï¿½ï¿½"ï¿½ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½,ï¿½Å¡ï¿½,Â¬ï¿½fï¿½?ï¿½ï¿½,Â¡ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½?sÂ¬ï¿½.Â¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â purpose, scope and how to contribute.">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <script src="/js/site.js" defer></script>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <!--#include file="../partials/header.html" -->
+  <main class="container">
+
+<section class="hero">
+  <h1>About Bee Planet Connection</h1>
+  <p>We serve global apiculture as an open hub for knowledge, tools, a directory and discussion ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?ï¿½Ã¢ï¿½,ï¿½ï¿½"ï¿½ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½,ï¿½Å¡ï¿½,Â¬ï¿½fï¿½?ï¿½ï¿½,Â¡ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½?sÂ¬ï¿½.Â¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â championing environmental stewardship.</p>
+</section>
+<section class="article">
+  <h2>What BPC is</h2>
+  <ul>
+    <li>A free, open knowledge base for apiculture.</li>
+    <li>A practical toolkit for beekeepers.</li>
+    <li>A global directory of organisations.</li>
+    <li>A forum for thoughtful discussion.</li>
+  </ul>
+  <h2>What BPC isnï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?ï¿½Ã¢ï¿½,ï¿½ï¿½"ï¿½ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½,ï¿½Å¡ï¿½,Â¬ï¿½fï¿½?ï¿½ï¿½,Â¡ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½,ï¿½Å¡ï¿½,Â¬ï¿½fï¿½?ï¿½ï¿½,Â¾ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¢t</h2>
+  <ul>
+    <li>Not a trade marketplace.</li>
+    <li>Not a replacement for local regulation or veterinary advice.</li>
+    <li>Not a closed community ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?ï¿½Ã¢ï¿½,ï¿½ï¿½"ï¿½ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½,ï¿½Å¡ï¿½,Â¬ï¿½fï¿½?ï¿½ï¿½,Â¡ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'ï¿½?ï¿½?Tï¿½fï¿½?sï¿½,Â¢ï¿½fï¿½'ï¿½,Â¢ï¿½fÂ¢Ã¢ï¿½?sÂ¬ï¿½.Â¡ï¿½fï¿½?sï¿½,Â¬ï¿½fï¿½'Ã¢ï¿½,ï¿½Å¡ï¿½fï¿½?sï¿½,Â we welcome constructive contributions.</li>
+  </ul>
+  <h2>Contribute</h2>
+  <ul>
+    <li>Suggest edits via GitHub pull requests.</li>
+    <li>Propose directory additions.</li>
+    <li>Share tools and templates.</li>
+    <li>Join discussions and mentor newcomers.</li>
+  </ul>
+</section>
+
+  </main>
+  <!--#include file="../partials/footer.html" -->
+</body>
+</html>
