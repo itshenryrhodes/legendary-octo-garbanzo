@@ -1,7 +1,18 @@
 <header class="site-header">
+  <style>
+    /* header-inline: scoped essentials so layout works even if external CSS is missing */
+    .site-header{background:#fff;border-bottom:1px solid #e2e8f0;position:relative;z-index:10}
+    .site-header .container{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px}
+    .brand{display:inline-flex;align-items:center;text-decoration:none}
+    .brand-lockup{height:40px;width:auto;display:block}
+    .main-nav{margin-left:auto;display:flex;gap:20px;align-items:center}
+    .main-nav a,.main-nav a:visited{color:#2e7d32;text-decoration:none;font-weight:500}
+    .main-nav a:hover{text-decoration:underline}
+    @media (max-width:480px){.brand-lockup{height:34px}.main-nav{gap:14px}}
+  </style>
   <div class="container">
     <a class="brand" href="/" aria-label="Bee Planet Connection — Home">
-      <img class="brand-lockup" src="=2" alt="Bee Planet Connection">
+      <img class="brand-lockup" src="/img/logo/logo-lockup\.svg\?v=3" alt="Bee Planet Connection">
     </a>
     <nav class="main-nav">
       <a href="/wiki/">Wiki</a>
