@@ -7,6 +7,14 @@
 .kicker{color:#475569;text-transform:uppercase;letter-spacing:.04em;font-size:.85rem}
 
 /* Home logo placement */
+.home-logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
+  display: block;
+}
+
 /* Size targets: mobile 44px, md 52px, lg 64px */
 .home-logo img {
   height: 44px;
@@ -23,9 +31,10 @@
 
 /* Optional offset variable
 :root { --home-logo-offset: 16px; }
-*/
+.home-logo { top: var(--home-logo-offset); } */
 
 /* --- force surface render of home-logo --- */
+.home-logo{position:fixed; top:18px; left:18px; z-index:1000; display:inline-block}
 .home-logo img{height:80px; width:auto; max-width:40vw}
 @media (min-width: 640px){ .home-logo img{height:96px} }
 @media (min-width:1024px){ .home-logo img{height:112px} }
@@ -49,64 +58,36 @@ header nav a:hover {
 }
   
 /* guard: ensure logo link never shows text nodes */
+.home-logo{ line-height:0; }
+
 /* --- guard: ensure the logo link never shows text nodes --- */
-/* hides any text nodes */
+.home-logo{ font-size:0; color:transparent; }   /* hides any text nodes */
 .home-logo img{ font-size:initial; color:inherit; }  /* keep the image normal */
 
 /* If any legacy brand-title markup still exists anywhere, hide it */
+header .brand-title{ display:none !important; }
+
+/* === Hard guard for duplicate brand text around the logo === */
+.home-logo{ 
+  line-height:0;         /* collapse stray inline text height */
+  font-size:0;           /* make any stray text 0px */
+  color:transparent;     /* and invisible just in case */
+  display:inline-block; 
+  vertical-align:middle;
+}
+.home-logo > img{ 
+  display:block;         /* treat the image as the only visible child */
+}
+.home-logo > :not(img){
+  display:none !important;   /* hide any spans/text that slip in */
+}
+.home-logo::before, 
+.home-logo::after{
+  content:none !important;   /* nuke pseudo-elements that might show text */
+}
+/* End guard */
+
 /* Kill any text home link next to the logo (keep only .home-logo) */
 header > a[href="/"]:not(.home-logo){
   display: none !important;
 }
-
-/* === Header layout refresh === */
-/* Brand (logo + text) on the left */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-/* Nav to the right */
-.main-nav {
-  margin-left: auto;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-/* Small screens: shrink logo text first */
-}
-
-/* === Header layout (brand left, nav right) === */
-/* small screens */
-
-/* === Header layout ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ final (appended to win the cascade) === */
-}
-/* === end header layout === */
-
-/* === Header layout Ã¢â‚¬â€ brand left, nav right === */
-/* small screens */
-/* === end header layout === */
-
-/* === Header layout â€” brand left, nav right (authoritative) === */
-.brand-lockup{ height:40px; width:auto; display:block; }
-.main-nav{ margin-left:auto; display:flex; gap:20px; align-items:center; }
-.main-nav a, .main-nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
-.main-nav a:hover{ text-decoration:underline; }
-/* small screens */
-@media (max-width:480px){
-  .brand-lockup{ height:34px; }
-  .main-nav{ gap:14px; }
-}
-/* === end header layout === */
-
- /* === Header layout — brand left, nav right (authoritative) === */
- .site-header{ background:#fff; border-bottom:1px solid #e2e8f0; position:relative; z-index:10; }
- .site-header .container{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:16px; }
- .brand{ display:inline-flex; align-items:center; text-decoration:none; }
- .brand-logo{ display:block; height:40px; width:auto; }
- .nav{ margin-left:auto; display:flex; align-items:center; }
- .nav a, .nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
- .nav a:hover{ text-decoration:underline; }
- @media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
- /* === end header layout === */
