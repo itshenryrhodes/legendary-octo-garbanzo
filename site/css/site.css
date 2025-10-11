@@ -14,3 +14,15 @@ body{margin:0;color:var(--ink);background:var(--bg-soft);font:16px/1.6 system-ui
 /* Guard: hide any Bee Planet logo images outside the header; keep header logo visible */
 body img[src^="/img/logo"], body img[src^="img/logo"] { display:none !important; }
 .site-header img[src^="/img/logo"], .site-header img[src^="img/logo"] { display:inline-block !important; }
+
+/* Guard: hide any non-header logo marks (img, svg, or wrappers) */
+body img[src*="/img/logo"], body img[src*="img/logo"] { display:none !important; }
+.site-header img[src*="/img/logo"], .site-header img[src*="img/logo"] { display:inline-block !important; }
+
+/* Also hide inline SVGs and obvious wrappers in hero areas */
+.hero [class*="logo"], .home-hero [class*="logo"], .page-hero [class*="logo"] { display:none !important; }
+.hero svg[class*="logo"], .home-hero svg[class*="logo"], .page-hero svg[class*="logo"] { display:none !important; }
+.hero svg[id*="logo"],   .home-hero svg[id*="logo"],   .page-hero svg[id*="logo"]   { display:none !important; }
+
+/* Kill background logos if any */
+.hero, .home-hero, .page-hero { background-image: none !important; }
