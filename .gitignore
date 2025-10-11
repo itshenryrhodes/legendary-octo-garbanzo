@@ -9,3 +9,9 @@ __pycache__/
 dist/
 out/
 !docs/BPC_Summary.pdf
+# Local snapshots and generated files
+snapshots/
+SNAPSHOT-*.md
+site/blog/posts.json
+site/blog/rss.xml
+site/search-index.json
