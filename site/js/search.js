@@ -1,4 +1,4 @@
-﻿(function(){
+(function(){
   const input = document.getElementById("wiki-search");
   const list  = document.getElementById("wiki-results");
   if(!input || !list) return;
@@ -28,7 +28,7 @@
     list.innerHTML = items.map(x => `
       <a class="card" href="${x.url}">
         <strong>${hl(x.title, q)}</strong>
-        <p>${hl((x.excerpt||"").slice(0,180), q)}…</p>
+        <p>${hl((x.excerpt||"").slice(0,180), q)}?</p>
       </a>
     `).join("");
   }
