@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+<link rel="preload" href="/css/site.css?v=862def4" as="style">
 <meta charset="utf-8">
-  <title>The Smart Hive &mdash; Using Technology and Data &mdash; Bee Planet Connection</title>
+  <title>Beyond the Hive &mdash; Community, Rules and Ethics &mdash; Bee Planet Connection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Smart Hive &mdash; Using Technology and Data cornerstone article &mdash; Bee Planet Connection.">
+  <meta name="description" content="Beyond the Hive &mdash; Community, Rules and Ethics cornerstone article &mdash; Bee Planet Connection.">
   
   
   <script src="/js/site.js" defer></script>
-<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -33,11 +33,11 @@
   <main class="container">
 
 <section class="article">
-  <h1>The Smart Hive &mdash; Using Technology and Data</h1>
+  <h1>Beyond the Hive &mdash; Community, Rules and Ethics</h1>
   <div class="meta">Last updated: 06 Oct 2025</div>
-  <p><em>Sensors, apps and open data can augment beekeeping decisions while keeping husbandry central.</em></p>
+  <p><em>Beekeeping thrives in community and within fair rules. Know your associations, regulations and ethical duties.</em></p>
   <h2>Key takeaways</h2>
-  <ul><li>Scales and temperature sensors provide 24/7 insights.</li><li>Digital logs enable evidence-based decisions and sharing.</li><li>Interpretation matters more than raw data.</li><li>Open-source projects democratise smart-hive tech.</li></ul>
+  <ul><li>Join clubs for training, mentoring and a collective voice.</li><li>Comply with honey labelling, medicine rules and disease reporting.</li><li>Ethical practice balances bee welfare, neighbours and wild pollinators.</li><li>Global cooperation (e.g., Apimondia) advances apiculture.</li></ul>
   <h2>Sections</h2>
   <ul>
     <li>Introduction</li>

@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<link rel="preload" href="/css/site.css?v=862def4" as="style">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">  <script src="/js/site.js" defer></script>
-<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -25,11 +25,11 @@
 </header>
 
 <!doctype html><meta charset="utf-8">
-<title>Reading brood patterns</title>
+<title>Weighing hives with cheap kit</title>
 <article>
-<h1>Reading brood patterns</h1>
-<p>Spotting scattered brood, drone layers and supersedure early prevents a poor season.</p>
-<small data-date="2025-10-03" data-tags="Health,Queen">3 Oct 2025 &mdash; Health</small>
+<h1>Weighing hives with cheap kit</h1>
+<p>Simple luggage scales can reveal forage flows and starvation risk.</p>
+<small data-date="2025-10-01" data-tags="Data & Sensing,Practice">1 Oct 2025 &mdash; Data & Sensing</small>
 </article>
 
 </body>
