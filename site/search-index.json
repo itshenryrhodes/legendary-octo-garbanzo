@@ -1,67 +1,117 @@
 [
-  {
-    "url": "/wiki/colony-health/cornerstone.html",
-    "title": "Keeping the Hive Healthy ? Threats and Remedies",
-    "excerpt": "From Varroa to foulbrood, colony health depends on informed monitoring, nutrition and timely interventions grounded in IPM."
-  },
-  {
-    "url": "/wiki/colony-health/",
-    "title": "Colony Health",
-    "excerpt": "Diseases, pests, nutrition and forage, queen and brood, stressors, biosecurity."
-  },
-  {
-    "url": "/wiki/community-policy/cornerstone.html",
-    "title": "Beyond the Hive ? Community, Rules and Ethics",
-    "excerpt": "Beekeeping thrives in community and within fair rules. Know your associations, regulations and ethical duties."
-  },
-  {
-    "url": "/wiki/community-policy/",
-    "title": "Community & Policy",
-    "excerpt": "Associations & clubs, education & outreach, local networks, regulation & standards, ethics."
-  },
-  {
-    "url": "/wiki/data-sensing/cornerstone.html",
-    "title": "The Smart Hive ? Using Technology and Data",
-    "excerpt": "Sensors, apps and open data can augment beekeeping decisions while keeping husbandry central."
-  },
-  {
-    "url": "/wiki/data-sensing/",
-    "title": "Data & Sensing",
-    "excerpt": "Sensors & telemetry, field logs, analysis & standards, open data, case studies."
-  },
-  {
-    "url": "/wiki/foundations/cornerstone.html",
-    "title": "The Basics of Bees and Beekeeping",
-    "excerpt": "Honey bees are social insects whose biology underpins all beekeeping practice ? from anatomy and lifecycle to communication and pollination."
-  },
-  {
-    "url": "/wiki/foundations/",
-    "title": "Foundations",
-    "excerpt": "Bee biology, anatomy, lifecycle, castes, pollination, races and glossary."
-  },
-  {
-    "url": "/wiki/",
-    "title": "Wiki",
-    "excerpt": "Explore foundations of bee biology, hive management, health, data and sustainability ? written for hobbyists and professionals alike."
-  },
-  {
-    "url": "/wiki/operations/cornerstone.html",
-    "title": "A Year in the Apiary ? Practices and Tips for Smooth Beekeeping",
-    "excerpt": "Beekeeping is seasonal: inspections, space management, harvest and winterisation form a yearly rhythm."
-  },
-  {
-    "url": "/wiki/operations/",
-    "title": "Operations",
-    "excerpt": "Inspections, hives and hardware, colony management, harvest & processing, safety, seasonal calendar."
-  },
-  {
-    "url": "/wiki/sustainability-environment/cornerstone.html",
-    "title": "Beekeeping in Balance ? Environment and Stewardship",
-    "excerpt": "Sustainable apiculture means improving habitat, reducing pesticide risks and adapting to climate shifts."
-  },
-  {
-    "url": "/wiki/sustainability-environment/",
-    "title": "Sustainability & Environment",
-    "excerpt": "Habitat & forage, climate impacts, pesticides & mitigation, biodiversity, urban vs rural."
-  }
+    {
+        "url":  "/about/",
+        "title":  "About ?f?\u0027????T?f?????,??\"??f?\u0027??,???f??s?,??f?\u0027????T?f??s?,??f?\u0027?,??f???,???,??f????,??f?\u0027??,???f??s?,??f?\u0027????T?f??s?,??f?\u0027?,??f????s??.??f??s?,??f?\u0027??,???f??s?,? Bee Planet Connection",
+        "excerpt":  "About Bee Planet Connection ?f?"
+    },
+    {
+        "url":  "/blog/posts/hive-weighing.html",
+        "title":  "Weighing hives with cheap kit",
+        "excerpt":  "Simple luggage scales can reveal forage flows and starvation risk."
+    },
+    {
+        "url":  "/blog/posts/reading-brood.html",
+        "title":  "Reading brood patterns",
+        "excerpt":  "Spotting scattered brood, drone layers and supersedure early prevents a poor season."
+    },
+    {
+        "url":  "/blog/posts/why-colony-records.html",
+        "title":  "Why colony records matter",
+        "excerpt":  "Good records turn hunches into decisions. Here?s a simple pattern that works from hobbyist to pro."
+    },
+    {
+        "url":  "/blog/",
+        "title":  "Blog ? Bee Planet Connection",
+        "excerpt":  "${(p.excerpt||\"\").slice(0,180)}?"
+    },
+    {
+        "url":  "/contact/",
+        "title":  "Contact ? Bee Planet Connection",
+        "excerpt":  "Contact Bee Planet Connection ? media and enquiries."
+    },
+    {
+        "url":  "/directory/",
+        "title":  "Directory ? Bee Planet Connection",
+        "excerpt":  "Find apiculture associations and organisations worldwide."
+    },
+    {
+        "url":  "/forum/",
+        "title":  "Forum ? Bee Planet Connection",
+        "excerpt":  "Join Bee Planet Connection community discussions on GitHub."
+    },
+    {
+        "url":  "/tools/",
+        "title":  "Tools ? Bee Planet Connection",
+        "excerpt":  "Beekeeping tools: checklists, templates and calculators."
+    },
+    {
+        "url":  "/wiki/colony-health/cornerstone.html",
+        "title":  "Keeping the Hive Healthy ? Threats and Remedies ? Bee Planet Connection",
+        "excerpt":  "Keeping the Hive Healthy ? Threats and Remedies cornerstone article ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/colony-health/",
+        "title":  "Colony Health ? Bee Planet Connection",
+        "excerpt":  "Colony Health pillar overview ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/community-policy/cornerstone.html",
+        "title":  "Beyond the Hive ? Community, Rules and Ethics ? Bee Planet Connection",
+        "excerpt":  "Beyond the Hive ? Community, Rules and Ethics cornerstone article ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/community-policy/",
+        "title":  "Community \u0026 Policy ? Bee Planet Connection",
+        "excerpt":  "Community \u0026 Policy pillar overview ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/data-sensing/cornerstone.html",
+        "title":  "The Smart Hive ? Using Technology and Data ? Bee Planet Connection",
+        "excerpt":  "The Smart Hive ? Using Technology and Data cornerstone article ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/data-sensing/",
+        "title":  "Data \u0026 Sensing ? Bee Planet Connection",
+        "excerpt":  "Data \u0026 Sensing pillar overview ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/foundations/cornerstone.html",
+        "title":  "The Basics of Bees and Beekeeping ? Bee Planet Connection",
+        "excerpt":  "The Basics of Bees and Beekeeping cornerstone article ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/foundations/",
+        "title":  "Foundations ? Bee Planet Connection",
+        "excerpt":  "Foundations pillar overview ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/operations/cornerstone.html",
+        "title":  "A Year in the Apiary ? Practices and Tips for Smooth Beekeeping ? Bee Planet Connection",
+        "excerpt":  "A Year in the Apiary ? Practices and Tips for Smooth Beekeeping cornerstone article ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/operations/",
+        "title":  "Operations ? Bee Planet Connection",
+        "excerpt":  "Operations pillar overview ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/sustainability-environment/cornerstone.html",
+        "title":  "Beekeeping in Balance ? Environment and Stewardship ? Bee Planet Connection",
+        "excerpt":  "Beekeeping in Balance ? Environment and Stewardship cornerstone article ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/sustainability-environment/",
+        "title":  "Sustainability \u0026 Environment ? Bee Planet Connection",
+        "excerpt":  "Sustainability \u0026 Environment pillar overview ? Bee Planet Connection."
+    },
+    {
+        "url":  "/wiki/",
+        "title":  "Wiki ? Bee Planet Connection",
+        "excerpt":  "BPC Wiki ? foundations, health, operations, policy, data and sustainability."
+    },
+    {
+        "url":  "/",
+        "title":  "Home ? Bee Planet Connection",
+        "excerpt":  "Bee Planet Connection: global apiculture knowledge, tools, directory and community."
+    }
 ]
