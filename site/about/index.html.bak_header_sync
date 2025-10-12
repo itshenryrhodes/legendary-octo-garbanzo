@@ -7,24 +7,20 @@
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<header class="site-header" role="banner">
-  <div class="container">
-    <a class="brand" href="/">
-      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
-      <span class="brand-text">Bee Planet Connection</span>
-    </a>
-    <nav class="nav" role="navigation" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/wiki/">Wiki</a>
-      <a href="/tools/">Tools</a>
-      <a href="/directory/">Directory</a>
-      <a href="/blog/">Blog</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/forum/">Forum</a>
-    </nav>
-  </div>
-</header>
+<header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">Bee Planet Connection</a>
+      <nav class="nav">
+        <a href="/wiki/">Wiki</a>
+        <a href="/tools/">Tools</a>
+        <a href="/directory/">Directory</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/forum/">Forum</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="content wrap">
     <h1>About Bee Planet Connection</h1>
