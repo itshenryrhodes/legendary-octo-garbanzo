@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Foundations — Bee Planet Connection</title>
+  <title>Beyond the Hive ? Community, Rules and Ethics ? Bee Planet Connection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Foundations pillar overview — Bee Planet Connection.">
+  <meta name="description" content="Beyond the Hive ? Community, Rules and Ethics cornerstone article ? Bee Planet Connection.">
   <link rel="stylesheet" href="/css/site.css?v=20251011152805">
   <link rel="stylesheet" href="/css/site.css?v=20251011152805">
   <script src="/js/site.js" defer></script>
@@ -31,14 +31,21 @@
   <!--#include file="../partials/header.html" -->
   <main class="container">
 
-<section class="hero">
-  <h1>Foundations</h1>
-  <p>Bee biology, anatomy, lifecycle, castes, pollination, races and glossary.</p>
-</section>
 <section class="article">
-  <h2>Start here</h2>
-  <p>Read the cornerstone article for a structured overview and practical tips.</p>
-  <p><a class="badge" href="/wiki/foundations/cornerstone.html">Read the cornerstone</a></p>
+  <h1>Beyond the Hive ? Community, Rules and Ethics</h1>
+  <div class="meta">Last updated: 06 Oct 2025</div>
+  <p><em>Beekeeping thrives in community and within fair rules. Know your associations, regulations and ethical duties.</em></p>
+  <h2>Key takeaways</h2>
+  <ul><li>Join clubs for training, mentoring and a collective voice.</li><li>Comply with honey labelling, medicine rules and disease reporting.</li><li>Ethical practice balances bee welfare, neighbours and wild pollinators.</li><li>Global cooperation (e.g., Apimondia) advances apiculture.</li></ul>
+  <h2>Sections</h2>
+  <ul>
+    <li>Introduction</li>
+    <li>Core concepts</li>
+    <li>Applied practice</li>
+    <li>In practice</li>
+    <li>References</li>
+  </ul>
+  <p>This HTML is a lightweight reading version. See <code>/outputs/pages.md</code> for the full editorial copy with all sections, which you can paste in later.</p>
 </section>
 
   </main>
