@@ -80,15 +80,15 @@ header > a[href="/"]:not(.home-logo){
 /* === Header layout (brand left, nav right) === */
 /* small screens */
 
-/* === Header layout ?f?'???T?f?s?,??f?'?,??f???s??.??f?s?,??f?'?,??f??,?s?,??f???,??" final (appended to win the cascade) === */
+/* === Header layout �f�'�??T�f?s�,��f�'�,��f�â?s��.��f?s�,��f�'�,��f�â,�š�,��f?�â,��" final (appended to win the cascade) === */
 }
 /* === end header layout === */
 
-/* === Header layout ?f?'?,??f??,?s?,??f???s??,? brand left, nav right === */
+/* === Header layout �f�'�,��f�â,�š�,��f�â?s��,� brand left, nav right === */
 /* small screens */
 /* === end header layout === */
 
-/* === Header layout ?f???s??,?? brand left, nav right (authoritative) === */
+/* === Header layout �f�â?s�â,�� brand left, nav right (authoritative) === */
 .brand-lockup{ height:40px; width:auto; display:block; }
 .main-nav{ margin-left:auto; display:flex; gap:20px; align-items:center; }
 .main-nav a, .main-nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
@@ -100,7 +100,7 @@ header > a[href="/"]:not(.home-logo){
 }
 /* === end header layout === */
 
- /* === Header layout ?,??? brand left, nav right (authoritative) === */
+ /* === Header layout â,�?� brand left, nav right (authoritative) === */
 @media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
  /* === end header layout === */
 
