@@ -1,8 +1,6 @@
+System.Text.RegularExpressions.MatchEvaluator
 <!doctype html><html lang="en">
-<head>
-<link rel="preload" href="/css/site.css" as="style">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">  <script src="/js/site.js" defer></script>
-</head>
+System.Text.RegularExpressions.MatchEvaluator<meta charset="utf-8">
 <title>Page not found &mdash; Bee Planet Connection</title>
 
 <!--#include file="partials/header.html" -->
