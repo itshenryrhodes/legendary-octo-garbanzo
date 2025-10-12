@@ -1,4 +1,4 @@
-﻿.DS_Store
+.DS_Store
 Thumbs.db
 *.log
 *.zip
@@ -14,4 +14,3 @@ snapshots/
 SNAPSHOT-*.md
 site/blog/posts.json
 site/blog/rss.xml
-site/search-index.json
