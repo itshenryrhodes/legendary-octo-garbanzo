@@ -1,0 +1,174 @@
+[
+  {
+    "name": "Apimondia",
+    "type": "Federation",
+    "region": "Global",
+    "country": "Global",
+    "url": "https://www.apimondia.org/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@apimondia.org"
+      }
+    ],
+    "tags": [
+      "global",
+      "congress",
+      "research"
+    ]
+  },
+  {
+    "name": "British Beekeepers Association (BBKA)",
+    "type": "Association",
+    "region": "UK",
+    "country": "United Kingdom",
+    "url": "https://www.bbka.org.uk/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "admin@bbka.org.uk"
+      }
+    ],
+    "tags": [
+      "education",
+      "hobbyist",
+      "advocacy"
+    ]
+  },
+  {
+    "name": "American Beekeeping Federation (ABF)",
+    "type": "Association",
+    "region": "NA",
+    "country": "United States",
+    "url": "https://www.abfnet.org/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@abfnet.org"
+      }
+    ],
+    "tags": [
+      "advocacy",
+      "education"
+    ]
+  },
+  {
+    "name": "Canadian Honey Council",
+    "type": "Association",
+    "region": "NA",
+    "country": "Canada",
+    "url": "https://honeycouncil.ca/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@honeycouncil.ca"
+      }
+    ],
+    "tags": [
+      "industry",
+      "advocacy"
+    ]
+  },
+  {
+    "name": "Apiculture New Zealand",
+    "type": "Association",
+    "region": "APAC",
+    "country": "New Zealand",
+    "url": "https://apinz.org.nz/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@apinz.org.nz"
+      }
+    ],
+    "tags": [
+      "industry",
+      "education"
+    ]
+  },
+  {
+    "name": "All-Ireland Pollinator Plan",
+    "type": "NGO",
+    "region": "EU",
+    "country": "Ireland",
+    "url": "https://pollinators.ie/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@pollinators.ie"
+      }
+    ],
+    "tags": [
+      "conservation",
+      "pollinators"
+    ]
+  },
+  {
+    "name": "South African Bee Industry Organisation (SABIO)",
+    "type": "Association",
+    "region": "SSA",
+    "country": "South Africa",
+    "url": "https://www.sabio.org/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "admin@sabio.org"
+      }
+    ],
+    "tags": [
+      "industry",
+      "training"
+    ]
+  },
+  {
+    "name": "Arab Beekeepers Union",
+    "type": "Federation",
+    "region": "MENA",
+    "country": "Regional",
+    "url": "https://arabbeekeepers.org/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@arabbeekeepers.org"
+      }
+    ],
+    "tags": [
+      "regional",
+      "events"
+    ]
+  },
+  {
+    "name": "Confedera\u00e7\u00e3o Brasileira de Apicultura (CBA)",
+    "type": "Association",
+    "region": "LATAM",
+    "country": "Brazil",
+    "url": "https://cba.org.br/",
+    "contacts": [
+      {
+        "label": "Geral",
+        "email": "contato@cba.org.br"
+      }
+    ],
+    "tags": [
+      "industry",
+      "events"
+    ]
+  },
+  {
+    "name": "European Professional Beekeepers Association (EPBA)",
+    "type": "Association",
+    "region": "EU",
+    "country": "Regional",
+    "url": "https://www.epba.eu/",
+    "contacts": [
+      {
+        "label": "General",
+        "email": "info@epba.eu"
+      }
+    ],
+    "tags": [
+      "professional",
+      "policy"
+    ]
+  }
+]

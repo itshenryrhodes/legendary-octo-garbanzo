@@ -1,3 +1,0 @@
-﻿# path redirects (one per line)
-# /old-path   /new-path   301
-/wiki/getting-started    /wiki/foundations/    301
