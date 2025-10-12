@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="preload" href="/css/site.css" as="style">
-<link rel="stylesheet" href="/css/site.css">
   <meta charset="utf-8">
-  <title>Wiki &mdash; Bee Planet Connection</title>
+  <title>Wiki â€” Bee Planet Connection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BPC Wiki &mdash; foundations, health, operations, policy, data and sustainability.">
-  
-  
+  <meta name="description" content="BPC Wiki â€” foundations, health, operations, policy, data and sustainability.">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
   <script src="/js/site.js" defer></script>
 </head>
 <body>
@@ -35,7 +33,7 @@
 
 <section class="hero">
   <h1>Wiki</h1>
-  <p>Explore foundations of bee biology, hive management, health, data and sustainability &mdash; written for hobbyists and professionals alike.</p>
+  <p>Explore foundations of bee biology, hive management, health, data and sustainability â€” written for hobbyists and professionals alike.</p>
 </section>
 <section class="article">
   <h2>Browse by pillar</h2>

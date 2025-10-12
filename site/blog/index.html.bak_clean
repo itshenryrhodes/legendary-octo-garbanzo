@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="preload" href="/css/site.css" as="style">
-<link rel="stylesheet" href="/css/site.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Blog &mdash; Bee Planet Connection</title>
+  <title>Blog Ã¢â‚¬â€ Bee Planet Connection</title>
   <link rel="preload" href="/css/site.css" as="style">
-  
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
   <header class="site-header">
@@ -29,14 +27,14 @@
     <h1>Blog</h1>
     <p>News, insights, and stories from the world of bees and beekeeping.</p>
     <ul>
-      <li><strong>A Climate for Bees ?</strong> How shifting seasons affect blooms and honey flows.</li>
-      <li><strong>Inside a Smart Hive ?</strong> Sensors and AI for earlier insights.</li>
-      <li><strong>Community Buzz ?</strong> Grassroots projects making a difference.</li>
+      <li><strong>A Climate for Bees Ã¢â‚¬â€</strong> How shifting seasons affect blooms and honey flows.</li>
+      <li><strong>Inside a Smart Hive Ã¢â‚¬â€</strong> Sensors and AI for earlier insights.</li>
+      <li><strong>Community Buzz Ã¢â‚¬â€</strong> Grassroots projects making a difference.</li>
     </ul>
   </main>
 
   <footer class="site-footer wrap">
-    <p>? 2025 Bee Planet Connection &mdash; For bees, for people, for planet.</p>
+    <p>Ã‚Â© 2025 Bee Planet Connection Ã¢â‚¬â€ For bees, for people, for planet.</p>
   </footer>
 </body>
 </html>

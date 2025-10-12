@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="preload" href="/css/site.css" as="style">
-<link rel="stylesheet" href="/css/site.css">
   <meta charset="utf-8">
-  <title>Data & Sensing &mdash; Bee Planet Connection</title>
+  <title>Sustainability & Environment â€” Bee Planet Connection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Data & Sensing pillar overview &mdash; Bee Planet Connection.">
-  
-  
+  <meta name="description" content="Sustainability & Environment pillar overview â€” Bee Planet Connection.">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
   <script src="/js/site.js" defer></script>
 </head>
 <body>
@@ -34,13 +32,13 @@
   <main class="container">
 
 <section class="hero">
-  <h1>Data & Sensing</h1>
-  <p>Sensors & telemetry, field logs, analysis & standards, open data, case studies.</p>
+  <h1>Sustainability & Environment</h1>
+  <p>Habitat & forage, climate impacts, pesticides & mitigation, biodiversity, urban vs rural.</p>
 </section>
 <section class="article">
   <h2>Start here</h2>
   <p>Read the cornerstone article for a structured overview and practical tips.</p>
-  <p><a class="badge" href="/wiki/data-sensing/cornerstone.html">Read the cornerstone</a></p>
+  <p><a class="badge" href="/wiki/sustainability-environment/cornerstone.html">Read the cornerstone</a></p>
 </section>
 
   </main>

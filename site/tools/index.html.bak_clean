@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="preload" href="/css/site.css" as="style">
-<link rel="stylesheet" href="/css/site.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tools &mdash; Bee Planet Connection</title>
+  <title>Tools Ã¢â‚¬â€ Bee Planet Connection</title>
   <link rel="preload" href="/css/site.css" as="style">
-  
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
   <header class="site-header">
@@ -31,10 +29,10 @@
 
     <h2>Starter Toolkit</h2>
     <ul>
-      <li><strong>Seasonal Checklist</strong> ? Month-by-month planning (printable).</li>
-      <li><strong>Inspection Notes Template</strong> ? CSV/PDF for consistent hive logs.</li>
-      <li><strong>Feeding Calculator</strong> ? Estimate syrup needs for winter stores.</li>
-      <li><strong>Swarm Log</strong> ? Record swarm events to learn and prevent.</li>
+      <li><strong>Seasonal Checklist</strong> Ã¢â‚¬â€ Month-by-month planning (printable).</li>
+      <li><strong>Inspection Notes Template</strong> Ã¢â‚¬â€ CSV/PDF for consistent hive logs.</li>
+      <li><strong>Feeding Calculator</strong> Ã¢â‚¬â€ Estimate syrup needs for winter stores.</li>
+      <li><strong>Swarm Log</strong> Ã¢â‚¬â€ Record swarm events to learn and prevent.</li>
     </ul>
 
     <h2>Monitoring & Technology</h2>
@@ -61,7 +59,7 @@
   </main>
 
   <footer class="site-footer wrap">
-    <p>? 2025 Bee Planet Connection &mdash; For bees, for people, for planet.</p>
+    <p>Ã‚Â© 2025 Bee Planet Connection Ã¢â‚¬â€ For bees, for people, for planet.</p>
   </footer>
 </body>
 </html>

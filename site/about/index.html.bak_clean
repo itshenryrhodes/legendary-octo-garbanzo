@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="preload" href="/css/site.css" as="style">
-<link rel="stylesheet" href="/css/site.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About &mdash; Bee Planet Connection</title>
+  <title>About Ã¢â‚¬â€ Bee Planet Connection</title>
   <link rel="preload" href="/css/site.css" as="style">
-  
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
   <header class="site-header">
@@ -27,7 +25,7 @@
 
   <main class="content wrap">
     <h1>About Bee Planet Connection</h1>
-    <p>We serve global apiculture as an open hub for knowledge, tools, a directory, and discussion &mdash; championing environmental stewardship in beekeeping.</p>
+    <p>We serve global apiculture as an open hub for knowledge, tools, a directory, and discussion Ã¢â‚¬â€ championing environmental stewardship in beekeeping.</p>
 
     <h2>What BPC is</h2>
     <ul>
@@ -40,8 +38,8 @@
     <h2>What BPC is not</h2>
     <ul>
       <li>Not a marketplace.</li>
-      <li>Not a regulatory authority &mdash; always follow local rules and veterinary advice.</li>
-      <li>Not a closed club &mdash; we welcome constructive contributions from all.</li>
+      <li>Not a regulatory authority Ã¢â‚¬â€ always follow local rules and veterinary advice.</li>
+      <li>Not a closed club Ã¢â‚¬â€ we welcome constructive contributions from all.</li>
     </ul>
 
     <h2>Contribute</h2>
@@ -54,7 +52,7 @@
   </main>
 
   <footer class="site-footer wrap">
-    <p>? 2025 Bee Planet Connection &mdash; For bees, for people, for planet.</p>
+    <p>Ã‚Â© 2025 Bee Planet Connection Ã¢â‚¬â€ For bees, for people, for planet.</p>
   </footer>
 </body>
 </html>

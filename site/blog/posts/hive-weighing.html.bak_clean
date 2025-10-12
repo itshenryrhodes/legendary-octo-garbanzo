@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
-<link rel="preload" href="/css/site.css" as="style">
-<link rel="stylesheet" href="/css/site.css"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">  <script src="/js/site.js" defer></script>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/site.css?v=20251011152805">  <script src="/js/site.js" defer></script>
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -23,13 +21,13 @@
     </nav>
   </div>
 </header>
-
+<link rel="stylesheet" href="/css/site.css" />
 <!doctype html><meta charset="utf-8">
 <title>Weighing hives with cheap kit</title>
 <article>
 <h1>Weighing hives with cheap kit</h1>
 <p>Simple luggage scales can reveal forage flows and starvation risk.</p>
-<small data-date="2025-10-01" data-tags="Data & Sensing,Practice">1 Oct 2025 &mdash; Data & Sensing</small>
+<small data-date="2025-10-01" data-tags="Data & Sensing,Practice">1 Oct 2025 â€” Data & Sensing</small>
 </article>
 
 </body>
