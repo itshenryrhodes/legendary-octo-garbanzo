@@ -18,10 +18,15 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      REPO_SLUG: ${{ github.event.repository.name }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
+      # REQUIRED by GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Prepare preview (rewrite root-absolute paths)
         shell: pwsh
@@ -33,15 +38,16 @@ jobs:
           if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
           Copy-Item $src $dst -Recurse -Force
 
-          $files = Get-ChildItem $dst -Recurse -Include *.html,*.htm,*.css,*.js
-          foreach($f in $files){
-            $t = Get-Content -Raw $f.FullName
-            $t = $t -replace 'href="/',  ('href="/'  + $env:REPO_SLUG + '/')
-            $t = $t -replace 'src="/',   ('src="/'   + $env:REPO_SLUG + '/')
-            $t = $t -replace 'url\("/',  ('url("/'   + $env:REPO_SLUG + '/')
-            $t = $t -replace "url\('/",  ('url('''/' + $env:REPO_SLUG + '/')
-            $t = $t -replace 'url\(/',   ('url(/'    + $env:REPO_SLUG + '/')
-            Set-Content -Path $f.FullName -Value $t -Encoding utf8
+          $slug = "${{ github.event.repository.name }}"
+          Get-ChildItem $dst -Recurse -Include *.html,*.htm,*.css,*.js | ForEach-Object {
+            $p = $_.FullName
+            $t = Get-Content -Raw -LiteralPath $p
+            $t = $t -replace 'href="/',  ('href="/'  + $slug + '/')
+            $t = $t -replace 'src="/',   ('src="/'   + $slug + '/')
+            $t = $t -replace 'url\("/',  ('url("/'   + $slug + '/')
+            $t = $t -replace "url\('/",  ("url(''/"  + $slug + '/')
+            $t = $t -replace 'url\(/',   ('url(/'    + $slug + '/')
+            Set-Content -LiteralPath $p -Value $t -Encoding utf8
           }
 
       - name: Upload artifact
