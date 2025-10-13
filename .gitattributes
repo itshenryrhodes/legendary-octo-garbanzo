@@ -1,6 +1,7 @@
-﻿* text=auto eol=lf
+﻿# Normalize text files to LF
+* text=auto eol=lf
 
-# Force UTF-8 text normalization for common web assets
+# Force normalization for common web assets
 *.html text eol=lf
 *.htm  text eol=lf
 *.css  text eol=lf
@@ -11,18 +12,18 @@
 *.xml  text eol=lf
 *.csv  text eol=lf
 *.txt  text eol=lf
+*.svg  text eol=lf
 
-# Fonts and images are binary (never modify line endings)
-*.ttf  binary
-*.otf  binary
-*.woff binary
+# Fonts and images are binary
+*.ttf   binary
+*.otf   binary
+*.woff  binary
 *.woff2 binary
-*.eot  binary
-*.png  binary
-*.jpg  binary
-*.jpeg binary
-*.gif  binary
-*.svg  text  eol=lf    # svg is xml; keep as text but normalize to LF
+*.eot   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
 
-# Prevent Git from guessing encodings on these
-*.pdf  binary
+# PDFs are binary
+*.pdf   binary
