@@ -1,0 +1,54 @@
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches:
+      - content-refresh-*
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      REPO_SLUG: ${{ github.event.repository.name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare preview (rewrite root-absolute paths)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $src = "site"
+          if (-not (Test-Path $src)) { throw "Expected '$src' folder with your static site." }
+          $dst = "site-preview"
+          if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
+          Copy-Item $src $dst -Recurse -Force
+
+          $files = Get-ChildItem $dst -Recurse -Include *.html,*.htm,*.css,*.js
+          foreach($f in $files){
+            $t = Get-Content -Raw $f.FullName
+            $t = $t -replace 'href="/',  ('href="/'  + $env:REPO_SLUG + '/')
+            $t = $t -replace 'src="/',   ('src="/'   + $env:REPO_SLUG + '/')
+            $t = $t -replace 'url\("/',  ('url("/'   + $env:REPO_SLUG + '/')
+            $t = $t -replace "url\('/",  ('url('''/' + $env:REPO_SLUG + '/')
+            $t = $t -replace 'url\(/',   ('url(/'    + $env:REPO_SLUG + '/')
+            Set-Content -Path $f.FullName -Value $t -Encoding utf8
+          }
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site-preview
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
