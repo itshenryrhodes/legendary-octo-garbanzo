@@ -1,4 +1,4 @@
-param(
+﻿param(
   [string[]]$Include = @("site/**/*.html","site/**/*.htm","site/**/*.css","site/**/*.js","site/**/*.json","site/**/*.md","site/**/*.yml","site/**/*.xml","site/**/*.csv","site/**/*.txt","site/**/*.svg"),
   [switch]$SummaryOnly
 )
@@ -19,16 +19,16 @@ function DoubleEncode([string]$s) {
 
 # Build tokens safely (em/en dash, curly quotes, ellipsis, NBSP marker)
 $tokens = @()
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x94) # em dash -> "â€”"
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x93) # en dash -> "â€“"
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x99) # rsquo   -> "â€™"
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x98) # lsquo   -> "â€˜"
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x9C) # ldquo   -> "â€œ"
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x9D) # rdquo   -> "â€�"
-$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0xA6) # ellipsis-> "â€¦"
-$tokens += "Â"                                     # stray NBSP marker when mangled
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x94) # em dash -> "Ã¢â‚¬â€"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x93) # en dash -> "Ã¢â‚¬â€œ"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x99) # rsquo   -> "Ã¢â‚¬â„¢"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x98) # lsquo   -> "Ã¢â‚¬Ëœ"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x9C) # ldquo   -> "Ã¢â‚¬Å“"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x9D) # rdquo   -> "Ã¢â‚¬ï¿½"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0xA6) # ellipsis-> "Ã¢â‚¬Â¦"
+$tokens += "Ã‚"                                     # stray NBSP marker when mangled
 
-# Add their double-encoded counterparts (e.g., "Ã¢â‚¬â€�")
+# Add their double-encoded counterparts (e.g., "ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ï¿½")
 $tokens = $tokens + ($tokens | ForEach-Object { DoubleEncode $_ })
 
 # Scan files
@@ -72,7 +72,7 @@ foreach($f in $paths){
 
 if ($violations.Count -gt 0) {
   if (-not $SummaryOnly) {
-    Write-Host "✖ Encoding/mojibake violations:" -ForegroundColor Red
+    Write-Host "âœ– Encoding/mojibake violations:" -ForegroundColor Red
     $violations | ForEach-Object { Write-Host " - $_" -ForegroundColor Red }
   } else {
     $violations | ForEach-Object { Write-Output $_ }
@@ -80,4 +80,5 @@ if ($violations.Count -gt 0) {
   exit 1
 }
 
-Write-Host "✓ No encoding/mojibake issues found."
+Write-Host "No encoding/mojibake issues found."
+
