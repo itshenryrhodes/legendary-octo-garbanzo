@@ -1,10 +1,28 @@
-* text=auto eol=lf
-*.html text working-tree-encoding=UTF-8
-*.htm  text working-tree-encoding=UTF-8
-*.css  text working-tree-encoding=UTF-8
-*.js   text working-tree-encoding=UTF-8
-*.json text working-tree-encoding=UTF-8
-*.csv  text working-tree-encoding=UTF-8
-*.txt  text working-tree-encoding=UTF-8
-*.md   text working-tree-encoding=UTF-8
-*.xml  text working-tree-encoding=UTF-8
+﻿* text=auto eol=lf
+
+# Force UTF-8 text normalization for common web assets
+*.html text eol=lf
+*.htm  text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.xml  text eol=lf
+*.csv  text eol=lf
+*.txt  text eol=lf
+
+# Fonts and images are binary (never modify line endings)
+*.ttf  binary
+*.otf  binary
+*.woff binary
+*.woff2 binary
+*.eot  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  text  eol=lf    # svg is xml; keep as text but normalize to LF
+
+# Prevent Git from guessing encodings on these
+*.pdf  binary
