@@ -5,13 +5,33 @@ param(
 
 $ErrorActionPreference = "Stop"
 $utf8Strict = New-Object System.Text.UTF8Encoding($false, $true)
+$cp1252     = [Text.Encoding]::GetEncoding(1252)
 
-$badTokens = @(
-  "Ã¢â‚¬â€�","Ã¢â‚¬â€œ","Ã¢â‚¬â„¢","Ã¢â‚¬Ëœ","Ã¢â‚¬Å“","Ã¢â‚¬Â","Ã¢â‚¬Â¦","Ã‚",
-  "â€™","â€˜","â€œ","â€�","â€“","â€”","â€¦","Â",
-  "ï¿½","€”","€” # include the Euro+dash cases we saw
-)
+function MojibakeFromUtf8Hex([byte[]]$bytes) {
+  # Intentionally wrong decode: interpret raw UTF-8 bytes as CP1252 to produce the mojibake token
+  return $cp1252.GetString($bytes)
+}
+function DoubleEncode([string]$s) {
+  # Take CP1252 mojibake -> encode as UTF-8 bytes -> decode again as CP1252 for the double-encoded form
+  $utf8 = [Text.Encoding]::UTF8
+  return $cp1252.GetString($utf8.GetBytes($s))
+}
 
+# Build tokens safely (em/en dash, curly quotes, ellipsis, NBSP marker)
+$tokens = @()
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x94) # em dash -> "â€”"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x93) # en dash -> "â€“"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x99) # rsquo   -> "â€™"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x98) # lsquo   -> "â€˜"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x9C) # ldquo   -> "â€œ"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0x9D) # rdquo   -> "â€�"
+$tokens += MojibakeFromUtf8Hex(0xE2,0x80,0xA6) # ellipsis-> "â€¦"
+$tokens += "Â"                                     # stray NBSP marker when mangled
+
+# Add their double-encoded counterparts (e.g., "Ã¢â‚¬â€�")
+$tokens = $tokens + ($tokens | ForEach-Object { DoubleEncode $_ })
+
+# Scan files
 $paths = @()
 foreach($glob in $Include){
   $glob = $glob -replace '/','\'
@@ -30,9 +50,7 @@ foreach($f in $paths){
   }
 
   # Strict decode check
-  try {
-    $text = $utf8Strict.GetString($bytes)
-  } catch {
+  try { $text = $utf8Strict.GetString($bytes) } catch {
     $violations += "{0}: Invalid UTF-8 bytes" -f $f.FullName
     continue
   }
@@ -44,9 +62,9 @@ foreach($f in $paths){
   }
 
   # Token scan
-  foreach($tok in $badTokens){
-    if ($text -like ("*{0}*" -f $tok)) {
-      $violations += "{0}: Contains mojibake token '{1}'" -f $f.FullName, $tok
+  foreach($tok in $tokens){
+    if ($null -ne $tok -and $tok -ne '' -and $text -like ("*{0}*" -f $tok)) {
+      $violations += "{0}: Contains mojibake token (auto-generated)" -f $f.FullName
       break
     }
   }

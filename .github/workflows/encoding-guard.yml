@@ -1,9 +1,7 @@
 name: Encoding Guard
-
 on:
   push:
   pull_request:
-
 jobs:
   lint-encoding:
     runs-on: ubuntu-latest
