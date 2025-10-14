@@ -17,3 +17,6 @@ site/blog/rss.xml
 # Local backups created by content/encoding scripts
 *.bak_utf8fix
 *.bak
+
+site-preview/
+
