@@ -11,32 +11,49 @@
       --charcoal:#333333;
       --honey:#FBBE32;
       --sky:#2196F3;
-      --leaf:#4CAF50;
       --bg-soft:#F9F9F9;
-      --max:720px;
+      --max:720px;     /* search/input column max width */
+      --maxMain:1100px;/* main content max width */
     }
 
-    /* Hero wallpaper band with just the search */
+    /* Full-bleed hero wallpaper with left-aligned inner column */
     .wiki-hero{
+      /* full-bleed trick relative to centered container */
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
       background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right/contain;
-      padding: 2.25rem 0 3rem 0;
+      padding: 2rem 0 3rem 0;
+      position: relative;
       border-bottom: 1px solid #eee;
     }
-    .wiki-hero .inner{
-      max-width: var(--max);
-      margin: 0;
+    /* subtle shadow at bottom to help contrast on light SVGs */
+    .wiki-hero::after{
+      content:"";
+      position:absolute; left:0; right:0; bottom:0; height:18px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.06));
+      pointer-events:none;
     }
-    /* Keep content left, avoid overlapping center artwork on large screens */
-    @media (min-width: 1100px){
-      .wiki-hero{ background-position: center right 5%; }
+    .wiki-hero .inner{
+      /* keep inner content aligned to the left edge of the normal page flow */
+      max-width: var(--max);
+      margin-left: clamp(16px, 4vw, 48px);
+      margin-right: 16px;
+      position: relative;
+      z-index: 1; /* keep over the wallpaper */
+    }
+    /* Keep artwork away from text on very wide displays */
+    @media (min-width: 1200px){
+      .wiki-hero{ background-position: center right 4%; }
+    }
+    /* Give the hero a sensible minimum height so overlay CTA has room */
+    @media (min-width: 900px){
+      .wiki-hero{ min-height: 360px; }
     }
 
-    /* Single search bar only */
+    /* Search area */
     .wiki-search{
       width: 100%;
-      max-width: var(--max);
       position: relative;
-      margin-left: 0;
     }
     .wiki-search input[type="search"]{
       width: 100%;
@@ -47,6 +64,8 @@
       color: var(--charcoal);
       box-shadow: 0 1px 0 rgba(0,0,0,.04) inset;
     }
+
+    /* Actions row directly under the search input */
     .wiki-actions{
       margin-top: .75rem;
       display: flex;
@@ -62,20 +81,37 @@
       font-weight: 700;
       cursor: pointer;
       text-decoration: none;
+      line-height: 1.2;
     }
     .btn-gold{ background: var(--honey); color:#000; }
-    .btn-gold:focus{ outline: 3px solid var(--sky); outline-offset: 2px; }
+    .btn-hollow{
+      border-color: #ddd; background: #fff; color:#000;
+    }
+    .btn:focus{ outline: 3px solid var(--sky); outline-offset: 2px; }
 
-    /* Featured article card */
+    /* Featured CTA overlay on the hero */
+    .hero-cta{
+      position: absolute;
+      left: clamp(16px, 4vw, 48px);
+      bottom: 1.25rem;
+      z-index: 2;
+    }
+    .hero-cta .btn{ box-shadow: 0 2px 0 rgba(0,0,0,.08); }
+
+    /* Main column below hero (pillars and featured card) */
+    .content.wrap{ max-width: 1200px; }
+    .wiki-main-col{ max-width: var(--maxMain); margin: 1.25rem auto 0 auto; padding: 0 16px; }
+
+    /* Featured article card (below). Its button has moved to the hero overlay */
     .featured{
       background: var(--bg-soft);
       border-radius: 14px;
       padding: 1.25rem;
-      margin: 1.5rem 0 2rem 0;
-      max-width: var(--max);
+      margin: 0 0 2rem 0;
     }
     .featured h2{ margin: 0 0 .35rem 0; }
     .featured ul{ margin:.5rem 0 0 1rem; }
+    .featured .btn{ display:none; } /* keep structure, hide duplicate CTA */
 
     /* Pillar grid */
     .pillars{
@@ -83,7 +119,6 @@
       grid-template-columns: 1fr;
       gap: 1rem;
       margin: 1rem 0 3rem 0;
-      max-width: 1100px;
     }
     @media (min-width: 720px){
       .pillars{ grid-template-columns: repeat(2, 1fr); }
@@ -122,10 +157,6 @@
       color:#555;
       margin: .25rem 0 0 0;
     }
-
-    /* Keep main column aligned with hero input */
-    .content.wrap{ max-width: 1200px; }
-    .wiki-main-col{ max-width: 1100px; }
   </style>
 </head>
 <body>
@@ -149,22 +180,27 @@
 </header>
 
 <main class="content wrap">
-  <!-- Wallpaper hero with left-aligned search bar only -->
+  <!-- Full-width wallpaper hero with left-aligned search and actions -->
   <section class="wiki-hero">
     <div class="inner">
       <form class="wiki-search" role="search" action="/wiki/" method="get">
         <label for="q" class="sr-only">Search the wiki</label>
         <input id="q" name="q" type="search" placeholder="Search the wiki">
+        <div class="wiki-actions">
+          <button class="btn btn-gold" type="submit">Search</button>
+          <button class="btn btn-hollow" type="button" id="random-article">Surprise me</button>
+        </div>
       </form>
+    </div>
 
-      <div class="wiki-actions">
-        <a class="btn btn-gold" href="#" id="random-article">Surprise me</a>
-      </div>
+    <!-- Featured article CTA overlay on the hero -->
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="/wiki/colony-health/cornerstone.html">Featured: Varroa guide</a>
     </div>
   </section>
 
   <section class="wiki-main-col">
-    <!-- Featured article -->
+    <!-- Featured article content (kept below; CTA hidden to avoid duplicate) -->
     <article class="featured" aria-labelledby="feat-title">
       <h2 id="feat-title">Featured article: Varroa mite management</h2>
       <p>A step-by-step, season-by-season guide to monitoring and managing Varroa with integrated methods.</p>
@@ -222,7 +258,7 @@
 
 <footer class="site-footer wrap">
   <p>© 2025 Bee Planet Connection - For bees, for people, for planet.</p>
-  <!-- wiki landing: structured grid, hero wallpaper, random article -->
+  <!-- wiki landing: full-bleed hero, search+surprise actions, featured CTA overlay -->
 </footer>
 
 <script>
