@@ -1,1 +1,65 @@
-# (paste the YAML from above here)
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - preview-*
+      - content-refresh-*
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare preview (rewrite root-absolute paths)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $src = "site"
+          if (-not (Test-Path $src)) { throw "Expected '$src' folder with your static site." }
+          $dst = "site-preview"
+          if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
+          Copy-Item $src $dst -Recurse -Force
+
+          $slug = "${{ github.event.repository.name }}"
+          Get-ChildItem $dst -Recurse -Include *.html,*.htm,*.css,*.js | ForEach-Object {
+            $p = $_.FullName
+            $t = Get-Content -Raw -LiteralPath $p
+            $t = $t -replace 'href="/',  ('href="/'  + $slug + '/')
+            $t = $t -replace 'src="/',   ('src="/'   + $slug + '/')
+            $t = $t -replace 'url\("/',  ('url("/'   + $slug + '/')
+            $t = $t -replace "url\('/",  ("url(''/"  + $slug + '/')
+            $t = $t -replace 'url\(/',   ('url(/'    + $slug + '/')
+            Set-Content -LiteralPath $p -Value $t -Encoding utf8
+          }
+
+          $candidates = @("CNAME","site/CNAME")
+          foreach($c in $candidates){ if(Test-Path $c){ Copy-Item $c "$dst/CNAME" -Force } }
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site-preview
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
