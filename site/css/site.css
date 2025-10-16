@@ -1,4 +1,4 @@
-@import url("/css/fonts-montserrat.css");
+﻿@import url("/css/fonts-montserrat.css");
 .toc{border-left:4px solid #e2e8f0;padding-left:12px;margin:16px 0}
 .article{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:20px}
 .article h2{margin-top:1.2em}
@@ -80,15 +80,15 @@ header > a[href="/"]:not(.home-logo){
 /* === Header layout (brand left, nav right) === */
 /* small screens */
 
-/* === Header layout �f�'�??T�f?s�,��f�'�,��f�â?s��.��f?s�,��f�'�,��f�â,�š�,��f?�â,��" final (appended to win the cascade) === */
+/* === Header layout ï¿½fï¿½'ï¿½??Tï¿½f?sï¿½,ï¿½ï¿½fï¿½'ï¿½,ï¿½ï¿½fï¿½Ã¢?sï¿½ï¿½.ï¿½ï¿½f?sï¿½,ï¿½ï¿½fï¿½'ï¿½,ï¿½ï¿½fï¿½Ã¢,ï¿½Å¡ï¿½,ï¿½ï¿½f?ï¿½Ã¢,ï¿½ï¿½" final (appended to win the cascade) === */
 }
 /* === end header layout === */
 
-/* === Header layout �f�'�,��f�â,�š�,��f�â?s��,� brand left, nav right === */
+/* === Header layout ï¿½fï¿½'ï¿½,ï¿½ï¿½fï¿½Ã¢,ï¿½Å¡ï¿½,ï¿½ï¿½fï¿½Ã¢?sï¿½ï¿½,ï¿½ brand left, nav right === */
 /* small screens */
 /* === end header layout === */
 
-/* === Header layout �f�â?s�â,�� brand left, nav right (authoritative) === */
+/* === Header layout ï¿½fï¿½Ã¢?sï¿½Ã¢,ï¿½ï¿½ brand left, nav right (authoritative) === */
 .brand-lockup{ height:40px; width:auto; display:block; }
 .main-nav{ margin-left:auto; display:flex; gap:20px; align-items:center; }
 .main-nav a, .main-nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
@@ -100,7 +100,7 @@ header > a[href="/"]:not(.home-logo){
 }
 /* === end header layout === */
 
- /* === Header layout â,�?� brand left, nav right (authoritative) === */
+ /* === Header layout Ã¢,ï¿½?ï¿½ brand left, nav right (authoritative) === */
 @media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
  /* === end header layout === */
 
@@ -140,3 +140,68 @@ body {
    body { font-family: YourCustomFont, -apple-system, "Segoe UI", ... } */
 /* or, if YourCustomFont is the problem, confine it to headings:
    h1,h2,h3,.brand { font-family: YourCustomFont, inherit; } */
+
+ /* === Bee Planet: Site-wide wallpaper underlay ==========================
+    Rules:
+      1) Full-bleed honeycomb wallpaper below header/logo on every page.
+      2) Always stays behind content; heroes & images automatically sit above.
+      3) Mobile-friendly scale; subtle lines; no horizontal scrollbars.
+      4) Cache-busted SVG so updates appear immediately.
+      5) Opt-out: add 
+o-wallpaper on <body> to disable per page.
+  ======================================================================= */
+
+ :root{
+   /* Header heights (adjust if your header size differs) */
+   --header-h: 72px;
+   --header-h-mobile: 64px;
+
+   /* Base tile size; tweaked by media queries for legibility */
+   --tile: 180px;
+ }
+
+/* Avoid horizontal scrollbars from sub-pixel rounding */
+ html, body { overflow-x: clip; }
+
+/* Ensure stacking order is predictable */
+ body { position: relative; }
+
+/* The wallpaper lives behind everything as a fixed underlay */
+ body::before{
+   content: "";
+   position: fixed;
+   top: var(--header-h);
+   left: 0; right: 0; bottom: 0;
+   z-index: 0;               /* sit behind all normal content */
+   pointer-events: none;     /* never intercept clicks */
+   background-image: url("/img/Wallpaper.svg?v=20251016162711");
+   background-repeat: repeat;
+   background-position: top center;
+   background-size: var(--tile) auto;
+ }
+
+/* Mobile: slightly larger tiles to reduce visual noise behind small text */
+ @media (max-width: 640px){
+   :root{
+     --header-h: var(--header-h-mobile);
+     --tile: 220px;
+   }
+ }
+
+/* Very wide screens: modestly smaller tiles so pattern doesn’t feel empty */
+ @media (min-width: 1280px){
+   :root{ --tile: 160px; }
+ }
+
+/* Content typically already stacks above, but these ensure clarity on legacy pages */
+ main, .content, .wrap, .page, footer, .hero, .container {
+   position: relative;
+   z-index: 1;
+   /* keep backgrounds as authored; do NOT force transparency globally */
+ }
+
+/* Per-page opt-out: <body class="no-wallpaper"> ... */
+ body.no-wallpaper::before{
+   display: none !important;
+ }
+
