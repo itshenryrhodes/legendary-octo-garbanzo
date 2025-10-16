@@ -1,207 +1,261 @@
-﻿@import url("/css/fonts-montserrat.css");
-.toc{border-left:4px solid #e2e8f0;padding-left:12px;margin:16px 0}
-.article{background:white;border:1px solid #e2e8f0;border-radius:16px;padding:20px}
-.article h2{margin-top:1.2em}
-.meta{color:#475569;font-size:.95rem;margin:.5rem 0 1rem}
-.badge{display:inline-block;background:#e6f2f6;border-radius:999px;padding:2px 10px;margin-right:6px}
-.kicker{color:#475569;text-transform:uppercase;letter-spacing:.04em;font-size:.85rem}
+/* =======================================================================
+   Bee Planet Connection – Site CSS
+   File: /site/css/site.css
+   Last updated: 2025-10-16
+   -----------------------------------------------------------------------
+   Notes:
+   • Default content is TRANSPARENT so the wallpaper shows through.
+   • Use .surface / .surface--soft for intentional cards/panels.
+   • Wallpaper lives under content via body::before (full-bleed below header).
+   • Header/logo/nav remain solid on white for readability.
+   ======================================================================= */
 
-/* Home logo placement */
-/* Size targets: mobile 44px, md 52px, lg 64px */
-.home-logo img {
-  height: 44px;
-  width: auto;
+/* Webfonts (Montserrat family) ------------------------------------------------*/
+@import url("/css/fonts-montserrat.css");
+
+/* ---------------------------- Brand tokens ----------------------------------*/
+:root{
+  /* Palette */
+  --honey: #FBBE32;     /* primary actions, accents */
+  --leaf:  #2e7d32;     /* brand green (links in header) */
+  --leaf-dark: #245a24;
+  --sky:   #2196F3;     /* focus rings, secondary accents */
+  --ink:   #333333;     /* primary text */
+  --ink-2: #475569;     /* secondary text */
+  --bg:    #FFFFFF;     /* solid surfaces */
+  --bg-soft:#F9F9F9;    /* soft surfaces */
+  --line:  #e2e8f0;     /* borders/dividers */
+
+  /* Layout */
+  --container: 1100px;
+  --pad: 16px;
+
+  /* Radii & shadows */
+  --r-xs: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.05);
+  --shadow-2: 0 4px 18px rgba(0,0,0,.08);
+
+  /* Wallpaper scaling & header heights */
+  --header-h: 72px;
+  --header-h-mobile: 64px;
+  --tile: 180px;        /* base honeycomb tile; tweaked by media queries */
 }
 
-@media (min-width: 640px) {
-  .home-logo img { height: 52px; }
-}
-
-@media (min-width: 1024px) {
-  .home-logo img { height: 64px; }
-}
-
-/* Optional offset variable
-:root { --home-logo-offset: 16px; }
-*/
-
-/* --- force surface render of home-logo --- */
-.home-logo img{height:80px; width:auto; max-width:40vw}
-@media (min-width: 640px){ .home-logo img{height:96px} }
-@media (min-width:1024px){ .home-logo img{height:112px} }
-/* --- end patch --- */
-
-/* --- Montserrat defaults --- */
-body{ font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight:400; }
-h1,h2,h3,h4,h5,h6{ font-weight:600; }
-.brand-green{ color:#2e7d32; } /* adjust if you switch brand tone */
-
-/* brand header/nav colours */
-:root { --brand-green: #2e7d32; --brand-green-dark: #245a24; }
-header nav a,
-header nav a:visited {
-  color: var(--brand-green);
-  text-decoration: none;
-}
-header nav a:hover {
-  color: var(--brand-green-dark);
-  text-decoration: underline;
-}
-  
-/* guard: ensure logo link never shows text nodes */
-/* --- guard: ensure the logo link never shows text nodes --- */
-/* hides any text nodes */
-.home-logo img{ font-size:initial; color:inherit; }  /* keep the image normal */
-
-/* If any legacy brand-title markup still exists anywhere, hide it */
-/* Kill any text home link next to the logo (keep only .home-logo) */
-header > a[href="/"]:not(.home-logo){
-  display: none !important;
-}
-
-/* === Header layout refresh === */
-/* Brand (logo + text) on the left */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-/* Nav to the right */
-.main-nav {
-  margin-left: auto;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-/* Small screens: shrink logo text first */
-}
-
-/* === Header layout (brand left, nav right) === */
-/* small screens */
-
-/* === Header layout ï¿½fï¿½'ï¿½??Tï¿½f?sï¿½,ï¿½ï¿½fï¿½'ï¿½,ï¿½ï¿½fï¿½Ã¢?sï¿½ï¿½.ï¿½ï¿½f?sï¿½,ï¿½ï¿½fï¿½'ï¿½,ï¿½ï¿½fï¿½Ã¢,ï¿½Å¡ï¿½,ï¿½ï¿½f?ï¿½Ã¢,ï¿½ï¿½" final (appended to win the cascade) === */
-}
-/* === end header layout === */
-
-/* === Header layout ï¿½fï¿½'ï¿½,ï¿½ï¿½fï¿½Ã¢,ï¿½Å¡ï¿½,ï¿½ï¿½fï¿½Ã¢?sï¿½ï¿½,ï¿½ brand left, nav right === */
-/* small screens */
-/* === end header layout === */
-
-/* === Header layout ï¿½fï¿½Ã¢?sï¿½Ã¢,ï¿½ï¿½ brand left, nav right (authoritative) === */
-.brand-lockup{ height:40px; width:auto; display:block; }
-.main-nav{ margin-left:auto; display:flex; gap:20px; align-items:center; }
-.main-nav a, .main-nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
-.main-nav a:hover{ text-decoration:underline; }
-/* small screens */
-@media (max-width:480px){
-  .brand-lockup{ height:34px; }
-  .main-nav{ gap:14px; }
-}
-/* === end header layout === */
-
- /* === Header layout Ã¢,ï¿½?ï¿½ brand left, nav right (authoritative) === */
-@media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
- /* === end header layout === */
-
- /* === Header layout ?" brand left, nav right (authoritative) === */
- .site-header{ background:#fff; border-bottom:1px solid #e2e8f0; position:relative; z-index:10; }
- .site-header .container{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:16px; }
- .brand{ display:inline-flex; align-items:center; text-decoration:none; }
- .brand-logo{ display:block; height:40px; width:auto; }
- .nav{ margin-left:auto; display:flex; align-items:center; gap:20px; }
- .nav a, .nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
- .nav a:hover{ text-decoration:underline; }
- @media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
- /* === end header layout === */
- /* === Header (glyph-only) === */
- .site-header{ background:#fff; border-bottom:1px solid #e2e8f0; position:relative; z-index:10; }
- .site-header .container{ max-width:1100px; margin:0 auto; padding:12px 16px; display:flex; align-items:center; gap:16px; }
- .brand{ display:inline-flex; align-items:center; text-decoration:none; }
- .brand-logo{ display:block; height:40px; width:auto; }
- .nav{ margin-left:auto; display:flex; align-items:center; gap:20px; }
- .nav a, .nav a:visited{ color:var(--brand-green,#2e7d32); text-decoration:none; font-weight:500; }
- .nav a:hover{ text-decoration:underline; }
- @media (max-width:480px){ .brand-logo{ height:34px; } .nav{ gap:14px; } }
-
- /* Hide hero emblem duplicates (keep header logo visible) */
- .home-hero img[src*="/img/logo"], .hero img[src*="/img/logo"] { display:none; }
- header .brand-logo { display:block; } /* explicit: header logo stays */
- /* === end header === */
-/* --- punctuation & emoji safety stack --- */
-body {
-  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+/* ---------------------------- Base typography --------------------------------*/
+html { -webkit-text-size-adjust: 100%; }
+body{
+  font-family: "Montserrat", -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
                "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-weight: 400;
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
+  color: var(--ink);
+  line-height: 1.6;
+  background: #fff; /* header sits on white; page content becomes transparent via surfaces */
+}
+h1,h2,h3,h4,h5,h6{ font-weight: 600; line-height: 1.25; margin: 1.25rem 0 .5rem; }
+p{ margin: .75rem 0; }
+.meta{ color: var(--ink-2); font-size: .95rem; margin: .5rem 0 1rem; }
+
+/* Links */
+a{ color: var(--sky); text-decoration: underline; text-underline-offset: 2px; }
+a:hover{ text-decoration-thickness: 2px; }
+
+/* Focus (WCAG-friendly) */
+:where(a,button,input,select,textarea,[tabindex]):focus{
+  outline: 3px solid var(--sky);
+  outline-offset: 2px;
 }
 
-/* if you use a custom webfont on body, keep it but add fallbacks, or restrict it:
-   body { font-family: YourCustomFont, -apple-system, "Segoe UI", ... } */
-/* or, if YourCustomFont is the problem, confine it to headings:
-   h1,h2,h3,.brand { font-family: YourCustomFont, inherit; } */
+/* Skip link (add <a class="skip-link" href="#main">Skip to content</a> as first element in <body>) */
+.skip-link{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  position: fixed; left: 16px; top: 12px; width: auto; height: auto;
+  background: #fff; color: #000; padding: .5rem .75rem; border-radius: var(--r-xs);
+  box-shadow: var(--shadow-1);
+  z-index: 1000;
+}
 
- /* === Bee Planet: Site-wide wallpaper underlay ==========================
-    Rules:
-      1) Full-bleed honeycomb wallpaper below header/logo on every page.
-      2) Always stays behind content; heroes & images automatically sit above.
-      3) Mobile-friendly scale; subtle lines; no horizontal scrollbars.
-      4) Cache-busted SVG so updates appear immediately.
-      5) Opt-out: add 
-o-wallpaper on <body> to disable per page.
-  ======================================================================= */
+/* Containers */
+.container, .wrap{ max-width: var(--container); margin: 0 auto; padding: 0 var(--pad); }
 
- :root{
-   /* Header heights (adjust if your header size differs) */
-   --header-h: 72px;
-   --header-h-mobile: 64px;
+/* ====================== Site-wide wallpaper underlay =========================
+   Rules:
+     1) Full-bleed honeycomb wallpaper below header/logo on every page.
+     2) Always behind content; heroes & images naturally sit above it.
+     3) Mobile-friendly scale; no horizontal scrollbars.
+     4) Cache-busted SVG so updates appear immediately.
+     5) Per-page opt-out: <body class="no-wallpaper">...
+   ============================================================================*/
+html, body { overflow-x: clip; } /* avoid sideways scroll from sub-pixel rounding */
+body{ position: relative; }
 
-   /* Base tile size; tweaked by media queries for legibility */
-   --tile: 180px;
- }
+body::before{
+  content: "";
+  position: fixed;
+  top: var(--header-h);
+  left: 0; right: 0; bottom: 0;
+  z-index: 0;                 /* always underneath */
+  pointer-events: none;       /* never intercept clicks */
+  background-image: url("/img/Wallpaper.svg?v=20251016");
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: var(--tile) auto;
+}
 
-/* Avoid horizontal scrollbars from sub-pixel rounding */
- html, body { overflow-x: clip; }
+/* Mobile: slightly larger tiles for legibility behind small text */
+@media (max-width: 640px){
+  :root{ --header-h: var(--header-h-mobile); --tile: 220px; }
+}
+/* Very wide: modestly smaller tiles so the pattern doesn’t feel empty */
+@media (min-width: 1280px){
+  :root{ --tile: 160px; }
+}
 
-/* Ensure stacking order is predictable */
- body { position: relative; }
+/* Make sure normal page regions sit above the underlay (transparent by default) */
+main, .content, .wrap, .page, footer, .hero, .container { position: relative; z-index: 1; background: transparent; }
 
-/* The wallpaper lives behind everything as a fixed underlay */
- body::before{
-   content: "";
-   position: fixed;
-   top: var(--header-h);
-   left: 0; right: 0; bottom: 0;
-   z-index: 0;               /* sit behind all normal content */
-   pointer-events: none;     /* never intercept clicks */
-   background-image: url("/img/Wallpaper.svg?v=20251016162711");
-   background-repeat: repeat;
-   background-position: top center;
-   background-size: var(--tile) auto;
- }
+/* Opt-out wallpaper */
+body.no-wallpaper::before{ display: none !important; }
 
-/* Mobile: slightly larger tiles to reduce visual noise behind small text */
- @media (max-width: 640px){
-   :root{
-     --header-h: var(--header-h-mobile);
-     --tile: 220px;
-   }
- }
+/* ======================= Header / Brand / Navigation =========================*/
+.site-header{
+  background:#fff; border-bottom:1px solid var(--line);
+  position:relative; z-index:10;
+}
+.site-header .container{
+  max-width: var(--container);
+  margin:0 auto;
+  padding:12px 16px;
+  display:flex; align-items:center; gap:16px;
+}
+.brand{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; }
+.brand-logo{ display:block; height:40px; width:auto; }
 
-/* Very wide screens: modestly smaller tiles so pattern doesn’t feel empty */
- @media (min-width: 1280px){
-   :root{ --tile: 160px; }
- }
+/* Primary navigation */
+.nav{ margin-left:auto; display:flex; align-items:center; gap:20px; }
+.nav a, .nav a:visited{ color: var(--leaf); text-decoration:none; font-weight:500; }
+.nav a:hover{ color: var(--leaf-dark); text-decoration: underline; }
 
-/* Content typically already stacks above, but these ensure clarity on legacy pages */
- main, .content, .wrap, .page, footer, .hero, .container {
-   position: relative;
-   z-index: 1;
-   /* keep backgrounds as authored; do NOT force transparency globally */
- }
+/* Mobile header tweaks */
+@media (max-width:480px){
+  .brand-logo{ height:34px; }
+  .nav{ gap:14px; }
+}
 
-/* Per-page opt-out: <body class="no-wallpaper"> ... */
- body.no-wallpaper::before{
-   display: none !important;
- }
+/* Home logo placement (kept for existing markup that uses .home-logo) */
+.home-logo img{ height:44px; width:auto; max-width:40vw; }
+@media (min-width: 640px){ .home-logo img{ height:52px; } }
+@media (min-width:1024px){ .home-logo img{ height:64px; } }
 
+/* Hide hero emblem duplicates (keep header logo visible) */
+.home-hero img[src*="/img/logo"], .hero img[src*="/img/logo"]{ display:none; }
+header .brand-logo{ display:block; }
+
+/* ============================ Surfaces & Cards ===============================*/
+/* Legacy ".article" boxes created unexpected white backgrounds; neutralize. */
+.article{
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Intentional surfaces (opt-in) */
+.surface{
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-1);
+}
+.surface--soft{
+  background: var(--bg-soft);
+  border: 1px solid #eee;
+  border-radius: var(--r-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-1);
+}
+/* Force transparency on any legacy block */
+.no-surface{ background: transparent !important; box-shadow: none !important; border: 0 !important; }
+
+/* Cards */
+.card{
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+}
+.card h3{ margin-top: .25rem; }
+
+/* Prose rhythm helpers */
+.prose > :where(p,ul,ol,blockquote,pre){ margin-bottom: .9rem; }
+.prose ul{ padding-left: 1.2rem; }
+.prose li{ margin: .25rem 0; }
+
+/* ============================ Buttons & Badges ===============================*/
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.5rem;
+  font-weight:700; line-height:1.2;
+  border-radius: var(--r-md);
+  padding:.6rem .95rem;
+  border:1px solid transparent;
+  text-decoration:none;
+  cursor:pointer;
+}
+.btn:focus{ outline:3px solid var(--sky); outline-offset:2px; }
+
+/* Primary (Honey) */
+.btn--gold{ background: var(--honey); color:#000; }
+
+/* Ghost / neutral */
+.btn--ghost{ background:#fff; color:#000; border-color: var(--line); }
+
+/* Link-look */
+.btn--link{ background: transparent; color: var(--sky); padding: 0; border: 0; }
+
+/* Badges */
+.badge{
+  display:inline-block;
+  background:#e6f2f6;
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-right: 6px;
+  font-size: .9rem;
+}
+
+/* ================================ Media =====================================*/
+img,svg,video{ max-width:100%; height:auto; }
+
+/* Optional translucent “paper” for heroes you want to sit above wallpaper */
+.hero-paper{
+  background: rgba(255,255,255,.92);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+}
+
+/* =============================== Utilities ==================================*/
+.toc{ border-left:4px solid var(--line); padding-left:12px; margin:16px 0; }
+.kicker{ color:var(--ink-2); text-transform:uppercase; letter-spacing:.04em; font-size:.85rem; }
+
+/* ================================ Dark Mode =================================*/
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#e8e8e8; --ink-2:#cbd5e1;
+    --bg:#121212; --bg-soft:#1a1a1a;
+    --line:#2a2f35;
+    --shadow-1: 0 1px 2px rgba(0,0,0,.6);
+    --shadow-2: 0 6px 24px rgba(0,0,0,.6);
+  }
+  body{ background:#0e0e0e; }
+  .surface{ background:#161616; }
+  .surface--soft{ background:#141414; }
+  .card{ background:#161616; }
+  .nav a, .nav a:visited{ color:#8dd48f; } /* dark legible green */
+}
