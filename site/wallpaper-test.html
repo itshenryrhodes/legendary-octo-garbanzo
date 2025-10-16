@@ -27,9 +27,10 @@
       left: 0; right: 0; bottom: 0;
       z-index: 0;                 /* always behind page content */
       pointer-events: none;       /* never intercept clicks */
-      background-image: url("/img/Wallpaper.svg");
+      background-image: url("/img/Wallpaper.svg?v=20251016153958");
       background-repeat: repeat;
       background-position: top center;
+      background-size: calc(var(--tile) * 2) auto !important; /* test-page 2× */
       background-size: calc(var(--tile) * 2) auto; /* 2x scale for test */
       background-size: calc(var(--tile) * 3) auto; /* 3x scale for test */ /* hex pattern scale */
       /* The SVG already uses subtle strokes; don't add opacity/filter here.
@@ -89,7 +90,7 @@
 </header>
 
 <!-- The full-bleed, fixed wallpaper lives under everything else -->
-<div class="wallpaper-underlay" aria-hidden="true"></div>
+<div class="wallpaper-underlay" aria-hidden="true" style="background-size: calc(var(--tile) * 2) auto !important" aria-hidden="true"></div>
 
 <main class="content wrap">
   <!-- Demo hero shows that foreground content always takes precedence -->
@@ -110,5 +111,6 @@
 </footer>
 </body>
 </html>
+
 
 
