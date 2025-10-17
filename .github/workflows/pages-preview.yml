@@ -1,0 +1,43 @@
+name: Deploy preview to GitHub Pages
+
+on:
+  # Change "working" to the actual name of your working branch (e.g. "dev" or "staging").
+  push:
+    branches: [ "working" ]
+  # Build preview on PRs into main as well.
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Keep preview runs from stepping on each other
+concurrency:
+  group: "pages-preview"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          # Your built/static site lives here
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    # Previews are automatically created for non-default branches and PRs.
+    # They will NOT use your custom domain.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
