@@ -293,3 +293,22 @@ body.blog-landing .panel .header { background: transparent !important; }
 body.blog-landing .surface-none,
 body.wiki-landing .surface-none { background: transparent !important; border: 0 !important; box-shadow: none !important; }
 
+ /* === Bee Planet: Site-wide wallpaper underlay ==========================
+    Full-bleed honeycomb wallpaper under the header on every page.
+    Sits behind content (z-index:0), mobile-friendly, cache-busted SVG.
+ ======================================================================= */
+ :root{ --header-h:72px; --header-h-mobile:64px; --tile:180px; }
+ html,body{ overflow-x:clip; }
+ body{ position:relative; }
+ body::before{
+   content:"";
+   position:fixed; top:var(--header-h); left:0; right:0; bottom:0;
+   z-index:0; pointer-events:none;
+   background-image:url("/img/Wallpaper.svg?v=20251017113459");
+   background-repeat:repeat; background-position:top center;
+   background-size:var(--tile) auto;
+ }
+ @media (max-width:640px){ :root{ --header-h:var(--header-h-mobile); --tile:220px; } }
+ @media (min-width:1280px){ :root{ --tile:160px; } }
+ main,.content,.wrap,.page,footer,.hero,.container{ position:relative; z-index:1; }
+ body.no-wallpaper::before{ display:none !important; }
