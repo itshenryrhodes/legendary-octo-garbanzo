@@ -6,6 +6,9 @@ on:
       - main
       - preview-*
       - content-refresh-*
+  pull_request:
+    branches:
+      - '**'          # build previews for PRs from any branch
   workflow_dispatch:
 
 permissions:
@@ -68,15 +71,26 @@ jobs:
           if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
           Copy-Item $src $dst -Recurse -Force
 
+          # Prefix root-absolute URLs (/, "/, '/) with the repository name.
+          # Use negative lookahead to avoid double-rewriting files that were already processed.
           $slug = "${{ github.event.repository.name }}"
           Get-ChildItem $dst -Recurse -Include *.html,*.htm,*.css,*.js | ForEach-Object {
             $p = $_.FullName
             $t = Get-Content -Raw -LiteralPath $p
-            $t = $t -replace 'href="/',  ('href="/'  + $slug + '/')
-            $t = $t -replace 'src="/',   ('src="/'   + $slug + '/')
-            $t = $t -replace 'url\("/',  ('url("/'   + $slug + '/')
-            $t = $t -replace "url\('/",  ("url(''/"  + $slug + '/')
-            $t = $t -replace 'url\(/',   ('url(/'    + $slug + '/')
+
+            # href/src (double-quoted)
+            $t = $t -replace "href=\"/(?!$slug/)",    "href=\"/$slug/"
+            $t = $t -replace "src=\"/(?!$slug/)",     "src=\"/$slug/"
+
+            # href/src (single-quoted)
+            $t = $t -replace "href='/(?!$slug/)",     "href='/$slug/"
+            $t = $t -replace "src='/(?!$slug/)",      "src='/$slug/"
+
+            # CSS url(...) variants
+            $t = $t -replace "url\(\"/(?!$slug/)",    "url(\"/$slug/"
+            $t = $t -replace "url\('/(?!$slug/)",     "url('/$slug/"
+            $t = $t -replace "url\(/(?!$slug/)",      "url(/$slug/"
+
             Set-Content -LiteralPath $p -Value $t -Encoding utf8
           }
 
