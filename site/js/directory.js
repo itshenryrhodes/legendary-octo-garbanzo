@@ -1,4 +1,4 @@
-(async function () {
+async function () {
   const q = document.getElementById("q");
   const list = document.getElementById("d");
   const selType = document.getElementById("f-type");
