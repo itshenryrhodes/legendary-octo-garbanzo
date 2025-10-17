@@ -1,13 +1,13 @@
-/* =======================================================================
-   Bee Planet Connection – Site CSS
+﻿/* =======================================================================
+   Bee Planet Connection â€“ Site CSS
    File: /site/css/site.css
    Last updated: 2025-10-16
    -----------------------------------------------------------------------
    Notes:
-   • Default content is TRANSPARENT so the wallpaper shows through.
-   • Use .surface / .surface--soft for intentional cards/panels.
-   • Wallpaper lives under content via body::before (full-bleed below header).
-   • Header/logo/nav remain solid on white for readability.
+   â€¢ Default content is TRANSPARENT so the wallpaper shows through.
+   â€¢ Use .surface / .surface--soft for intentional cards/panels.
+   â€¢ Wallpaper lives under content via body::before (full-bleed below header).
+   â€¢ Header/logo/nav remain solid on white for readability.
    ======================================================================= */
 
 /* Webfonts (Montserrat family) ------------------------------------------------*/
@@ -111,7 +111,7 @@ body::before{
 @media (max-width: 640px){
   :root{ --header-h: var(--header-h-mobile); --tile: 220px; }
 }
-/* Very wide: modestly smaller tiles so the pattern doesn’t feel empty */
+/* Very wide: modestly smaller tiles so the pattern doesnâ€™t feel empty */
 @media (min-width: 1280px){
   :root{ --tile: 160px; }
 }
@@ -233,7 +233,7 @@ header .brand-logo{ display:block; }
 /* ================================ Media =====================================*/
 img,svg,video{ max-width:100%; height:auto; }
 
-/* Optional translucent “paper” for heroes you want to sit above wallpaper */
+/* Optional translucent â€œpaperâ€ for heroes you want to sit above wallpaper */
 .hero-paper{
   background: rgba(255,255,255,.92);
   border-radius: var(--r-lg);
@@ -259,3 +259,37 @@ img,svg,video{ max-width:100%; height:auto; }
   .card{ background:#161616; }
   .nav a, .nav a:visited{ color:#8dd48f; } /* dark legible green */
 }
+
+/* === Wiki/Blog landing: transparent surfaces over wallpaper ===
+   Shows wallpaper behind landing cards/lists on wiki + blog.
+   Scoped via body.wiki-landing and body.blog-landing so other pages
+   can keep white surfaces when needed.
+*/
+body.wiki-landing .card,
+body.wiki-landing .article,
+body.wiki-landing .panel,
+body.blog-landing .card,
+body.blog-landing .article,
+body.blog-landing .panel,
+body.blog-landing .post-card,
+body.blog-landing .post,
+body.blog-landing .teaser,
+body.blog-landing .summary {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid var(--surface-stroke-1, #E6DFC4);
+}
+
+/* Headers/inner bands stay transparent too */
+body.wiki-landing .card .header,
+body.wiki-landing .article .header,
+body.wiki-landing .panel .header,
+body.blog-landing .card .header,
+body.blog-landing .article .header,
+body.blog-landing .panel .header { background: transparent !important; }
+
+/* Optional helper: remove borders entirely where desired */
+.surface-none,
+body.blog-landing .surface-none,
+body.wiki-landing .surface-none { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+
