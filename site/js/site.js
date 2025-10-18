@@ -1,4 +1,4 @@
-function(){
+(function(){
   try{
     var here = location.pathname.toLowerCase();
     var links = document.querySelectorAll('nav.nav a');

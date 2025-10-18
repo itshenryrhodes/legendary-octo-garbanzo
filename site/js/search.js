@@ -1,4 +1,4 @@
-function(){
+(function(){
   const input = document.getElementById("wiki-search");
   const list  = document.getElementById("wiki-results");
   if(!input || !list) return;
