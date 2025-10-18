@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,81 +12,32 @@
       --honey:#FBBE32;
       --sky:#2196F3;
       --bg-soft:#F9F9F9;
-      --max:720px;     /* search/input column max width */
-      --maxMain:1100px;/* main content max width */
+      --max:720px;
+      --maxMain:1100px;
     }
 
-    /* Full-bleed hero wallpaper with left-aligned inner column */
-    /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
+    html,body{ overflow-x: clip; }
 
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-@media (min-width: 1200px){
-  /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
+    .wiki-hero{
+      position: relative;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
+      background-size: cover;
+      padding: 2rem 0 3rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    @supports (width: 100dvw) {
+      .wiki-hero{
+        width: 100dvw;
+        margin-left: calc(50% - 50dvw);
+        margin-right: calc(50% - 50dvw);
+      }
+    }
+    @media (min-width: 900px){ .wiki-hero{ min-height: 360px; } }
+    @media (min-width: 1200px){ .wiki-hero{ background-position: center right 4%; } }
 
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-    /* subtle shadow at bottom to help contrast on light SVGs */
     .wiki-hero::after{
       content:"";
       position:absolute; left:0; right:0; bottom:0; height:18px;
@@ -94,210 +45,38 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
       pointer-events:none;
     }
     .wiki-hero .inner{
-  max-width: var(--max, 720px);
-  margin-left: clamp(16px, 4vw, 48px);
-  margin-right: 16px;
-  position: relative;
-  z-index: 1;
-}
-    /* Keep artwork away from text on very wide displays */
-    @media (min-width: 1200px){
-      /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
-
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-@media (min-width: 1200px){
-  /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
-
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-    }
-    /* Give the hero a sensible minimum height so overlay CTA has room */
-    @media (min-width: 900px){
-      /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
-
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-@media (min-width: 1200px){
-  /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
-
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-    }
-
-    /* Search area */
-    .wiki-search{
-      width: 100%;
+      max-width: var(--max, 720px);
+      margin-left: clamp(16px, 4vw, 48px);
+      margin-right: 16px;
       position: relative;
+      z-index: 1;
     }
+
+    .sr-only{
+      position: absolute !important;
+      width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+
+    .wiki-search{ width:100%; position:relative; }
     .wiki-search input[type="search"]{
-      width: 100%;
-      font: inherit;
-      padding: .9rem 1rem;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      color: var(--charcoal);
-      box-shadow: 0 1px 0 rgba(0,0,0,.04) inset;
+      width:100%; font:inherit; padding:.9rem 1rem;
+      border:1px solid #ddd; border-radius:10px; color:var(--charcoal);
+      box-shadow:0 1px 0 rgba(0,0,0,.04) inset;
     }
 
-    /* Actions row directly under the search input */
-    .wiki-actions{
-      margin-top: .75rem;
-      display: flex;
-      gap: .75rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .btn{
-      display:inline-block;
-      border: 1px solid transparent;
-      border-radius: 10px;
-      padding: .6rem .9rem;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      line-height: 1.2;
-    }
+    .wiki-actions{ margin-top:.75rem; display:flex; gap:.75rem; flex-wrap:wrap; align-items:center; }
+    .btn{ display:inline-block; border:1px solid transparent; border-radius:10px; padding:.6rem .9rem; font-weight:700; cursor:pointer; text-decoration:none; line-height:1.2; }
     .btn-gold{ background: var(--honey); color:#000; }
-    .btn-hollow{
-      border-color: #ddd; background: #fff; color:#000;
-    }
-    .btn:focus{ outline: 3px solid var(--sky); outline-offset: 2px; }
+    .btn-hollow{ border-color:#ddd; background:#fff; color:#000; }
+    .btn:focus{ outline:3px solid var(--sky); outline-offset:2px; }
 
-    /* Featured CTA overlay on the hero */
-    .hero-cta{
-      position: absolute;
-      left: clamp(16px, 4vw, 48px);
-      bottom: 1.25rem;
-      z-index: 2;
-    }
-    .hero-cta .btn{ box-shadow: 0 2px 0 rgba(0,0,0,.08); }
+    .hero-cta{ position:absolute; left:clamp(16px,4vw,48px); bottom:1.25rem; z-index:2; }
+    .hero-cta .btn{ box-shadow:0 2px 0 rgba(0,0,0,.08); }
 
-    /* Main column below hero (pillars and featured card) */
-    .content.wrap{ max-width: 1200px; }
+    .content.wrap{ max-width:1200px; }
     .wiki-main-col{ max-width: var(--maxMain); margin: 1.25rem auto 0 auto; padding: 0 16px; }
 
-    /* Featured article card (below). Its button has moved to the hero overlay */
     .featured{
       background: var(--bg-soft);
       border-radius: 14px;
@@ -306,138 +85,30 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
     }
     .featured h2{ margin: 0 0 .35rem 0; }
     .featured ul{ margin:.5rem 0 0 1rem; }
-    .featured .btn{ display:none; } /* keep structure, hide duplicate CTA */
+    .featured .btn{ display:none; }
 
-    /* Pillar grid */
-    .pillars{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin: 1rem 0 3rem 0;
-    }
-    @media (min-width: 720px){
-      .pillars{ grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1100px){
-      .pillars{ grid-template-columns: repeat(3, 1fr); }
-    }
+    .pillars{ display:grid; grid-template-columns:1fr; gap:1rem; margin:1rem 0 3rem 0; }
+    @media (min-width: 720px){ .pillars{ grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 1100px){ .pillars{ grid-template-columns: repeat(3,1fr); } }
+
     .pillar{
       border: 1px solid #eee;
       border-radius: 14px;
       padding: 1rem;
       background: #fff;
-      display:flex;
-      flex-direction: column;
-      gap:.5rem;
-      min-height: 170px;
+      display:flex; flex-direction:column; gap:.5rem; min-height:170px;
     }
-    .pillar h3{
-      margin:0;
-      font-size: 1.1rem;
-      line-height: 1.3;
-    }
-    .pillar p{ margin: 0; color: var(--charcoal); }
-    .pill-cta{
-      margin-top: auto;
-      display: inline-block;
-      font-weight: 700;
-      color: #000;
-      background: var(--honey);
-      border-radius: 10px;
-      padding: .45rem .7rem;
-      text-decoration: none;
-    }
-    .pill-note{
-      font-size: .92rem;
-      color:#555;
-      margin: .25rem 0 0 0;
-    }
-  .sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-/* === Full-bleed hero helpers (injected) === */
-body{ overflow-x:hidden; } /* prevent 1-2px horizontal scrollbars on Windows */
-.content.wrap{ overflow:visible; } /* don't clip children that escape container */
+    .pillar h3{ margin:0; font-size:1.1rem; line-height:1.3; }
+    .pillar p{ margin:0; color:var(--charcoal); }
+    .pill-cta{ margin-top:auto; display:inline-block; font-weight:700; color:#000; background:var(--honey); border-radius:10px; padding:.45rem .7rem; text-decoration:none; }
 
-/* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
+    .pill-note{ font-size:.92rem; color:#555; margin:.25rem 0 0 0; }
 
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-@media (min-width: 1200px){
-  /* === Full-bleed hero (dvw/vw) === */
-html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
-.wiki-hero{
-  position: relative;
-  /* Fallback for browsers without dvw */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background: #fff url("/img/Winnie_Wiki_Hero.svg") no-repeat center right;
-  background-size: cover; /* change to 'contain' if you prefer no cropping */
-  padding: 2rem 0 3rem 0;
-  border-bottom: 1px solid #eee;
-}
-@supports (width: 100dvw) {
-  .wiki-hero{
-    width: 100dvw;
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50dvw);
-  }
-}
-@media (min-width: 900px){
-  .wiki-hero{ min-height: 360px; }
-}
-@media (min-width: 1200px){
-  .wiki-hero{ background-position: center right 4%; }
-}
-
-/* keep the visually-hidden label available to screen readers */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-}
-
-/* keep the label accessible, not visible */
-.sr-only{
-  position: absolute !important;
-  width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-}
-</style>
+    /* === Page-local transparency override (wallpaper visible) === */
+    .content.wrap,
+    .featured,
+    .pillar { background: transparent !important; }
+  </style>
 </head>
 <body class="wiki-landing">
 <header class="site-header" role="banner">
@@ -460,7 +131,6 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
 </header>
 
 <main class="content wrap">
-  <!-- Full-width wallpaper hero with left-aligned search and actions -->
   <section class="wiki-hero">
     <div class="inner">
       <form class="wiki-search" role="search" action="/wiki/" method="get">
@@ -473,14 +143,12 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
       </form>
     </div>
 
-    <!-- Featured article CTA overlay on the hero -->
     <div class="hero-cta">
       <a class="btn btn-gold" href="/wiki/colony-health/cornerstone.html">Featured: Varroa guide</a>
     </div>
   </section>
 
   <section class="wiki-main-col">
-    <!-- Featured article content (kept below; CTA hidden to avoid duplicate) -->
     <article class="featured" aria-labelledby="feat-title">
       <h2 id="feat-title">Featured article: Varroa mite management</h2>
       <p>A step-by-step, season-by-season guide to monitoring and managing Varroa with integrated methods.</p>
@@ -492,7 +160,6 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
       <p><a class="btn btn-gold" href="/wiki/colony-health/cornerstone.html">Read the guide</a></p>
     </article>
 
-    <!-- Browse by pillar -->
     <h2>Browse by pillar</h2>
     <div class="pillars">
       <div class="pillar">
@@ -538,11 +205,9 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
 
 <footer class="site-footer wrap">
   <p>© 2025 Bee Planet Connection - For bees, for people, for planet.</p>
-  <!-- wiki landing: full-bleed hero, search+surprise actions, featured CTA overlay -->
 </footer>
 
 <script>
-  // Simple client-side random article picker
   (function(){
     var links = [
       "/wiki/colony-health/cornerstone.html",
@@ -564,9 +229,3 @@ html,body{ overflow-x: clip; } /* avoid scroll from sub-pixel rounding */
 </script>
 </body>
 </html>
-
-
-
-
-
-
