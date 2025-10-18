@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,7 +6,6 @@
   <title>Contact — Bee Planet Connection</title>
   <link rel="stylesheet" href="/css/site.css?v=20251017115242">
   <style>
-    /* Scoped to this page only */
     .contact-hero { display:grid; grid-template-columns: 1fr; gap:2rem; align-items:start; }
     @media (min-width: 900px) { .contact-hero { grid-template-columns: 1fr 1fr; } }
     .contact-card { background:#F9F9F9; padding:1.5rem; border-radius:12px; }
@@ -14,18 +13,18 @@
     .contact-form label{ display:block; font-weight:600; margin:.75rem 0 .25rem; }
     .contact-form input[type="text"],
     .contact-form input[type="email"],
-    .contact-form textarea{
-      width:100%; padding:.75rem; border:1px solid #ddd; border-radius:8px; font:inherit;
-    }
+    .contact-form textarea{ width:100%; padding:.75rem; border:1px solid #ddd; border-radius:8px; font:inherit; }
     .contact-actions { margin-top:1rem; display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; }
-    .btn-primary{
-      background:#FBBE32; color:#000; border:none; padding:.75rem 1rem; border-radius:10px; cursor:pointer; font-weight:700;
-    }
+    .btn-primary{ background:#FBBE32; color:#000; border:none; padding:.75rem 1rem; border-radius:10px; cursor:pointer; font-weight:700; }
     .btn-primary:focus{ outline:3px solid #2196F3; outline-offset:2px; }
     .email-inline a{ color:#2196F3; text-decoration:underline; }
     .hero-figure{ text-align:right; }
     .hero-figure img{ max-width:100%; height:auto; }
     .lede { color:#333; }
+
+    /* Page-local transparency override so wallpaper shows through */
+    .content.wrap,
+    .contact-card { background: transparent !important; }
   </style>
 </head>
 <body>
@@ -50,7 +49,6 @@
 
 <main class="content wrap">
   <section class="contact-hero">
-    <!-- LEFT: intro + form -->
     <div>
       <div class="contact-card">
         <h1>Contact Bee Planet Connection</h1>
@@ -71,7 +69,6 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
-        <!-- Optional Formspree helpers -->
         <input type="hidden" name="_subject" value="New contact via beeplanetconnection.org">
         <input type="hidden" name="_captcha" value="false">
 
@@ -82,7 +79,6 @@
       </form>
     </div>
 
-    <!-- RIGHT: hero image -->
     <figure class="hero-figure" aria-hidden="true">
       <img src="/img/Winnie_Hero.svg" alt="Illustration of beekeeper and hive">
     </figure>
@@ -91,9 +87,6 @@
 
 <footer class="site-footer wrap">
   <p>© 2025 Bee Planet Connection - For bees, for people, for planet.</p>
-  <!-- deployed contact page -->
 </footer>
 </body>
 </html>
-
-
