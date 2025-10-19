@@ -1,17 +1,154 @@
-<div class="card">
-  <h3>Newcomer path</h3>
-  <p>Begin with bee castes and lifecycle, parts of a hive, and what healthy brood looks like. Then read a short glossary.</p>
-  <ul class="list-slim" id="newcomer-list"></ul>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foundations — Bee Planet Connection</title>
 
-<div class="card">
-  <h3>Intermediate path</h3>
-  <p>Deepen with communication, nutrition, genetics, and reading frames. Add context from natural history.</p>
-  <ul class="list-slim" id="intermediate-list"></ul>
-</div>
+  <meta name="description" content="Start here: bee castes & lifecycle, parts of a hive, healthy brood, and more—organised by newcomer, intermediate, and advanced paths." />
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/wiki.css" />
+  <script src="/js/ga.js"></script>
+  <style>
+    /* Light safety styling in case CSS fails to load on first publish */
+    .wrap { max-width: 960px; margin: 0 auto; padding: 1rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
+    .card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem; background: #fff; }
+    .list-slim { list-style: none; padding-left: 0; margin: .5rem 0 0; }
+    .list-slim li { margin: .35rem 0; }
+    .muted { color: #666; font-size: .9rem; }
+  </style>
+</head>
+<body class="wallpaper wiki">
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="/"><img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" /><span class="brand-text">Bee Planet Connection</span></a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/wiki/">Wiki</a>
+        <a href="/tools/">Tools</a>
+        <a href="/directory/">Directory</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/forum/">Forum</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="card">
-  <h3>Advanced path</h3>
-  <p>Explore physiology, sensory systems, evolutionary trade-offs, and the scientific underpinnings of colony dynamics.</p>
-  <ul class="list-slim" id="advanced-list"></ul>
-</div>
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a> › Foundations
+    </nav>
+
+    <h1>Foundations</h1>
+    <p class="lede">Start with the essentials, then deepen your understanding.</p>
+
+    <div class="grid" style="margin-top: 1rem;">
+      <div class="card">
+        <h3>Newcomer path</h3>
+        <p>Begin with bee castes and lifecycle, parts of a hive, and what healthy brood looks like. Then read a short glossary.</p>
+        <ul class="list-slim" id="newcomer-list" aria-live="polite"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Intermediate path</h3>
+        <p>Deepen with communication, nutrition, genetics, and reading frames. Add context from natural history.</p>
+        <ul class="list-slim" id="intermediate-list" aria-live="polite"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Advanced path</h3>
+        <p>Explore physiology, sensory systems, evolutionary trade-offs, and the scientific underpinnings of colony dynamics.</p>
+        <ul class="list-slim" id="advanced-list" aria-live="polite"></ul>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:1rem">Lists are built from <code>/wiki/_meta/taxonomy-full.json</code>.</p>
+  </main>
+
+  <script>
+    (function () {
+      const LEVEL_MAP = {
+        newcomer: document.getElementById('newcomer-list'),
+        intermediate: document.getElementById('intermediate-list'),
+        advanced: document.getElementById('advanced-list')
+      };
+
+      // Defensive: clear lists with a tiny placeholder while we fetch
+      Object.values(LEVEL_MAP).forEach(ul => ul.innerHTML = '<li class="muted">Loading…</li>');
+
+      // Fetch taxonomy (absolute path so it works from any subdirectory)
+      fetch('/wiki/_meta/taxonomy-full.json', { cache: 'no-store' })
+        .then(r => {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(json => {
+          // Normalize to array
+          const items = Array.isArray(json) ? json : [json];
+
+          // Filter to the Foundations pillar only
+          const foundations = items.filter(x => (x.pillar || '').toLowerCase() === 'foundations');
+
+          // Group by level we know about
+          const buckets = { newcomer: [], intermediate: [], advanced: [] };
+          for (const it of foundations) {
+            const level = (it.level || '').toLowerCase();
+            if (buckets[level]) buckets[level].push(it);
+          }
+
+          // Helper to make a safe URL for the article
+          const linkFor = (slug) => {
+            // If slug already ends with .html, keep it; otherwise treat as a folder page
+            if (typeof slug !== 'string' || !slug.length) return '#';
+            return `/wiki/foundations/${slug}`;
+          };
+
+          // Render each list. Keep the taxonomy order (we already inserted our canonical entry first).
+          for (const level of Object.keys(buckets)) {
+            const ul = LEVEL_MAP[level];
+            const list = buckets[level];
+
+            if (!ul) continue;
+            ul.innerHTML = ''; // clear "Loading…"
+
+            if (!list.length) {
+              ul.innerHTML = '<li class="muted">Nothing here yet.</li>';
+              continue;
+            }
+
+            // De-duplicate by (slug) to be safe
+            const seen = new Set();
+            for (const it of list) {
+              if (!it.slug || seen.has(it.slug)) continue;
+              seen.add(it.slug);
+
+              const li = document.createElement('li');
+              const a = document.createElement('a');
+              a.href = linkFor(it.slug);
+              a.textContent = it.title || it.slug.replace(/[-_]/g, ' ');
+              a.rel = 'bookmark';
+
+              li.appendChild(a);
+
+              if (it.summary) {
+                const span = document.createElement('span');
+                span.className = 'muted';
+                span.textContent = ' — ' + it.summary;
+                li.appendChild(span);
+              }
+
+              ul.appendChild(li);
+            }
+          }
+        })
+        .catch(err => {
+          console.error('Foundations listing failed:', err);
+          Object.values(LEVEL_MAP).forEach(ul => ul.innerHTML =
+            '<li class="muted">Could not load the Foundations list. Try a hard refresh.</li>');
+        });
+    })();
+  </script>
+</body>
+</html>
