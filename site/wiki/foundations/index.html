@@ -2,30 +2,32 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Foundations — Bee Planet Connection</title>
   <meta name="description" content="Start here: the core principles of bees, biology, and beekeeping. Clear intros, structured learning paths, and links to every Foundations topic." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- IMPORTANT: homepage styles FIRST (for header/logo/nav), then wiki utilities (for wallpaper, cards, etc.) -->
-  <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/css/wiki.css" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Wiki", "item": "https://www.beeplanetconnection.org/wiki/" },
-      { "@type": "ListItem", "position": 2, "name": "Foundations", "item": "https://www.beeplanetconnection.org/wiki/foundations/" }
-    ]
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Wiki",
+      "item": "https://www.beeplanetconnection.org/wiki/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Foundations",
+      "item": "https://www.beeplanetconnection.org/wiki/foundations/"
+    }]
   }
   </script>
 </head>
 
-<!-- Keep wallpaper so the honeycomb background shows on wiki pages -->
-<body class="wallpaper wiki">
-
-  <!-- COPY of the homepage header (logo + brand + primary nav) -->
+<body class="wiki wallpaper">
+  <!-- Site-wide sticky header (same as homepage) -->
   <header class="site-header" role="banner">
     <div class="container">
       <a class="brand" href="/">
@@ -46,12 +48,13 @@
   </header>
 
   <!-- Page content -->
-  <header class="page-wrap">
-    <nav class="pillars muted" aria-label="Pillars">
+  <main class="wrap">
+    <nav class="crumbs muted" aria-label="Breadcrumb">
       <a href="/wiki/">Wiki</a>
       <span>›</span>
       <strong>Foundations</strong>
     </nav>
+
     <h1>Foundations</h1>
     <p class="lede">
       Start here. “Foundations” covers the core ideas of bees and beekeeping:
@@ -59,7 +62,7 @@
       that make the rest of the wiki make sense. This page is your map to every foundational topic
       plus recommended paths for newcomers and returning keepers.
     </p>
-    <p class="pill-note muted">
+    <p class="muted">
       Audience: newcomers, educators, practitioners seeking a refresher. For applied practice see
       <a href="/wiki/operations/">Operations</a>, for health and threats see
       <a href="/wiki/colony-health/">Colony Health</a>, for sensors and telemetry see
@@ -83,9 +86,7 @@
         <li><a href="#glossary-core-terms">Glossary: core terms</a></li>
       </ul>
     </section>
-  </header>
 
-  <main class="page-wrap">
     <section id="getting-started" class="index-block">
       <h2>Getting started</h2>
       <div class="grid cols-3">
@@ -112,10 +113,7 @@
     <section id="topic-map" class="index-block">
       <h2>Topic map</h2>
       <p class="muted">Key sub-areas across Foundations. These lists update automatically as the wiki grows.</p>
-
-      <div class="grid cols-2" id="topic-groups">
-        <!-- Populated by JS -->
-      </div>
+      <div class="grid cols-2" id="topic-groups"></div>
     </section>
 
     <div class="divider"></div>
@@ -186,17 +184,21 @@
 
     function el(tag, attrs={}, html=null){
       const n = document.createElement(tag);
-      for (const [k,v] of Object.entries(attrs)){ if(k==="class") n.className = v; else n.setAttribute(k,v); }
+      for (const [k,v] of Object.entries(attrs)){
+        if(k==="class") n.className = v; else n.setAttribute(k,v);
+      }
       if(html!==null) n.innerHTML = html;
       return n;
     }
+
     function linkItem(item){
       const a = el("a", { href: `/wiki/${item.pillar}/${item.slug}` }, item.title);
-      const li = el("li", {}, null);
+      const li = el("li");
       li.appendChild(a);
       if (item.summary) li.appendChild(el("span", {class:"muted"}, " — " + item.summary));
       return li;
     }
+
     function groupBy(arr, key){
       return arr.reduce((m, x) => {
         const k = (typeof key === "function") ? key(x) : x[key];
@@ -211,30 +213,30 @@
         const items = all.filter(x => (x.pillar || "").toLowerCase() === pillarKey)
                          .sort((a,b) => (a.title||"").localeCompare(b.title||""));
 
+        // By level
         const byLevel = groupBy(items, x => (x.level || "newcomer").toLowerCase());
-        const levels = ["newcomer","intermediate","advanced"];
-        levels.forEach(lvl => {
-          const ul = document.getElementById(`by-${lvl}`) || document.getElementById(`${lvl}-list`);
+        [["newcomer-list","newcomer"],["intermediate-list","intermediate"],["advanced-list","advanced"]]
+          .forEach(([id, lvl]) => {
+            const ul = document.getElementById(id);
+            if (!ul) return;
+            (byLevel[lvl]||[]).slice(0,12).forEach(item => ul.appendChild(linkItem(item)));
+          });
+
+        // Browse by level
+        ["newcomer","intermediate","advanced"].forEach(lvl => {
+          const ul = document.getElementById(`by-${lvl}`);
           if (!ul) return;
           (byLevel[lvl]||[]).slice(0,12).forEach(item => ul.appendChild(linkItem(item)));
         });
 
-        const gsMap = {
-          "newcomer-list": (byLevel["newcomer"]||[]).slice(0,8),
-          "intermediate-list": (byLevel["intermediate"]||[]).slice(0,8),
-          "advanced-list": (byLevel["advanced"]||[]).slice(0,8)
-        };
-        Object.entries(gsMap).forEach(([id, list]) => {
-          const ul = document.getElementById(id);
-          if (ul) list.forEach(item => ul.appendChild(linkItem(item)));
-        });
-
+        // Topic groups (simple heuristics)
         const groups = [
           { id: "Bee biology", match: ["anatomy","physiology","lifecycle","castes","pheromone","communication","nervous","senses","wax","venom"] },
           { id: "Hive basics", match: ["hive","frame","comb","brood","queen","worker","drone","forage","stores","equipment"] },
           { id: "Terminology & concepts", match: ["glossary","terminology","basics","primer","introduction","overview"] },
           { id: "Natural history", match: ["evolution","wild","native","pollination","ecology","species"] }
         ];
+
         const wrap = document.getElementById("topic-groups");
         groups.forEach(g => {
           const subset = items.filter(i => {
@@ -242,6 +244,7 @@
             const t = (i.title || "").toLowerCase();
             return g.match.some(m => s.includes(m) || t.includes(m));
           }).slice(0,12);
+
           const card = el("div", { class:"card" });
           card.appendChild(el("h3", {}, g.id));
           const ul = el("ul", { class:"list-slim" });
@@ -250,6 +253,7 @@
           wrap.appendChild(card);
         });
 
+        // Glossary grid
         const glossary = items.filter(i => {
           const f = (i.format || "").toLowerCase();
           const s = (i.slug || "").toLowerCase();
