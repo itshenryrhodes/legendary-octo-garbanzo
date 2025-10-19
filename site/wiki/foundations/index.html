@@ -1,37 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Foundations — Bee Planet Connection</title>
-  <meta name="description" content="Start here: the core principles of bees, biology, and beekeeping. Clear intros, structured learning paths, and links to every Foundations topic." />
-  <link rel="stylesheet" href="/css/wiki.css" />
+  <meta name="description" content="Start here: the core principles of bees, biology, and beekeeping. Clear intros, structured learning paths, and links to every Foundations topic.">
+
+  <!-- Header/nav styling (from homepage) -->
+  <link rel="stylesheet" href="/css/site.css">
+  <!-- Wiki layer (wallpaper, cards, grids, etc.) -->
+  <link rel="stylesheet" href="/css/wiki.css">
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Wiki",
-      "item": "https://www.beeplanetconnection.org/wiki/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Foundations",
-      "item": "https://www.beeplanetconnection.org/wiki/foundations/"
-    }]
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Wiki","item":"https://www.beeplanetconnection.org/wiki/"},
+      {"@type":"ListItem","position":2,"name":"Foundations","item":"https://www.beeplanetconnection.org/wiki/foundations/"}
+    ]
   }
   </script>
 </head>
 
 <body class="wiki wallpaper">
-  <!-- Site-wide sticky header (same as homepage) -->
+  <!-- Site-wide sticky header: identical to site/index.html -->
   <header class="site-header" role="banner">
     <div class="container">
       <a class="brand" href="/">
-        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection">
         <span class="brand-text">Bee Planet Connection</span>
       </a>
       <nav class="nav" role="navigation" aria-label="Primary">
@@ -190,7 +187,6 @@
       if(html!==null) n.innerHTML = html;
       return n;
     }
-
     function linkItem(item){
       const a = el("a", { href: `/wiki/${item.pillar}/${item.slug}` }, item.title);
       const li = el("li");
@@ -198,78 +194,74 @@
       if (item.summary) li.appendChild(el("span", {class:"muted"}, " — " + item.summary));
       return li;
     }
-
     function groupBy(arr, key){
-      return arr.reduce((m, x) => {
-        const k = (typeof key === "function") ? key(x) : x[key];
-        (m[k] = m[k] || []).push(x);
+      return arr.reduce((m,x)=>{
+        const k = (typeof key==="function") ? key(x) : x[key];
+        (m[k]=m[k]||[]).push(x);
         return m;
-      }, {});
+      },{});
     }
 
-    fetch(TAX_URL, { cache: "no-cache" })
-      .then(r => r.json())
-      .then(all => {
-        const items = all.filter(x => (x.pillar || "").toLowerCase() === pillarKey)
-                         .sort((a,b) => (a.title||"").localeCompare(b.title||""));
+    fetch(TAX_URL, { cache:"no-cache" })
+      .then(r=>r.json())
+      .then(all=>{
+        const items = all
+          .filter(x => (x.pillar||"").toLowerCase()===pillarKey)
+          .sort((a,b)=>(a.title||"").localeCompare(b.title||""));
 
-        // By level
-        const byLevel = groupBy(items, x => (x.level || "newcomer").toLowerCase());
+        const byLevel = groupBy(items, x => (x.level||"newcomer").toLowerCase());
         [["newcomer-list","newcomer"],["intermediate-list","intermediate"],["advanced-list","advanced"]]
-          .forEach(([id, lvl]) => {
+          .forEach(([id,lvl])=>{
             const ul = document.getElementById(id);
-            if (!ul) return;
-            (byLevel[lvl]||[]).slice(0,12).forEach(item => ul.appendChild(linkItem(item)));
+            if(!ul) return;
+            (byLevel[lvl]||[]).slice(0,12).forEach(it=>ul.appendChild(linkItem(it)));
           });
 
-        // Browse by level
-        ["newcomer","intermediate","advanced"].forEach(lvl => {
+        ["newcomer","intermediate","advanced"].forEach(lvl=>{
           const ul = document.getElementById(`by-${lvl}`);
-          if (!ul) return;
-          (byLevel[lvl]||[]).slice(0,12).forEach(item => ul.appendChild(linkItem(item)));
+          if(!ul) return;
+          (byLevel[lvl]||[]).slice(0,12).forEach(it=>ul.appendChild(linkItem(it)));
         });
 
-        // Topic groups (simple heuristics)
         const groups = [
-          { id: "Bee biology", match: ["anatomy","physiology","lifecycle","castes","pheromone","communication","nervous","senses","wax","venom"] },
-          { id: "Hive basics", match: ["hive","frame","comb","brood","queen","worker","drone","forage","stores","equipment"] },
-          { id: "Terminology & concepts", match: ["glossary","terminology","basics","primer","introduction","overview"] },
-          { id: "Natural history", match: ["evolution","wild","native","pollination","ecology","species"] }
+          { id:"Bee biology", match:["anatomy","physiology","lifecycle","castes","pheromone","communication","nervous","senses","wax","venom"] },
+          { id:"Hive basics", match:["hive","frame","comb","brood","queen","worker","drone","forage","stores","equipment"] },
+          { id:"Terminology & concepts", match:["glossary","terminology","basics","primer","introduction","overview"] },
+          { id:"Natural history", match:["evolution","wild","native","pollination","ecology","species"] }
         ];
 
         const wrap = document.getElementById("topic-groups");
-        groups.forEach(g => {
-          const subset = items.filter(i => {
-            const s = (i.slug || "").toLowerCase();
-            const t = (i.title || "").toLowerCase();
+        groups.forEach(g=>{
+          const subset = items.filter(i=>{
+            const s=(i.slug||"").toLowerCase();
+            const t=(i.title||"").toLowerCase();
             return g.match.some(m => s.includes(m) || t.includes(m));
           }).slice(0,12);
 
-          const card = el("div", { class:"card" });
-          card.appendChild(el("h3", {}, g.id));
-          const ul = el("ul", { class:"list-slim" });
-          subset.forEach(item => ul.appendChild(linkItem(item)));
+          const card = el("div",{class:"card"});
+          card.appendChild(el("h3",{},g.id));
+          const ul = el("ul",{class:"list-slim"});
+          subset.forEach(it=>ul.appendChild(linkItem(it)));
           card.appendChild(ul);
           wrap.appendChild(card);
         });
 
-        // Glossary grid
-        const glossary = items.filter(i => {
-          const f = (i.format || "").toLowerCase();
-          const s = (i.slug || "").toLowerCase();
-          const t = (i.title || "").toLowerCase();
-          return f === "glossary" || s.includes("glossary") || t.includes("glossary");
+        const glossary = items.filter(i=>{
+          const f=(i.format||"").toLowerCase();
+          const s=(i.slug||"").toLowerCase();
+          const t=(i.title||"").toLowerCase();
+          return f==="glossary" || s.includes("glossary") || t.includes("glossary");
         }).slice(0,9);
 
         const ggrid = document.getElementById("glossary-grid");
-        glossary.forEach(item => {
-          const c = el("div", { class:"card" });
-          c.appendChild(el("h3", {}, `<a href="/wiki/${item.pillar}/${item.slug}">${item.title}</a>`));
-          c.appendChild(el("p", { class:"muted" }, item.summary || ""));
+        glossary.forEach(it=>{
+          const c = el("div",{class:"card"});
+          c.appendChild(el("h3",{},`<a href="/wiki/${it.pillar}/${it.slug}">${it.title}</a>`));
+          c.appendChild(el("p",{class:"muted"}, it.summary||""));
           ggrid.appendChild(c);
         });
       })
-      .catch(err => console.error("Taxonomy load failed:", err));
+      .catch(err=>console.error("Taxonomy load failed:", err));
   })();
   </script>
 </body>
