@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>Foundations — Bee Planet Connection</title>
   <meta name="description" content="Start here: the core principles of bees, biology, and beekeeping. Clear intros, structured learning paths, and links to every Foundations topic." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Correct stylesheet path for this repo -->
+
+  <!-- IMPORTANT: homepage styles FIRST (for header/logo/nav), then wiki utilities (for wallpaper, cards, etc.) -->
+  <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/css/wiki.css" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Wiki",
-      "item": "https://www.beeplanetconnection.org/wiki/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Foundations",
-      "item": "https://www.beeplanetconnection.org/wiki/foundations/"
-    }]
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Wiki", "item": "https://www.beeplanetconnection.org/wiki/" },
+      { "@type": "ListItem", "position": 2, "name": "Foundations", "item": "https://www.beeplanetconnection.org/wiki/foundations/" }
+    ]
   }
   </script>
-
-  <style>
-    /* Minimal helpers that complement /css/wiki.css without fighting it */
-    .page-wrap { max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem; }
-    .lede { font-size: 1.125rem; line-height: 1.6; margin-bottom: 1rem; }
-    .pill-note { font-size: .95rem; opacity: .85; }
-    .grid { display: grid; gap: 1rem; }
-    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    @media (max-width: 900px){ .grid.cols-3 { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 640px){ .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } }
-    .card { background: rgba(255,255,255,.85); border-radius: 14px; padding: 1rem 1.125rem; box-shadow: 0 6px 24px rgba(0,0,0,.06); border:1px solid var(--ring, #e5e7eb); }
-    .card h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
-    .card p { margin: .25rem 0 0; font-size: .95rem; }
-    .index-block h2 { margin-top: 2rem; }
-    .chip { display:inline-block; font-size:.8rem; padding:.2rem .5rem; border-radius:999px; background:#eef3ff; margin-left:.5rem; }
-    .muted { color: var(--muted, #6b7280); }
-    .toc { list-style: none; padding: 0; margin: .75rem 0 0; }
-    .toc li { margin: .25rem 0; }
-    .list-slim { list-style: none; padding: 0; margin: .5rem 0 0; }
-    .list-slim li { margin:.25rem 0; }
-    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .85rem; background: #f6f8fa; border:1px solid #e5e7eb; padding:.125rem .375rem; border-radius:6px; }
-    .notice { padding:.75rem 1rem; border-left: 4px solid #84cc16; background:#f7fee7; border-radius:6px; }
-    .divider { height:1px; background: var(--ring, #e5e7eb); margin: 1.25rem 0; }
-    .pillars { display:flex; gap:.5rem; flex-wrap:wrap; font-size:.95rem; }
-    .pillars a { text-decoration:none; }
-  </style>
 </head>
 
-<body class="wiki wallpaper">
-  <!-- Site header & primary nav that match /css/wiki.css rules -->
-  <header class="nav" role="banner">
-    <div class="wrap nav-inner">
+<!-- Keep wallpaper so the honeycomb background shows on wiki pages -->
+<body class="wallpaper wiki">
+
+  <!-- COPY of the homepage header (logo + brand + primary nav) -->
+  <header class="site-header" role="banner">
+    <div class="container">
       <a class="brand" href="/">
         <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
         <span class="brand-text">Bee Planet Connection</span>
       </a>
-      <nav class="nav-menu" role="navigation" aria-label="Primary">
+      <nav class="nav" role="navigation" aria-label="Primary">
         <a href="/">Home</a>
         <a href="/wiki/">Wiki</a>
         <a href="/tools/">Tools</a>
@@ -75,11 +45,11 @@
     </div>
   </header>
 
-  <!-- Page header -->
+  <!-- Page content -->
   <header class="page-wrap">
     <nav class="pillars muted" aria-label="Pillars">
       <a href="/wiki/">Wiki</a>
-      <span aria-hidden="true">›</span>
+      <span>›</span>
       <strong>Foundations</strong>
     </nav>
     <h1>Foundations</h1>
@@ -238,20 +208,21 @@
     fetch(TAX_URL, { cache: "no-cache" })
       .then(r => r.json())
       .then(all => {
-        const items = all.filter(x => (x.pillar || "").toLowerCase() === pillarKey);
-        items.sort((a,b) => (a.title||"").localeCompare(b.title||""));
+        const items = all.filter(x => (x.pillar || "").toLowerCase() === pillarKey)
+                         .sort((a,b) => (a.title||"").localeCompare(b.title||""));
 
         const byLevel = groupBy(items, x => (x.level || "newcomer").toLowerCase());
-        ["newcomer","intermediate","advanced"].forEach(lvl => {
+        const levels = ["newcomer","intermediate","advanced"];
+        levels.forEach(lvl => {
           const ul = document.getElementById(`by-${lvl}`) || document.getElementById(`${lvl}-list`);
           if (!ul) return;
           (byLevel[lvl]||[]).slice(0,12).forEach(item => ul.appendChild(linkItem(item)));
         });
 
         const gsMap = {
-          "newcomer-list": (byLevel["newcomer"] || []).slice(0,8),
-          "intermediate-list": (byLevel["intermediate"] || []).slice(0,8),
-          "advanced-list": (byLevel["advanced"] || []).slice(0,8)
+          "newcomer-list": (byLevel["newcomer"]||[]).slice(0,8),
+          "intermediate-list": (byLevel["intermediate"]||[]).slice(0,8),
+          "advanced-list": (byLevel["advanced"]||[]).slice(0,8)
         };
         Object.entries(gsMap).forEach(([id, list]) => {
           const ul = document.getElementById(id);
@@ -264,7 +235,6 @@
           { id: "Terminology & concepts", match: ["glossary","terminology","basics","primer","introduction","overview"] },
           { id: "Natural history", match: ["evolution","wild","native","pollination","ecology","species"] }
         ];
-
         const wrap = document.getElementById("topic-groups");
         groups.forEach(g => {
           const subset = items.filter(i => {
@@ -272,7 +242,6 @@
             const t = (i.title || "").toLowerCase();
             return g.match.some(m => s.includes(m) || t.includes(m));
           }).slice(0,12);
-
           const card = el("div", { class:"card" });
           card.appendChild(el("h3", {}, g.id));
           const ul = el("ul", { class:"list-slim" });
@@ -286,7 +255,7 @@
           const s = (i.slug || "").toLowerCase();
           const t = (i.title || "").toLowerCase();
           return f === "glossary" || s.includes("glossary") || t.includes("glossary");
-        }).slice(0, 9);
+        }).slice(0,9);
 
         const ggrid = document.getElementById("glossary-grid");
         glossary.forEach(item => {
@@ -296,7 +265,7 @@
           ggrid.appendChild(c);
         });
       })
-      .catch(err => { console.error("Taxonomy load failed:", err); });
+      .catch(err => console.error("Taxonomy load failed:", err));
   })();
   </script>
 </body>
