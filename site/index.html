@@ -1,42 +1,52 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
+  <!-- Analytics -->
   <script defer src="/js/ga.js"></script>
+
+  <!-- Encoding & viewport -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Bee Planet Connection — Bees, science, and better beekeeping</title>
-  <meta name="description" content="Bee Planet Connection helps people learn bee biology, practice evidence-based beekeeping, and connect with a global community. Explore clear guides, practical tools, and research-grounded articles.">
+
+  <title>Helping pollinators, empowering people &mdash; Bee Planet Connection</title>
+  <meta name="description" content="Practical guidance, tools, and a global community to keep bees healthy. Learn, share, and act with Bee Planet Connection.">
+  <link rel="canonical" href="https://www.beeplanetconnection.org/">
+
+  <!-- Site-wide CSS -->
   <link rel="stylesheet" href="/css/site.css">
-  <style>
-    /* Home-only, minimal cosmetic helpers */
-    .hero { max-width: 68rem; margin: 4rem auto 2rem; padding: 0 1rem; text-align: left; }
-    .hero h1 { font-size: clamp(2rem, 2.8vw + 1.4rem, 3.25rem); line-height: 1.1; margin: 0 0 .75rem; }
-    .hero .lede { font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); color: var(--muted, #6b7280); margin: 0 0 1rem; }
-    .hero .sublede { color: var(--muted, #6b7280); margin: 0; }
-    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(12, minmax(0,1fr)); max-width: 68rem; margin: 2rem auto; padding: 0 1rem; }
-    .col-6 { grid-column: span 12; }
-    @media (min-width: 900px){ .col-6 { grid-column: span 6; } }
-    .feature-card {
-      display:block; border:1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.06); /* looks good on wallpaper + plain bg */
-      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-      border-radius: 16px; padding: 1.25rem; text-decoration: none;
-      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bee Planet Connection">
+  <meta property="og:title" content="Helping pollinators, empowering people">
+  <meta property="og:description" content="Practical guidance, tools, and a global community to keep bees healthy.">
+  <meta property="og:url" content="https://www.beeplanetconnection.org/">
+  <meta property="og:image" content="https://www.beeplanetconnection.org/img/Winnie_Hero.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Helping pollinators, empowering people">
+  <meta name="twitter:description" content="Practical guidance, tools, and a global community to keep bees healthy.">
+  <meta name="twitter:image" content="https://www.beeplanetconnection.org/img/Winnie_Hero.svg">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Bee Planet Connection",
+    "url":"https://www.beeplanetconnection.org/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.beeplanetconnection.org/search/?q={query}",
+      "query-input":"required name=query"
     }
-    .feature-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.32); background: rgba(255,255,255,.09); }
-    .feature-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.875rem; text-transform:uppercase; letter-spacing:.04em; color: var(--muted, #6b7280); }
-    .feature-title { margin:.25rem 0 .5rem; font-size:1.25rem; line-height:1.25; }
-    .feature-desc { margin:0; color: var(--muted, #6b7280); }
-    .cta-row { max-width:68rem; margin: 1rem auto 2rem; padding: 0 1rem; display:flex; gap:.75rem; flex-wrap:wrap; }
-    .cta-row a.button { text-decoration:none; }
-    .button { display:inline-block; padding:.6rem .9rem; border-radius:9999px; border:1px solid rgba(255,255,255,.18); }
-    .button.primary { background: var(--brand, #111827); color: #fff; border-color: transparent; }
-    .button.ghost { background: transparent; color: inherit; }
-  </style>
+  }
+  </script>
 </head>
 
-<body class="home">
-  <!-- Canonical site header -->
+<body class="home wallpaper">
+  <!-- Shared site header / primary nav -->
   <header class="site-header" role="banner">
     <div class="container">
       <a class="brand" href="/">
@@ -57,48 +67,148 @@
   </header>
 
   <main>
-    <!-- Purpose / positioning -->
-    <section class="hero">
-      <h1>Learn the bees. Keep better. Build community.</h1>
-      <p class="lede">
-        Bee Planet Connection helps people understand bee biology, practice evidence-based beekeeping,
-        and connect with others who care about pollinators. We publish clear, peer-informed articles,
-        hands-on tools, and structured learning paths—from first hive to advanced practice.
-      </p>
-      <p class="sublede">
-        Start with the Wiki for fundamentals, visit the Blog for ideas and field notes, and use our
-        Tools and Directory to put knowledge to work.
-      </p>
+    <!-- HERO: text left, image right -->
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Helping pollinators, empowering people</h1>
+          <p class="hero-subtitle">Practical guidance, tools, and a global community to keep bees healthy.</p>
+          <div class="hero-actions">
+            <a class="btn" href="/wiki/">Explore the Wiki</a>
+            <a class="btn btn-ghost" href="/blog/">Read the Blog</a>
+          </div>
+        </div>
+
+        <figure class="hero-art" aria-hidden="true">
+          <img src="/img/Winnie_Hero.svg" alt="" loading="eager" decoding="async">
+        </figure>
+      </div>
     </section>
 
-    <div class="cta-row" aria-label="Primary calls to action">
-      <a class="button primary" href="/wiki/">Explore the Wiki</a>
-      <a class="button ghost" href="/blog/">Read the Blog</a>
-      <a class="button ghost" href="/tools/">Browse Tools</a>
-    </div>
+    <!-- FEATURED: transparent cards over wallpaper -->
+    <section class="wrap">
+      <div class="grid cards-2">
+        <!-- Featured Wiki article -->
+        <a class="card card-link glass" href="/wiki/foundations/bee-castes-and-lifecycle.html">
+          <div class="card-body">
+            <h2 class="h3">Featured from the Wiki</h2>
+            <h3 class="h2">Bee castes &amp; lifecycle</h3>
+            <p class="muted">
+              Meet the queen, workers, and drones &mdash; and track the brood cycle from egg to adult. Essential foundations for every keeper.
+            </p>
+            <span class="cta">Read article &rarr;</span>
+          </div>
+        </a>
 
-    <!-- Featured content -->
-    <section class="grid" aria-label="Featured content">
-      <!-- FEATURED WIKI -->
-      <a class="feature-card col-6" href="/wiki/foundations/bee-castes-and-lifecycle.html">
-        <span class="feature-eyebrow">Featured Wiki</span>
-        <h2 class="feature-title">Bee castes &amp; lifecycle: a quick tour</h2>
-        <p class="feature-desc">
-          Meet the three castes—queen, worker, drone—and see how eggs become adults across the brood cycle.
-          A perfect first stop for newcomers before diving deeper.
-        </p>
-      </a>
+        <!-- Featured Blog post -->
+        <a class="card card-link glass" href="/blog/posts/the-bee-line.html">
+          <div class="card-body">
+            <h2 class="h3">Featured from the Blog</h2>
+            <h3 class="h2">The Bee Line: Why the World’s Future Still Hangs on a Hum</h3>
+            <p class="muted">
+              A big-picture look at pollinators, food systems, and the choices that keep both resilient.
+            </p>
+            <span class="cta">Read the post &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
-      <!-- FEATURED BLOG -->
-      <a class="feature-card col-6" href="/blog/posts/the-bee-line.html">
-        <span class="feature-eyebrow">Featured Blog</span>
-        <h2 class="feature-title">The Bee Line: Why the World’s Future Still Hangs on a Hum</h2>
-        <p class="feature-desc">
-          From food systems to wild landscapes, why pollinators still matter—and what practical steps keepers
-          and communities can take right now.
-        </p>
-      </a>
+    <!-- Value props -->
+    <section class="wrap">
+      <div class="grid cards-3">
+        <div class="card ghost">
+          <div class="card-body">
+            <h3>Learn what matters</h3>
+            <p class="muted">Clear, science-grounded articles from foundations to advanced practice.</p>
+            <a class="inline-cta" href="/wiki/">Start learning &rarr;</a>
+          </div>
+        </div>
+        <div class="card ghost">
+          <div class="card-body">
+            <h3>Use better tools</h3>
+            <p class="muted">Checklists, calculators, and logs that turn insight into action.</p>
+            <a class="inline-cta" href="/tools/">See tools &rarr;</a>
+          </div>
+        </div>
+        <div class="card ghost">
+          <div class="card-body">
+            <h3>Grow together</h3>
+            <p class="muted">Join keepers, researchers, and educators building healthier hives worldwide.</p>
+            <a class="inline-cta" href="/forum/">Visit the forum &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section shortcuts -->
+    <section class="wrap">
+      <h2>Go deeper</h2>
+      <div class="grid cards-3">
+        <a class="card card-link glass" href="/wiki/foundations/">
+          <div class="card-body">
+            <h3>Foundations</h3>
+            <p class="muted">Biology, behaviour, lifecycle, hive basics, and core concepts.</p>
+            <span class="cta">Browse topics &rarr;</span>
+          </div>
+        </a>
+        <a class="card card-link glass" href="/wiki/operations/">
+          <div class="card-body">
+            <h3>Operations</h3>
+            <p class="muted">Seasonal tasks, inspections, handling, and harvesting.</p>
+            <span class="cta">Plan your season &rarr;</span>
+          </div>
+        </a>
+        <a class="card card-link glass" href="/wiki/colony-health/">
+          <div class="card-body">
+            <h3>Colony Health</h3>
+            <p class="muted">Nutrition, pathogens, parasites, and early warning signs.</p>
+            <span class="cta">Protect your hives &rarr;</span>
+          </div>
+        </a>
+      </div>
     </section>
   </main>
+
+  <!-- Page-scoped helpers to ensure layout/glass look even if site.css lacks them -->
+  <style>
+    /* Layout helpers */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
+    .grid { display: grid; gap: 1rem; }
+    .cards-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .cards-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+    /* Hero split */
+    .hero { padding: 2.5rem 0 1rem; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 1.25rem; align-items: center; }
+    .hero-title { font-size: clamp(1.9rem, 3.4vw, 3rem); line-height: 1.15; margin: 0 0 .5rem; }
+    .hero-subtitle { font-size: clamp(1rem, 1.6vw, 1.25rem); color: var(--muted, #666); margin: 0 0 1rem; }
+    .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: .25rem; }
+    .hero-art { margin: 0; display: flex; justify-content: center; }
+    .hero-art img { max-width: 520px; width: 100%; height: auto; }
+
+    /* Cards */
+    .card { border-radius: 12px; padding: 0; overflow: hidden; }
+    .card-body { padding: 1rem 1.1rem; }
+    .card-link { text-decoration: none; color: inherit; display: block; }
+    .glass {
+      background: color-mix(in oklab, #fff 10%, transparent);
+      backdrop-filter: saturate(120%) blur(6px);
+      border: 1px solid color-mix(in oklab, #000 12%, transparent);
+    }
+    .ghost {
+      background: transparent;
+      border: 1px dashed color-mix(in oklab, #000 15%, transparent);
+    }
+    .cta, .inline-cta { display: inline-block; margin-top: .4rem; font-weight: 600; }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-art { order: -1; }
+      .cards-2 { grid-template-columns: 1fr; }
+      .cards-3 { grid-template-columns: 1fr; }
+    }
+  </style>
 </body>
 </html>
