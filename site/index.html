@@ -1,31 +1,42 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en-GB">
 <head>
   <script defer src="/js/ga.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Foundations ΓÇö Bee Planet Connection</title>
-  <meta name="description" content="Start here: the core principles of bees, biology, and beekeeping. Clear intros, structured learning paths, and links to every Foundations topic.">
-
-  <!-- Header/nav styling (from homepage) -->
+  <title>Bee Planet Connection — Bees, science, and better beekeeping</title>
+  <meta name="description" content="Bee Planet Connection helps people learn bee biology, practice evidence-based beekeeping, and connect with a global community. Explore clear guides, practical tools, and research-grounded articles.">
   <link rel="stylesheet" href="/css/site.css">
-  <!-- Wiki layer (wallpaper, cards, grids, etc.) -->
-  <link rel="stylesheet" href="/css/wiki.css">
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Wiki","item":"https://www.beeplanetconnection.org/wiki/"},
-      {"@type":"ListItem","position":2,"name":"Foundations","item":"https://www.beeplanetconnection.org/wiki/foundations/"}
-    ]
-  }
-  </script>
+  <style>
+    /* Home-only, minimal cosmetic helpers */
+    .hero { max-width: 68rem; margin: 4rem auto 2rem; padding: 0 1rem; text-align: left; }
+    .hero h1 { font-size: clamp(2rem, 2.8vw + 1.4rem, 3.25rem); line-height: 1.1; margin: 0 0 .75rem; }
+    .hero .lede { font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); color: var(--muted, #6b7280); margin: 0 0 1rem; }
+    .hero .sublede { color: var(--muted, #6b7280); margin: 0; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(12, minmax(0,1fr)); max-width: 68rem; margin: 2rem auto; padding: 0 1rem; }
+    .col-6 { grid-column: span 12; }
+    @media (min-width: 900px){ .col-6 { grid-column: span 6; } }
+    .feature-card {
+      display:block; border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06); /* looks good on wallpaper + plain bg */
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+      border-radius: 16px; padding: 1.25rem; text-decoration: none;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .feature-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.32); background: rgba(255,255,255,.09); }
+    .feature-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.875rem; text-transform:uppercase; letter-spacing:.04em; color: var(--muted, #6b7280); }
+    .feature-title { margin:.25rem 0 .5rem; font-size:1.25rem; line-height:1.25; }
+    .feature-desc { margin:0; color: var(--muted, #6b7280); }
+    .cta-row { max-width:68rem; margin: 1rem auto 2rem; padding: 0 1rem; display:flex; gap:.75rem; flex-wrap:wrap; }
+    .cta-row a.button { text-decoration:none; }
+    .button { display:inline-block; padding:.6rem .9rem; border-radius:9999px; border:1px solid rgba(255,255,255,.18); }
+    .button.primary { background: var(--brand, #111827); color: #fff; border-color: transparent; }
+    .button.ghost { background: transparent; color: inherit; }
+  </style>
 </head>
 
-<body class="wiki wallpaper">
-  <!-- Site-wide sticky header: identical to site/index.html -->
+<body class="home">
+  <!-- Canonical site header -->
   <header class="site-header" role="banner">
     <div class="container">
       <a class="brand" href="/">
@@ -45,225 +56,49 @@
     </div>
   </header>
 
-  <!-- Page content -->
-  <main class="wrap">
-    <nav class="crumbs muted" aria-label="Breadcrumb">
-      <a href="/wiki/">Wiki</a>
-      <span>ΓÇ║</span>
-      <strong>Foundations</strong>
-    </nav>
+  <main>
+    <!-- Purpose / positioning -->
+    <section class="hero">
+      <h1>Learn the bees. Keep better. Build community.</h1>
+      <p class="lede">
+        Bee Planet Connection helps people understand bee biology, practice evidence-based beekeeping,
+        and connect with others who care about pollinators. We publish clear, peer-informed articles,
+        hands-on tools, and structured learning paths—from first hive to advanced practice.
+      </p>
+      <p class="sublede">
+        Start with the Wiki for fundamentals, visit the Blog for ideas and field notes, and use our
+        Tools and Directory to put knowledge to work.
+      </p>
+    </section>
 
-    <h1>Foundations</h1>
-    <p class="lede">
-      Start here. ΓÇ£FoundationsΓÇ¥ covers the core ideas of bees and beekeeping:
-      bee biology and behaviour, hive architecture, roles and lifecycle, and the essential terms
-      that make the rest of the wiki make sense. This page is your map to every foundational topic
-      plus recommended paths for newcomers and returning keepers.
-    </p>
-    <p class="muted">
-      Audience: newcomers, educators, practitioners seeking a refresher. For applied practice see
-      <a href="/wiki/operations/">Operations</a>, for health and threats see
-      <a href="/wiki/colony-health/">Colony Health</a>, for sensors and telemetry see
-      <a href="/wiki/data-sensing/">Data &amp; Sensing</a>, for policy contexts see
-      <a href="/wiki/community-policy/">Community &amp; Policy</a>, and for ecology see
-      <a href="/wiki/sustainability-environment/">Sustainability &amp; Environment</a>.
-    </p>
-
-    <div class="notice">
-      <strong>How navigation works:</strong> The topic lists below are generated automatically from our taxonomy.
-      As new pages are written, they will appear here without editing this page.
+    <div class="cta-row" aria-label="Primary calls to action">
+      <a class="button primary" href="/wiki/">Explore the Wiki</a>
+      <a class="button ghost" href="/blog/">Read the Blog</a>
+      <a class="button ghost" href="/tools/">Browse Tools</a>
     </div>
 
-    <section aria-labelledby="toc">
-      <h2 id="toc">On this page</h2>
-      <ul class="toc">
-        <li><a href="#getting-started">Getting started</a></li>
-        <li><a href="#topic-map">Topic map</a></li>
-        <li><a href="#browse-by-level">Browse by level</a></li>
-        <li><a href="#recommended-paths">Recommended paths</a></li>
-        <li><a href="#glossary-core-terms">Glossary: core terms</a></li>
-      </ul>
-    </section>
+    <!-- Featured content -->
+    <section class="grid" aria-label="Featured content">
+      <!-- FEATURED WIKI -->
+      <a class="feature-card col-6" href="/wiki/foundations/bee-castes-and-lifecycle.html">
+        <span class="feature-eyebrow">Featured Wiki</span>
+        <h2 class="feature-title">Bee castes &amp; lifecycle: a quick tour</h2>
+        <p class="feature-desc">
+          Meet the three castes—queen, worker, drone—and see how eggs become adults across the brood cycle.
+          A perfect first stop for newcomers before diving deeper.
+        </p>
+      </a>
 
-    <section id="getting-started" class="index-block">
-      <h2>Getting started</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Newcomer path</h3>
-          <p>Begin with bee castes and lifecycle, parts of a hive, and what healthy brood looks like. Then read a short glossary.</p>
-          <ul class="list-slim" id="newcomer-list"></ul>
-        </div>
-        <div class="card">
-          <h3>Intermediate path</h3>
-          <p>Deepen with communication, nutrition, genetics, and reading frames. Add context from natural history.</p>
-          <ul class="list-slim" id="intermediate-list"></ul>
-        </div>
-        <div class="card">
-          <h3>Advanced path</h3>
-          <p>Explore physiology, sensory systems, evolutionary trade-offs, and the scientific underpinnings of colony dynamics.</p>
-          <ul class="list-slim" id="advanced-list"></ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="topic-map" class="index-block">
-      <h2>Topic map</h2>
-      <p class="muted">Key sub-areas across Foundations. These lists update automatically as the wiki grows.</p>
-      <div class="grid cols-2" id="topic-groups"></div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="browse-by-level" class="index-block">
-      <h2>Browse by level</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Newcomer <span class="chip">Level</span></h3>
-          <ul class="list-slim" id="by-newcomer"></ul>
-        </div>
-        <div class="card">
-          <h3>Intermediate <span class="chip">Level</span></h3>
-          <ul class="list-slim" id="by-intermediate"></ul>
-        </div>
-        <div class="card">
-          <h3>Advanced <span class="chip">Level</span></h3>
-          <ul class="list-slim" id="by-advanced"></ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="recommended-paths" class="index-block">
-      <h2>Recommended next paths</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Apply the basics</h3>
-          <p>Take what youΓÇÖve learned into practice.</p>
-          <ul class="list-slim">
-            <li><a href="/wiki/operations/">Operations</a> ΓÇö seasonal tasks, inspection, harvesting</li>
-            <li><a href="/wiki/operations/">A Year in the Apiary</a></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Protect your colony</h3>
-          <p>Recognise stressors early and act decisively.</p>
-          <ul class="list-slim">
-            <li><a href="/wiki/colony-health/">Colony Health</a> ΓÇö pests, diseases, nutrition</li>
-            <li><a href="/wiki/colony-health/">Diagnosis &amp; monitoring</a></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Think with data</h3>
-          <p>Use sensing and logs to learn faster.</p>
-          <ul class="list-slim">
-            <li><a href="/wiki/data-sensing/">Data &amp; Sensing</a> ΓÇö logs, sensors, telemetry</li>
-            <li><a href="/wiki/data-sensing/">Smart hive concepts</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="glossary-core-terms" class="index-block">
-      <h2>Glossary: core terms</h2>
-      <p class="muted">Short definitions to orient newcomers. Full entries live under Foundations.</p>
-      <div class="grid cols-3" id="glossary-grid"></div>
+      <!-- FEATURED BLOG -->
+      <a class="feature-card col-6" href="/blog/posts/the-bee-line.html">
+        <span class="feature-eyebrow">Featured Blog</span>
+        <h2 class="feature-title">The Bee Line: Why the World’s Future Still Hangs on a Hum</h2>
+        <p class="feature-desc">
+          From food systems to wild landscapes, why pollinators still matter—and what practical steps keepers
+          and communities can take right now.
+        </p>
+      </a>
     </section>
   </main>
-
-  <script>
-  (function(){
-    const TAX_URL = "/wiki/_meta/taxonomy-full.json";
-    const pillarKey = "foundations";
-
-    function el(tag, attrs={}, html=null){
-      const n = document.createElement(tag);
-      for (const [k,v] of Object.entries(attrs)){
-        if(k==="class") n.className = v; else n.setAttribute(k,v);
-      }
-      if(html!==null) n.innerHTML = html;
-      return n;
-    }
-    function linkItem(item){
-      const a = el("a", { href: `/wiki/${item.pillar}/${item.slug}` }, item.title);
-      const li = el("li");
-      li.appendChild(a);
-      if (item.summary) li.appendChild(el("span", {class:"muted"}, " ΓÇö " + item.summary));
-      return li;
-    }
-    function groupBy(arr, key){
-      return arr.reduce((m,x)=>{
-        const k = (typeof key==="function") ? key(x) : x[key];
-        (m[k]=m[k]||[]).push(x);
-        return m;
-      },{});
-    }
-
-    fetch(TAX_URL, { cache:"no-cache" })
-      .then(r=>r.json())
-      .then(all=>{
-        const items = all
-          .filter(x => (x.pillar||"").toLowerCase()===pillarKey)
-          .sort((a,b)=>(a.title||"").localeCompare(b.title||""));
-
-        const byLevel = groupBy(items, x => (x.level||"newcomer").toLowerCase());
-        [["newcomer-list","newcomer"],["intermediate-list","intermediate"],["advanced-list","advanced"]]
-          .forEach(([id,lvl])=>{
-            const ul = document.getElementById(id);
-            if(!ul) return;
-            (byLevel[lvl]||[]).slice(0,12).forEach(it=>ul.appendChild(linkItem(it)));
-          });
-
-        ["newcomer","intermediate","advanced"].forEach(lvl=>{
-          const ul = document.getElementById(`by-${lvl}`);
-          if(!ul) return;
-          (byLevel[lvl]||[]).slice(0,12).forEach(it=>ul.appendChild(linkItem(it)));
-        });
-
-        const groups = [
-          { id:"Bee biology", match:["anatomy","physiology","lifecycle","castes","pheromone","communication","nervous","senses","wax","venom"] },
-          { id:"Hive basics", match:["hive","frame","comb","brood","queen","worker","drone","forage","stores","equipment"] },
-          { id:"Terminology & concepts", match:["glossary","terminology","basics","primer","introduction","overview"] },
-          { id:"Natural history", match:["evolution","wild","native","pollination","ecology","species"] }
-        ];
-
-        const wrap = document.getElementById("topic-groups");
-        groups.forEach(g=>{
-          const subset = items.filter(i=>{
-            const s=(i.slug||"").toLowerCase();
-            const t=(i.title||"").toLowerCase();
-            return g.match.some(m => s.includes(m) || t.includes(m));
-          }).slice(0,12);
-
-          const card = el("div",{class:"card"});
-          card.appendChild(el("h3",{},g.id));
-          const ul = el("ul",{class:"list-slim"});
-          subset.forEach(it=>ul.appendChild(linkItem(it)));
-          card.appendChild(ul);
-          wrap.appendChild(card);
-        });
-
-        const glossary = items.filter(i=>{
-          const f=(i.format||"").toLowerCase();
-          const s=(i.slug||"").toLowerCase();
-          const t=(i.title||"").toLowerCase();
-          return f==="glossary" || s.includes("glossary") || t.includes("glossary");
-        }).slice(0,9);
-
-        const ggrid = document.getElementById("glossary-grid");
-        glossary.forEach(it=>{
-          const c = el("div",{class:"card"});
-          c.appendChild(el("h3",{},`<a href="/wiki/${it.pillar}/${it.slug}">${it.title}</a>`));
-          c.appendChild(el("p",{class:"muted"}, it.summary||""));
-          ggrid.appendChild(c);
-        });
-      })
-      .catch(err=>console.error("Taxonomy load failed:", err));
-  })();
-  </script>
 </body>
 </html>
