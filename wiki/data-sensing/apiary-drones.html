@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Drones for Apiary Inspection</title>
+  <meta name="description" content="How to use small unmanned aircraft systems (drones) to survey apiaries, map forage, and monitor hives—safely, ethically, and with a repeatable data workflow." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Drones for Apiary Inspection</h1>
+      <p class="summary">A practical guide to choosing, flying, and integrating drones into beekeeping: site surveys, thermal checks, forage mapping, and a clean data pipeline from flight to decisions.</p>
+      <nav aria-label="Pillar hub"><a href="/wiki/data-sensing/">← Back to Data &amp; Sensing</a></nav>
+    </header>
+
+    <section id="why-drones">
+      <h2>Why use drones around bees?</h2>
+      <p>
+        Modern small drones (sUAS) can quickly capture aerial imagery and environmental data that would take hours to gather from the ground. For beekeepers, this means safer access to rough terrain, rapid counts of hive stands, documentation after storms or floods, thermal sweeps to detect heat loss in winter, and landscape-level insights about forage and water. When paired with basic mapping software, a single flight can produce orthomosaics (stitched overhead maps) to help with <a href="/wiki/operations/apiary-layout-basics.html">apiary layout</a>, access routes, and planting plans.
+      </p>
+    </section>
+
+    <section id="use-cases">
+      <h2>High-value use cases</h2>
+      <ul>
+        <li><strong>Storm &amp; disaster assessment:</strong> Quick aerial pass to check for toppled hives, blocked access, or flooding without walking through debris.</li>
+        <li><strong>Thermal integrity checks:</strong> With a small thermal camera, scan for odd heat signatures that may indicate displaced lids, poor insulation, or empty colonies in winter.</li>
+        <li><strong>Forage mapping:</strong> Fly at bloom peaks and compare month to month to guide planting and to coordinate with <a href="/wiki/data-sensing/apiary-weather-stations.html">apiary weather stations</a>.</li>
+        <li><strong>Inventory &amp; asset tracking:</strong> Count hive stands and equipment across out-yards; annotate on the map for maintenance runs.</li>
+        <li><strong>Access &amp; safety planning:</strong> Identify clear approaches for vehicles, shade patterns for summer, and prevailing wind exposure.</li>
+        <li><strong>Research &amp; education:</strong> Document growth of hedgerows or <a href="/wiki/habitat/flower-strip-design.html">flower strips</a> for grants and community reporting.</li>
+      </ul>
+    </section>
+
+    <section id="airframes">
+      <h2>Hardware: airframes &amp; sensors</h2>
+      <p>
+        Most beekeeping tasks fit within off-the-shelf quadcopters. Choose a model with reliable positioning, obstacle sensing, and a stabilized gimbal camera. Key considerations:
+      </p>
+      <ul>
+        <li><strong>Camera:</strong> A 20–48 MP wide camera is adequate for maps and inspections. If you plan thermal checks, choose a model or payload with a radiometric thermal sensor.</li>
+        <li><strong>Flight time:</strong> 25–40 minutes per battery is typical; bring a set for multi-site days.</li>
+        <li><strong>Wind performance:</strong> Apiaries are often in open fields; pick craft with decent wind hold (10–12 m/s).</li>
+        <li><strong>RTK/GNSS (optional):</strong> For precise mapping without ground control points, consider an RTK variant; otherwise, use ground targets and post-process.</li>
+      </ul>
+      <p>
+        Useful accessories: multi-charger, high-visibility launch pad, spare props, ND filters (for consistent shutter speeds), and a compact tablet with high brightness for field visibility.
+      </p>
+    </section>
+
+    <section id="flight-planning">
+      <h2>Flight planning fundamentals</h2>
+      <p>
+        For mapping, fly automated grid missions at 70–80% overlap, altitude 60–120 m AGL (adjust for local rules and detail needs). For site checks, manual flights with waypoints to key vantage points work well. Record consistent paths so time-series comparisons are meaningful.
+      </p>
+      <ul>
+        <li><strong>Altitude &amp; detail:</strong> Higher altitude = fewer images, lower detail; lower altitude = finer detail, longer flights. Match to purpose.</li>
+        <li><strong>Lighting:</strong> Aim for mid-morning or mid-afternoon, low wind, uniform cloud cover if possible to reduce shadows on orthomosaics.</li>
+        <li><strong>Seasonality:</strong> Schedule regular flights (e.g., monthly) to correlate with <a href="/wiki/data-sensing/hive-weight-monitoring.html">hive weight curves</a> and bloom timing.</li>
+        <li><strong>Launch &amp; recovery:</strong> Use a clear pad away from bees’ flight lines; avoid hovering directly over hive entrances to reduce disturbance.</li>
+      </ul>
+    </section>
+
+    <section id="regulation-ethics">
+      <h2>Regulations, privacy, and ethics</h2>
+      <p>
+        Aviation and privacy rules vary by region. Before flying, learn the airspace classification, altitude limits, registration requirements, and line-of-sight rules that apply where you operate. Respect neighbors’ privacy, avoid flying over people or livestock without permission, and never harass wildlife. Keep logs of flights, maintenance, and incidents as part of broader <a href="/wiki/data-sensing/data-management-practices.html">data management</a>.
+      </p>
+      <p>
+        If any telemetry or imagery is uploaded to cloud services, apply basic security hygiene—unique credentials, role-based access, and encryption. See <a href="/wiki/data-sensing/internet-security-hives.html">Internet security for smart hives</a>.
+      </p>
+    </section>
+
+    <section id="safety">
+      <h2>Safety around bees and people</h2>
+      <ul>
+        <li><strong>Standoff distance:</strong> Keep 5–10 m lateral separation from hive entrances and avoid hovering in the flight path. Bees dislike prolonged prop-wash.</li>
+        <li><strong>Approach direction:</strong> Approach from above and downwind of the hives to keep noise and turbulent air off entrances.</li>
+        <li><strong>Temperature &amp; season:</strong> Avoid low flights on cold days when bees are clustered, and avoid crowding entrances during nectar dearths when colonies are defensive.</li>
+        <li><strong>PPE &amp; comms:</strong> Crew on the ground should wear veils if working nearby. Use hand signals or radios; maintain visual line of sight.</li>
+      </ul>
+    </section>
+
+    <section id="workflow">
+      <h2>A repeatable data workflow</h2>
+      <ol>
+        <li><strong>Plan:</strong> Define objective (e.g., “post-storm status”), pick flight plan, check weather, and confirm airspace.</li>
+        <li><strong>Collect:</strong> Fly the grid/waypoints, capture stills (preferably RAW+JPEG) and, if equipped, thermal imagery.</li>
+        <li><strong>Process:</strong> Stitch images into an orthomosaic or 3D surface (photogrammetry). Export geotiffs and web-friendly tiles.</li>
+        <li><strong>Analyze:</strong> In a GIS, overlay previous months to see changes. Combine with <a href="/wiki/data-sensing/geospatial-bee-mapping.html">apiary geospatial mapping</a> layers—hive points, water, plantings, windbreaks.</li>
+        <li><strong>Decide &amp; act:</strong> Create task tickets (e.g., “replace two lids at east yard; plant buckwheat along the south fence”).</li>
+        <li><strong>Archive:</strong> Store raw imagery, stitched outputs, and notes in a structured folder with metadata. See <a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a>.</li>
+      </ol>
+    </section>
+
+    <section id="thermal">
+      <h2>Thermal scans for winter readiness</h2>
+      <p>
+        Small radiometric thermal sensors can reveal heat loss points across lids and seams. Fly a slow lateral path 6–10 m from the hives at dusk or dawn for best contrast. Look for unusually cool colonies (potentially empty or dead) and abnormally hot points (lid misalignment, inadequate insulation). Pair these observations with ground truth: open suspect hives on the next warm day to confirm and address issues. Cross-reference with <a href="/wiki/sustainability-environment/energy-saving-hive.html">insulation and hive efficiency</a>.
+      </p>
+    </section>
+
+    <section id="mapping-forage">
+      <h2>Forage &amp; water mapping</h2>
+      <p>
+        Orthomosaics at monthly intervals help you see nectar corridors, shaded lines, and bloom gaps. Annotate early nectar sources and late-season drought-proof plants. Use these maps to plan <a href="/wiki/habitat/flower-strip-design.html">flower strips</a>, ponds or troughs, and windbreaks. When combined with <a href="/wiki/data-sensing/apiary-weather-stations.html">local weather station</a> records and <a href="/wiki/data-sensing/hive-weight-monitoring.html">hive weight</a> traces, you can attribute weight jumps to specific flowering events and plan supplemental feeding when dearth appears.
+      </p>
+    </section>
+
+    <section id="limitations">
+      <h2>Limitations &amp; caveats</h2>
+      <ul>
+        <li><strong>Noise &amp; disturbance:</strong> Short, respectful flights minimize disruption. Avoid repetitive hovering.</li>
+        <li><strong>Thermal interpretation:</strong> Thermal signatures are relative and affected by wind, sun angle, and materials; always confirm on the ground.</li>
+        <li><strong>Line-of-sight &amp; weather:</strong> Wind, rain, and glare affect safety and image quality. Scrub flights when conditions are marginal.</li>
+        <li><strong>Data volume:</strong> Mapping creates large datasets; plan storage and backup as part of your <a href="/wiki/data-sensing/data-management-practices.html">data practices</a>.</li>
+      </ul>
+    </section>
+
+    <section id="costs">
+      <h2>Costs &amp; scaling</h2>
+      <p>
+        A practical starter kit (airframe, 3–4 batteries, case, mapping app subscription) fits many small-operation budgets. Thermal payloads increase cost; consider shared access with a local association. As you scale, standardize flight templates and metadata so multiple pilots produce comparable datasets. Consider contributing anonymized landscape layers to <a href="/wiki/sustainability-environment/pollinator-citizen-science.html">pollinator citizen science</a> or <a href="/wiki/data-sensing/open-data-beekeeping.html">open data</a> efforts where appropriate.
+      </p>
+    </section>
+
+    <section id="starter-plan">
+      <h2>30-day starter plan</h2>
+      <ol>
+        <li><strong>Week 1:</strong> Choose airframe; draft safety and privacy guidelines; create a file naming convention; practice manual flight over an empty field.</li>
+        <li><strong>Week 2:</strong> Build two missions: a quick “status sweep” (waypoints) and a “mapping grid.” Fly your home yard; process a test orthomosaic.</li>
+        <li><strong>Week 3:</strong> Add a dawn or dusk thermal pass if equipped; compare to daytime RGB imagery. Note any suspect hives for ground checks.</li>
+        <li><strong>Week 4:</strong> Create a one-page SOP; schedule monthly repeats at critical yards; log first change detections and resulting actions.</li>
+      </ol>
+    </section>
+
+    <section id="checklist">
+      <h2>Quick checklist before each flight</h2>
+      <ul>
+        <li>Airspace &amp; weather checked; mission objective defined.</li>
+        <li>Batteries charged and labeled; spare props; launch pad packed.</li>
+        <li>SD cards formatted; camera set to consistent resolution and format.</li>
+        <li>Mission plan loaded (grid/waypoints); geofence and RTH set.</li>
+        <li>Crew briefed; standoff from hive entrances maintained.</li>
+        <li>Post-flight: data offloaded, backed up, and tagged with site/date.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <nav class="related">
+        <h2>Related pages</h2>
+        <ul>
+          <li><a href="/wiki/data-sensing/geospatial-bee-mapping.html">Geospatial mapping of apiaries</a></li>
+          <li><a href="/wiki/data-sensing/data-management-practices.html">Data management for beekeepers</a></li>
+          <li><a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a></li>
+          <li><a href="/wiki/data-sensing/apiary-weather-stations.html">Apiary weather stations</a></li>
+          <li><a href="/wiki/sustainability-environment/energy-saving-hive.html">Insulation &amp; hive efficiency</a></li>
+        </ul>
+      </nav>
+      <p><strong>Public URL:</strong> <code>/wiki/data-sensing/apiary-drones.html</code><br />
+         <strong>File location:</strong> <code>/site/wiki/data-sensing/apiary-drones.html</code></p>
+    </footer>
+  </article>
+</body>
+</html>
