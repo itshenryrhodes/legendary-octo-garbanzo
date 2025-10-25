@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bee Counting Technologies</title>
+  <meta name="description" content="Overview of devices and algorithms that count bees entering and exiting hives, how they work, where they help, and how to choose and deploy them." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Bee Counting Technologies</h1>
+      <p class="summary">Devices and algorithms that estimate the number of bees entering and exiting a hive. This guide explains approaches, accuracy trade-offs, deployment tips, and how to turn counts into useful decisions.</p>
+      <nav aria-label="Pillar hub">
+        <a href="/wiki/data-sensing/">← Back to Data &amp; Sensing</a>
+      </nav>
+    </header>
+
+    <section id="why-count">
+      <h2>Why count bees?</h2>
+      <p>Entrance traffic correlates with colony strength, foraging conditions, and stress. A healthy colony shows distinct daily patterns—rapid morning ramp-up, midday peak, and evening return. Drops in outbound counts can indicate dearth, cold snaps, pesticide exposure, swarming, or queen loss. Combined with <a href="/wiki/data-sensing/hive-weight-monitoring.html">hive weight monitoring</a> and <a href="/wiki/data-sensing/apiary-weather-stations.html">local weather</a>, counts help explain nectar flows, evaluate management interventions, and alert you to abnormal events.</p>
+    </section>
+
+    <section id="approaches">
+      <h2>Approaches to bee counting</h2>
+      <p>No single method is “best”; the right choice depends on climate, budget, installation skill, and data needs.</p>
+
+      <h3 id="ir-gate">1) Infrared (IR) gate counters</h3>
+      <p>Small IR emitters and detectors form “beams” across narrow entrance tunnels. When a bee breaks a beam in sequence, logic determines direction (in/out) and increments a counter.</p>
+      <ul>
+        <li><strong>Pros:</strong> Low power, weather-resistant, simple electronics, works day and night, data are easy to aggregate.</li>
+        <li><strong>Cons:</strong> Requires “tunnelizing” the entrance; traffic jams and clumping bees can create missed or double counts; propolis buildup affects alignment.</li>
+        <li><strong>Best for:</strong> Long-term trend tracking with moderate accuracy needs.</li>
+      </ul>
+
+      <h3 id="computer-vision">2) Computer-vision (CV) counters</h3>
+      <p>A small camera observes the entrance; on-device or server algorithms detect and track bees frame-to-frame, estimating direction and count. Modern systems use lightweight machine-learning models.</p>
+      <ul>
+        <li><strong>Pros:</strong> High detail (flight speed, clustering), can adapt to irregular entrances, supports advanced analytics (orientation, pollen loads).</li>
+        <li><strong>Cons:</strong> Higher power draw and storage; performance depends on lighting, lens cleanliness, and model quality; requires periodic recalibration.</li>
+        <li><strong>Best for:</strong> Research, commercial pollination analytics, and situations where behavior details matter.</li>
+      </ul>
+
+      <h3 id="rfi">3) RFID / Tag-based tallying</h3>
+      <p>Individual bees are tagged; readers at the entrance log passages.</p>
+      <ul>
+        <li><strong>Pros:</strong> Individual-level data (age cohort, foraging longevity).</li>
+        <li><strong>Cons:</strong> Labor-intensive tagging; tags affect behavior; not representative of whole colony; expensive for routine beekeeping.</li>
+        <li><strong>Best for:</strong> Controlled experiments, not broad operational monitoring.</li>
+      </ul>
+
+      <h3 id="lidar">4) Lidar / time-of-flight and microwave</h3>
+      <p>Experimental systems detect movement across a beam using reflected light or microwaves.</p>
+      <ul>
+        <li><strong>Pros:</strong> Enclosed sensors; less lighting dependency than CV.</li>
+        <li><strong>Cons:</strong> Cost, complexity, sensitivity to multi-bee interference; limited hobbyist availability.</li>
+        <li><strong>Best for:</strong> Specialized research deployments.</li>
+      </ul>
+    </section>
+
+    <section id="accuracy">
+      <h2>Accuracy and validation</h2>
+      <p>Entrance traffic is messy. Accuracy claims should be interpreted cautiously and validated against short human-observed samples.</p>
+      <ul>
+        <li><strong>Metrics:</strong> Report <em>mean absolute percentage error</em> (MAPE) over 15-minute intervals rather than single-bee precision; direction accuracy (% in/out correct) and <em>miss rate</em> under crowding also matter.</li>
+        <li><strong>Sources of error:</strong> Bee bunching during nectar rushes; orientation flights; drifting; guards patrolling in and out without foraging; rain sheltering under the landing board.</li>
+        <li><strong>Calibration:</strong> Record 10–15 minutes of video or manual click-counting in different conditions (sun, shade, wind) and tune thresholds or retrain models as needed.</li>
+      </ul>
+    </section>
+
+    <section id="design">
+      <h2>Design and installation tips</h2>
+      <ul>
+        <li><strong>Entrance geometry:</strong> For IR gates, build 1–2 cm wide channels with matte, non-reflective walls. For CV, ensure a stable field of view with bees crossing orthogonally to the camera.</li>
+        <li><strong>Lighting:</strong> Avoid direct glare on lenses or sensors; add a small hood. For CV at night, use low-intensity IR illumination outside the bee visual spectrum.</li>
+        <li><strong>Mounting:</strong> Isolate sensors from hive vibration; route cables away from the entrance to reduce chewing and propolizing.</li>
+        <li><strong>Weatherproofing:</strong> Use IP-rated enclosures and desiccant packs; avoid condensation on optics by providing slight airflow and anti-fog coatings.</li>
+        <li><strong>Maintain bee flow:</strong> Do not over-restrict the entrance—aim for minimal added resistance and provide bypass options during peak flows or queen return windows.</li>
+      </ul>
+    </section>
+
+    <section id="data-pipeline">
+      <h2>Data pipeline and storage</h2>
+      <p>Counts become valuable when paired with context. Consider:</p>
+      <ul>
+        <li><strong>Sampling:</strong> Raw detection at 10–60 Hz; publish aggregated counts every 1–5 minutes. Use a rolling median filter to smooth spikes.</li>
+        <li><strong>Edge vs. cloud:</strong> IR gates can run on tiny microcontrollers; CV often needs a single-board computer. Transmit summaries to reduce bandwidth.</li>
+        <li><strong>Time sync:</strong> Use NTP or GPS; drift ruins comparisons with <a href="/wiki/data-sensing/hive-weight-monitoring.html">weight</a> and <a href="/wiki/data-sensing/apiary-weather-stations.html">weather</a>.</li>
+        <li><strong>Schema:</strong> Store timestamp, hive_id, direction (in/out), window_length_s, count, sensor_health, and confidence. See <a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a>.</li>
+        <li><strong>Visualization:</strong> Plot diurnal curves and 7-day overlays; annotate inspections, feedings, super additions, and treatments for interpretation.</li>
+      </ul>
+    </section>
+
+    <section id="interpretation">
+      <h2>Interpreting patterns</h2>
+      <ul>
+        <li><strong>Healthy signature:</strong> Clear morning ramp-up, midday plateau, evening return spike, and low nocturnal traffic.</li>
+        <li><strong>Swarm indicators:</strong> Elevated pre-swarm fanning, abnormal midday outflow followed by a sustained drop; combine with <a href="/wiki/operations/swarm-signs-and-prevention.html">swarm signs</a> (published) and <a href="/wiki/operations/hive-swarming-prevention.html">advanced prevention</a> (planned).</li>
+        <li><strong>Forage dearth:</strong> Flattened curves and fewer outbound trips; check <a href="/wiki/habitat/summer-dearth-strategies.html">dearth strategies</a> (planned) and nectar flow via weight trend.</li>
+        <li><strong>Pesticide event:</strong> Sudden traffic collapse inconsistent with weather; inspect immediately and see <a href="/wiki/colony-health/damage-signs-from-pesticides.html">pesticide exposure signs</a> (planned).</li>
+      </ul>
+    </section>
+
+    <section id="buying">
+      <h2>Chooser’s checklist</h2>
+      <ul>
+        <li><strong>Goal clarity:</strong> Trends vs. precise counts; research vs. day-to-day management.</li>
+        <li><strong>Environment:</strong> Dust, propolis, rain, winter icing—pick hardware that survives your worst month.</li>
+        <li><strong>Power:</strong> Solar budget for CV systems; IR gates can run for months on small batteries.</li>
+        <li><strong>Integration:</strong> Exports to CSV/JSON; MQTT support; dashboards; ability to pair with scales and temperature sensors.</li>
+        <li><strong>Serviceability:</strong> Replaceable lenses, easy cleaning, and remote health checks (uptime, temperature, frame-rate).</li>
+        <li><strong>Data ownership:</strong> Ensure you can access raw and aggregated data; understand subscription terms if using a commercial platform.</li>
+      </ul>
+    </section>
+
+    <section id="diy">
+      <h2>DIY: building a simple IR gate</h2>
+      <ol>
+        <li><strong>Entrance module:</strong> 6–8 parallel channels made from matte black plastic; width 12–15 mm, height 8–10 mm.</li>
+        <li><strong>Sensors:</strong> Paired IR LEDs and phototransistors at each channel; mount flush and shield from ambient light leaks.</li>
+        <li><strong>Logic:</strong> A small microcontroller reads beam states at 100–200 Hz and detects “break sequences” to infer direction.</li>
+        <li><strong>Debounce &amp; de-clump:</strong> Ignore breaks shorter than a threshold; apply per-channel refractory periods to reduce double counts during bunching.</li>
+        <li><strong>Telemetry:</strong> Publish 1-minute totals via LoRa/Wi-Fi; log locally as a fallback.</li>
+      </ol>
+      <p>Test side-by-side with a manual clicker for 15 minutes, then adjust thresholds. Re-validate monthly or after large nectar flows.</p>
+    </section>
+
+    <section id="cv-tuning">
+      <h2>Computer-vision tuning pointers</h2>
+      <ul>
+        <li><strong>Optics:</strong> Use a fixed-focus lens and lock exposure. Frame the entire entrance plus 5–10 cm margin.</li>
+        <li><strong>Background control:</strong> Provide a matte, high-contrast backdrop behind the flight path to aid detection.</li>
+        <li><strong>Model choice:</strong> Prefer lightweight detectors (e.g., tiny object-detectors) capable of 15–30 FPS on single-board computers.</li>
+        <li><strong>Tracking:</strong> Use simple centroid tracking with motion direction over a virtual “count line.”</li>
+        <li><strong>Health signals:</strong> Log frame-rate, dropped frames, and confidence to spot dirty lenses or misalignment early.</li>
+      </ul>
+    </section>
+
+    <section id="maintenance">
+      <h2>Maintenance and troubleshooting</h2>
+      <ul>
+        <li><strong>Cleaning cadence:</strong> Wipe lenses and IR windows weekly in propolizing seasons; check for cobwebs and wax dust.</li>
+        <li><strong>Seasonality:</strong> Expect lower traffic in cold weather; build alerts around relative baselines, not fixed thresholds.</li>
+        <li><strong>False counts:</strong> Raindrops, shadows, and drifting wasps can cause spikes; cross-check with weight and <a href="/wiki/data-sensing/sound-analysis-hive.html">sound analysis</a> to filter anomalies.</li>
+        <li><strong>Firmware updates:</strong> Stage updates on one hive first; compare to control before rolling out.</li>
+      </ul>
+    </section>
+
+    <section id="ethics">
+      <h2>Ethics, privacy, and disturbance</h2>
+      <p>Counting at the entrance should not impede bee movement or overheat the landing board. Avoid bright visible lights. When using cameras in shared spaces, position them narrowly on the entrance and avoid capturing neighboring properties. Share aggregated, non-identifiable data when contributing to <a href="/wiki/sustainability-environment/pollinator-citizen-science.html">citizen science</a>.</p>
+    </section>
+
+    <section id="from-counts-to-actions">
+      <h2>From counts to actions</h2>
+      <ul>
+        <li><strong>Supering decisions:</strong> Rising outbound traffic and sustained weight gain suggest adding supers (<a href="/wiki/operations/honey-supering.html">Adding Supers</a>).</li>
+        <li><strong>Swarm management:</strong> Anomalous patterns support inspections and measures in <a href="/wiki/operations/swarm-signs-and-prevention.html">Swarm signs &amp; prevention</a> (published) and <a href="/wiki/operations/hive-swarming-prevention.html">Advanced Swarm Prevention</a> (planned).</li>
+        <li><strong>Health checks:</strong> Persistent traffic depression warrants a <a href="/wiki/colony-health/hive-health-assessment.html">colony health assessment</a> and mite monitoring.</li>
+        <li><strong>ML forecasting:</strong> Pair counts, weather, and weight to build simple predictive models; see <a href="/wiki/data-sensing/machine-learning-beehealth.html">Machine Learning for Bee Health</a>.</li>
+      </ul>
+    </section>
+
+    <section id="glossary">
+      <h2>Key terms</h2>
+      <dl>
+        <dt>Directionality</dt>
+        <dd>Ability to distinguish bees entering vs. exiting the hive.</dd>
+        <dt>Throughput</dt>
+        <dd>Maximum bees per minute the system can measure without saturating.</dd>
+        <dt>Confidence</dt>
+        <dd>Model or sensor’s self-reported quality measure for a given count window.</dd>
+      </dl>
+    </section>
+
+    <footer>
+      <nav class="related">
+        <h2>Related pages</h2>
+        <ul>
+          <li><a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a> (planned)</li>
+          <li><a href="/wiki/data-sensing/sound-analysis-hive.html">Hive Sound Analysis</a> (planned)</li>
+          <li><a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a> (planned)</li>
+          <li><a href="/wiki/data-sensing/apiary-weather-stations.html">Apiary Weather Stations</a> (planned)</li>
+          <li><a href="/wiki/data-sensing/machine-learning-beehealth.html">Machine Learning for Bee Health</a> (planned)</li>
+        </ul>
+      </nav>
+    </footer>
+  </article>
+</body>
+</html>
