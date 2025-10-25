@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Data Logging Best Practices</title>
+  <meta name="description" content="How to design reliable hive data logging—what to measure, how to sample, calibrate, store, secure, and use your sensor data without drowning in it." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Data Logging Best Practices</h1>
+      <p class="summary">How to design reliable hive data logging—what to measure, how to sample, calibrate, store, secure, and use your sensor data without drowning in it.</p>
+      <nav aria-label="Pillar hub">
+        <a href="/wiki/data-sensing/">← Back to Data Sensing</a>
+      </nav>
+    </header>
+
+    <section id="why-log">
+      <h2>Why log hive data?</h2>
+      <p>Good logs turn scattered sensor readings into decisions you can trust. Temperature and humidity show brood conditions and ventilation; weight traces nectar flows and winter consumption; acoustics reveal stress and swarm preparation. Logging adds three things your memory cannot: consistent timing, auditability, and the ability to compare across colonies and seasons.</p>
+      <p>This guide focuses on robust practice, not fancy hardware. Start simple, automate the boring parts, and make sure every number has a known origin, unit, and clock.</p>
+    </section>
+
+    <section id="planning">
+      <h2>Plan first: questions over gadgets</h2>
+      <ul>
+        <li><strong>Decide what you need to know:</strong> “Are my colonies light and at risk?” “Did a treatment reduce mite stress?” Your questions dictate sensors and sampling rate.</li>
+        <li><strong>Choose a minimal set:</strong> For most yards, start with <em>internal temperature &amp; humidity</em> in the brood nest and a <em>hive scale</em> under at least one representative hive.</li>
+        <li><strong>Budget for power and enclosure:</strong> A great sensor in a leaky box with dying batteries is worse than none. Weatherproof first.</li>
+        <li><strong>Make the data useful:</strong> Decide where the data will live (<a href="/wiki/data-sensing/data-management-practices.html">data management</a>) and how you’ll view it (dashboard, spreadsheet, app).</li>
+      </ul>
+    </section>
+
+    <section id="sampling">
+      <h2>Sampling strategy and rates</h2>
+      <p>Sampling more often isn’t always better; it costs power and storage and can amplify noise. Use rates that capture the biology of interest:</p>
+      <ul>
+        <li><strong>Internal temperature:</strong> every 5–10 minutes shows brood stability and anomalies without excessive drain.</li>
+        <li><strong>Internal humidity:</strong> every 5–10 minutes paired with temperature; trends matter more than single points.</li>
+        <li><strong>Hive weight:</strong> every 15 minutes to 1 hour balances resolution of forager returns with battery life.</li>
+        <li><strong>Weather station (yard-level):</strong> every 10–15 minutes for rainfall, ambient temperature, wind.</li>
+        <li><strong>Acoustics:</strong> schedule short 10–30 second recordings every hour or on a triggered event to save space.</li>
+      </ul>
+      <p>Apply <strong>duty cycling</strong> (sensor sleeps between reads) and <strong>edge aggregation</strong> (average, min, max over the interval) to reduce raw volume while preserving information.</p>
+    </section>
+
+    <section id="placement">
+      <h2>Sensor placement basics</h2>
+      <ul>
+        <li><strong>Brood sensor:</strong> Mount just above the brood nest centerline, not touching comb or bees directly. Avoid contact with wet cappings.</li>
+        <li><strong>Humidity:</strong> Shield the probe from drips and propolis; ensure airflow. Do not place against the cover where condensation collects.</li>
+        <li><strong>Scale:</strong> Level the platform, avoid point loads, and keep feet off soft soil. Note any rock shims in your metadata.</li>
+        <li><strong>Weather:</strong> Place rain and temperature sensors in open air, shielded from sun with a radiation shield, away from building heat.</li>
+      </ul>
+      <p>Map each sensor’s physical position in your records. Unknown placement is a common reason data cannot be interpreted later.</p>
+    </section>
+
+    <section id="calibration">
+      <h2>Calibration and quality checks</h2>
+      <p>Uncalibrated sensors lie politely. Bake in simple checks:</p>
+      <ul>
+        <li><strong>Temperature:</strong> Compare probes in a stirred ice bath (should read ~0&nbsp;°C) and at room temperature side-by-side. Record offsets.</li>
+        <li><strong>Humidity:</strong> Use known-salt packs (e.g., 75% RH) to verify readings annually.</li>
+        <li><strong>Weight:</strong> Verify with known loads (e.g., two bricks = 5&nbsp;kg). Log the test date and observed offset.</li>
+        <li><strong>Clock:</strong> Ensure all devices sync time (see “Timekeeping”). Misaligned clocks make cross-hive plots misleading.</li>
+      </ul>
+      <p>Add <strong>reasonableness filters</strong> to your logger: discard impossible spikes (e.g., ±10&nbsp;kg in one minute) unless also flagged as “lifted hive” via a tilt sensor or lid-open switch.</p>
+    </section>
+
+    <section id="timekeeping">
+      <h2>Timekeeping and identifiers</h2>
+      <ul>
+        <li><strong>UTC timestamps:</strong> Store in UTC (<code>2025-10-25T14:03:00Z</code>). Convert to local time only in the dashboard.</li>
+        <li><strong>Stable IDs:</strong> Each colony gets a permanent <code>colony_id</code>; each physical box or location can have its own <code>hive_id</code>; each device has a <code>device_id</code>. Keep a lookup table.</li>
+        <li><strong>Event markers:</strong> Log discrete events (feed, move, add super, treatment) with timestamp and note. They give context to data swings.</li>
+      </ul>
+    </section>
+
+    <section id="schema">
+      <h2>A simple, durable data schema</h2>
+      <p>Use a tidy, append-only layout so any tool can read it later. One row per measurement:</p>
+      <pre><code>timestamp_utc, apiary_id, hive_id, colony_id, device_id, sensor, value, unit, qc_flag
+2025-10-25T14:03:00Z, Y01, H07, C07, D-TH-02, temp_internal, 35.2, C, ok
+2025-10-25T14:03:00Z, Y01, H07, C07, D-TH-02, rh_internal,   56.0, %, ok
+2025-10-25T14:03:00Z, Y01, H07, C07, D-SCALE-01, weight,     42.8, kg, ok</code></pre>
+      <p>Keep units explicit (<code>C</code>, <code>%</code>, <code>kg</code>) and use <code>qc_flag</code> for notes like <code>lid_open</code>, <code>lifted</code>, <code>sensor_fault</code>.</p>
+    </section>
+
+    <section id="storage">
+      <h2>Storage, backup, and retention</h2>
+      <ul>
+        <li><strong>Local first:</strong> Log to a local file or database on the gateway (e.g., a field computer) so you don’t lose data if the network drops.</li>
+        <li><strong>Daily sync:</strong> Mirror to a second location (NAS or cloud bucket). Automate with a nightly job and verify completion.</li>
+        <li><strong>Retention tiers:</strong> Keep full-resolution data for 12 months, then archive downsampled summaries (5-min → hourly) to save space.</li>
+        <li><strong>Versioned folders:</strong> Use dated folders or table partitions (<code>year=2025/month=10</code>) for fast queries and clean housekeeping.</li>
+      </ul>
+    </section>
+
+    <section id="connectivity">
+      <h2>Connectivity in real yards</h2>
+      <p>Design for outages. Gateways should queue data for days and retry uploads. If using cellular, log signal strength and data usage; if using long-range radios, record packet loss rate for diagnostics.</p>
+      <p>Mark gaps explicitly (no silent flat lines). Your dashboard should draw a gap when no samples exist, not interpolate.</p>
+    </section>
+
+    <section id="power">
+      <h2>Power: keep it alive</h2>
+      <ul>
+        <li><strong>Duty cycle:</strong> Sleep between reads and radio transmissions. Batch sends to once per 5–15 minutes.</li>
+        <li><strong>Battery choice:</strong> Use cells rated for cold; mount packs in insulated boxes but allow ventilation to avoid moisture damage.</li>
+        <li><strong>Solar:</strong> Right-size the panel and include a charge controller; log battery voltage to catch failures early.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>Security and integrity</h2>
+      <ul>
+        <li><strong>Signed firmware and updates:</strong> Prevent rogue code from hijacking devices.</li>
+        <li><strong>Unique credentials per device:</strong> Avoid shared passwords. Rotate keys if a device is lost.</li>
+        <li><strong>Immutable logs:</strong> Append-only storage or checksums make tampering evident; keep raw files read-only after upload.</li>
+        <li>See <a href="/wiki/data-sensing/internet-security-hives.html">Internet Security for Smart Hives</a> for a deeper checklist.</li>
+      </ul>
+    </section>
+
+    <section id="qaqc">
+      <h2>QA/QC: trust but verify</h2>
+      <ul>
+        <li><strong>Range checks:</strong> Reject physiologically impossible values (e.g., 80&nbsp;°C internal).</li>
+        <li><strong>Spike detection:</strong> Flag sudden steps that coincide with <em>no</em> event markers.</li>
+        <li><strong>Drift checks:</strong> Compare sensors across hives at night; large persistent offsets suggest calibration drift.</li>
+        <li><strong>Cross-validation:</strong> Internal temp should be near brood target (~34–36&nbsp;°C). If weight drops while foraging should rise, check scale feet and weather (rainwater).</li>
+      </ul>
+    </section>
+
+    <section id="dashboards">
+      <h2>Dashboards and alerts that help, not harass</h2>
+      <ul>
+        <li><strong>Few, clear views:</strong> A yard overview (latest weight, temp, alerts) and a deep-dive per hive.</li>
+        <li><strong>Context layers:</strong> Overlay weather, super additions, moves, and treatment events on charts.</li>
+        <li><strong>Sane alerts:</strong> Alert on <em>duration</em> (e.g., internal temp &lt; 30&nbsp;°C for &gt; 60 minutes) to avoid false positives.</li>
+      </ul>
+      <p>For building, see <a href="/wiki/data-sensing/remote-monitoring-systems.html">Remote Hive Monitoring Systems</a> and <a href="/wiki/data-sensing/smartphone-apps-beekeeping.html">Smartphone Apps</a>.</p>
+    </section>
+
+    <section id="documentation">
+      <h2>Metadata and documentation</h2>
+      <p>Data without context is noise. Maintain a simple catalog:</p>
+      <ul>
+        <li><strong>Devices:</strong> model, firmware, calibration offsets, install date, location.</li>
+        <li><strong>Hives:</strong> colony ID, queen age/line, configuration (boxes, frames), treatments.</li>
+        <li><strong>Sensors:</strong> serial, placement diagram/photo, units, sampling rate.</li>
+      </ul>
+      <p>Store this with your data so exports remain meaningful years later.</p>
+    </section>
+
+    <section id="ethics">
+      <h2>Ethics, privacy, and sharing</h2>
+      <p>Yard locations, neighbor behavior, and pesticide incidents can be sensitive. If you share to community platforms (<a href="/wiki/sustainability-environment/pollinator-citizen-science.html">citizen science</a>, <a href="/wiki/data-sensing/open-data-beekeeping.html">open data</a>):</p>
+      <ul>
+        <li>Obscure exact coordinates if needed; share at the landscape scale.</li>
+        <li>Remove personal identifiers from notes before publishing.</li>
+        <li>Include a data license so others know how they can use your contribution.</li>
+      </ul>
+    </section>
+
+    <section id="troubleshooting">
+      <h2>Troubleshooting quick table</h2>
+      <table>
+        <thead>
+          <tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Flat temperature line at 25&nbsp;°C</td><td>Probe outside cluster, or sensor stuck</td><td>Reposition near brood; check wiring and propolis</td></tr>
+          <tr><td>Weight jumps ±5&nbsp;kg instantly</td><td>Wind lift, human disturbance, loose foot</td><td>Secure scale, add event markers; filter spikes</td></tr>
+          <tr><td>Missing data overnight</td><td>Battery sag or upload window misconfigured</td><td>Check solar/pack; queue locally; reschedule uploads</td></tr>
+          <tr><td>All hives drift together</td><td>Clock offset or ambient heat wave</td><td>Sync time; compare with weather station</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="start-small">
+      <h2>Start small, iterate, and compare</h2>
+      <p>Instrument one or two representative colonies first. Run for two weeks, review plots, and prune what isn’t useful. Add complexity only when you’ve proven that new data changes decisions.</p>
+    </section>
+
+    <footer>
+      <nav class="related">
+        <h2>Related pages</h2>
+        <ul>
+          <li><a href="/wiki/data-sensing/hive-temperature-humidity-sensors.html">Hive Temperature and Humidity Sensors</a></li>
+          <li><a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a></li>
+          <li><a href="/wiki/data-sensing/remote-monitoring-systems.html">Remote Hive Monitoring Systems</a></li>
+          <li><a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a></li>
+          <li><a href="/wiki/data-sensing/apiary-weather-stations.html">Apiary Weather Stations</a></li>
+          <li><a href="/wiki/data-sensing/internet-security-hives.html">Internet Security for Smart Hives</a></li>
+          <li><a href="/wiki/data-sensing/machine-learning-beehealth.html">Machine Learning for Bee Health</a></li>
+          <li><a href="/wiki/data-sensing/smartphone-apps-beekeeping.html">Smartphone Apps for Beekeepers</a></li>
+        </ul>
+      </nav>
+      <p><strong>File location:</strong> <code>/site/wiki/data-sensing/data-logging-best-practices.html</code></p>
+    </footer>
+  </article>
+</body>
+</html>
