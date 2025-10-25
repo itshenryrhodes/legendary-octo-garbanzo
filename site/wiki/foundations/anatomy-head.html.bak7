@@ -1,0 +1,183 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Anatomy: head (worker honey bee)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical tour of the honey bee head: compound eyes, ocelli, antennae, mouthparts, and the sensory systems that drive foraging, communication, and nest work.">
+  <link rel="canonical" href="/wiki/foundations/anatomy-head.html">
+<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/css/wiki.css" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <header>
+    <nav aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a> â€º
+      <a href="/wiki/foundations/">Foundations</a> â€º
+      Anatomy: head
+    </nav>
+    <h1>Anatomy: head (worker honey bee)</h1>
+    <p class="lede">A practical tour of the honey bee headâ€”what each structure does, how to recognise normal functions during inspections, and how to handle frames without disrupting sensory communication.</p>
+  </header>
+
+  <main>
+    <section id="overview">
+      <h2>Why the head matters to beekeepers</h2>
+      <p>The head packs most of a workerâ€™s sensory hardware and the mouthparts used to test nectar, share food, and shape wax. If you understand how bees sense and sample the world, you can read their signals, give calmer inspections, and avoid mistakes that trigger defensive behavior or robbing.</p>
+      <ul>
+        <li><strong>Observation:</strong> spot waggle dance activity, antennal exchanges, and fanning at the entrance.</li>
+        <li><strong>Handling:</strong> use smoke to mask alarm odours without drenching bees; avoid crushing that releases defensive pheromone.</li>
+        <li><strong>Decisions:</strong> link what you see on frames to foraging conditions, queen presence, and colony mood.</li>
+      </ul>
+      <p>Related context: <a href="/wiki/foundations/bee-biology-basics.html">Bee biology basics</a>, <a href="/wiki/foundations/bee-communication.html">Bee communication</a>, and the glossary entry <a href="/wiki/foundations/glossary-antenna.html">Antenna</a>.</p>
+    </section>
+
+    <section id="external-structures">
+      <h2>External structures</h2>
+
+      <article id="compound-eyes">
+        <h3>Compound eyes</h3>
+        <p>Workers have a pair of large compound eyes composed of thousands of ommatidia. They excel at detecting motion and patterns, including ultraviolet guides on flowers. Bees also use the pattern of polarized sky light for orientation, which helps them navigate even when the sun is obscured.</p>
+        <ul>
+          <li><strong>What you might see:</strong> foragers orienting at the entrance, briefly facing outward before takeoff; inside the hive, eyes are less important than smell and touch.</li>
+          <li><strong>Practical tip:</strong> avoid abrupt movements in front of the entranceâ€”fast motion is a defensive trigger.</li>
+        </ul>
+      </article>
+
+      <article id="ocelli">
+        <h3>Ocelli (simple eyes)</h3>
+        <p>Three small ocelli sit on the top of the head in a triangular arrangement. They sense light intensity and help stabilize flight and horizon detection.</p>
+        <p><strong>Inspection note:</strong> ocelli arenâ€™t visible during normal work, but understand they aid a beeâ€™s balanceâ€”closing the colony smoothly prevents frantic reorientation flights.</p>
+      </article>
+
+      <article id="antennae">
+        <h3>Antennae</h3>
+        <p>Each antenna includes a scape, pedicel, and a flagellum with many segments carrying chemoreceptors and mechanoreceptors. Antennae sample odours, humidity, temperature, vapours, and even tiny air vibrations.</p>
+        <ul>
+          <li><strong>Communication:</strong> antennal contact spreads information; nurse bees and foragers frequently â€œtasteâ€ each other to assess nectar quality and share colony state.</li>
+          <li><strong>Grooming:</strong> forelegs have notches used to clean antennae; you can often spot workers pausing to pull an antenna through a foreleg notch.</li>
+        </ul>
+        <p>See the glossary note <a href="/wiki/foundations/glossary-antenna.html">Antenna</a> for a compact definition, and <a href="/wiki/foundations/bee-communication.html">Bee communication</a> for how antennal signals integrate with dances and pheromones.</p>
+      </article>
+
+      <article id="mouthparts">
+        <h3>Mouthparts</h3>
+        <p>The head carries an extendable proboscis (tongue) formed from the glossa and associated labial structures, plus mandibles used as gripping and shaping tools. The proboscis sips nectar and water; the mandibles manipulate wax, propolis, and pollen, and help clean cells before the queen lays.</p>
+        <ul>
+          <li><strong>Trophallaxis:</strong> bees mouth-to-mouth exchange to equalise food quality and share enzymesâ€”watch for short exchanges on the top bars during nectar flow.</li>
+          <li><strong>Comb work:</strong> during new comb construction, youâ€™ll see mandibles kneading soft white wax scales (produced in the abdomen) into cell walls.</li>
+        </ul>
+        <p>Related reading: <a href="/wiki/foundations/comb-construction-basics.html">Comb construction basics</a>, <a href="/wiki/operations/feeding-basics.html">Feeding basics</a>.</p>
+      </article>
+    </section>
+
+    <section id="internal-organs">
+      <h2>Key internal organs housed in the head</h2>
+      <article id="brain">
+        <h3>Brain and sensory integration</h3>
+        <p>The bee brain is compact but highly specialised. Lobes integrate input from the eyes and antennae, and the mushroom bodies support learning and memory. Foragers can remember profitable floral scents and return to them; scouts learn landmarks and communicate directions via dance.</p>
+        <p><strong>In practice:</strong> disruptive smoke clouds can temporarily impair odor-tracking; use minimal puffs and wait a few seconds before opening brood boxes.</p>
+      </article>
+
+      <article id="salivary-glands">
+        <h3>Salivary and mandibular glands</h3>
+        <p>Glands in the head contribute fluids for processing food and wax, and produce pheromones that influence social behaviour. Queen mandibular pheromone is the best-known example, but workers also produce blends that affect task allocation and cohesion.</p>
+      </article>
+
+      <article id="hypopharyngeal-glands">
+        <h3>Hypopharyngeal glands (nurse jelly)</h3>
+        <p>In young workers these glands produce protein-rich secretions used to feed larvae and queens. As workers age and switch to foraging, the glands shrink.</p>
+        <p><strong>Inspection cue:</strong> a strong population of young workersâ€”often indicated by fresh white wax and polished cellsâ€”supports better brood food production.</p>
+      </article>
+    </section>
+
+    <section id="what-to-look-for">
+      <h2>What to look for during inspections</h2>
+      <ul>
+        <li><strong>Antennal contacts:</strong> frequent, calm touching suggests steady traffic and normal food sharing.</li>
+        <li><strong>Tongue extension:</strong> foragers extend the proboscis to test nectar; high activity at open nectar sources may foretell backfilling and the need for supering.</li>
+        <li><strong>Fanning at the entrance:</strong> workers raise abdomens and beat wings while releasing orientation scent; this helps returning foragers and ventilates the hive.</li>
+        <li><strong>Grooming behaviour:</strong> steady self- and allo-grooming is normal; frantic grooming with wing-chewing can be a stress sign.</li>
+      </ul>
+      <p>If bees ramp to head-butting and pinging your veil, pause, re-close gently, add a tiny puff of smoke at the entrance, and resume after a short wait. Combine with careful frame handling from <a href="/wiki/foundations/hive-tool-basics.html">Hive tool basics</a>.</p>
+    </section>
+
+    <section id="differences-by-caste">
+      <h2>Head anatomy by caste (quick contrasts)</h2>
+      <ul>
+        <li><strong>Workers:</strong> well-developed antennae and mouthparts; compound eyes moderate in size; mandibular glands tuned for worker tasks.</li>
+        <li><strong>Drones:</strong> very large compound eyes that meet at the top of the head to aid queen-chasing; mouthparts are less adapted for wax work.</li>
+        <li><strong>Queen:</strong> mandibular glands specialise in pheromone production; mouthparts capable of cell inspection and food intake but little wax manipulation.</li>
+      </ul>
+      <p>For detailed life-stage context, see <a href="/wiki/foundations/bee-castes-and-lifecycle.html">Bee castes &amp; lifecycle</a>.</p>
+    </section>
+
+    <section id="handling">
+      <h2>Handling that respects sensory biology</h2>
+      <ol>
+        <li><strong>Approach smoothly:</strong> open the hive with minimal vibration; avoid knocking boxes, which triggers alarm odours and agitation.</li>
+        <li><strong>Use light smoke:</strong> a small puff at the entrance and under the cover masks alarm scent long enough to work; wait a few seconds before lifting frames.</li>
+        <li><strong>Keep frames oriented:</strong> return frames to their original positionsâ€”bees map locations using scent and orientation; reshuffling can stall work.</li>
+        <li><strong>Mind nectar drips:</strong> spilled syrup or nectar overwhelms antennal cues and can spark robbing; keep equipment clean and entrances reduced when feeding.</li>
+      </ol>
+      <p>More on hive temperament and control in <a href="/wiki/operations/first-inspection-checklist.html">First inspection checklist</a> and <a href="/wiki/operations/swarm-signs-and-prevention.html">Swarm signs &amp; prevention</a>.</p>
+    </section>
+
+    <section id="diagnostics">
+      <h2>Basic diagnostics from head-driven behaviours</h2>
+      <ul>
+        <li><strong>Queenright signals:</strong> calm brood care and steady antennal contact near polished cells generally indicate a laying queen nearby, even if you donâ€™t spot her.</li>
+        <li><strong>Nectar dearth vs. flow:</strong> tongues rapidly testing thin nectar and fanning for evaporation indicate flow; listless milling and entrance agitation suggest dearth.</li>
+        <li><strong>Stress cues:</strong> persistent head-butting, loud â€œroaring,â€ and bees tracking your hands are red flagsâ€”shorten the session and re-plan.</li>
+      </ul>
+      <p>Pair behaviour with objective checks: see <a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa monitoring schedule</a> and <a href="/wiki/colony-health/hygienic-behaviour-testing.html">Hygienic behaviour testing</a>.</p>
+    </section>
+
+    <section id="glossary-links">
+      <h2>Glossary links</h2>
+      <ul>
+        <li><a href="/wiki/foundations/glossary-antenna.html">Antenna</a></li>
+        <li><a href="/wiki/foundations/glossary-ocelli.html">Ocelli</a></li>
+        <li><a href="/wiki/foundations/glossary-proboscis.html">Proboscis</a></li>
+        <li><a href="/wiki/foundations/glossary-trophallaxis.html">Trophallaxis</a></li>
+      </ul>
+    </section>
+
+    <section id="related">
+      <h2>Related reading</h2>
+      <ul>
+        <li><a href="/wiki/foundations/anatomy-thorax.html">Anatomy: thorax</a></li>
+        <li><a href="/wiki/foundations/anatomy-abdomen.html">Anatomy: abdomen</a></li>
+        <li><a href="/wiki/foundations/bee-communication.html">Bee communication</a></li>
+        <li><a href="/wiki/foundations/nectar-to-honey.html">Nectar to honey</a></li>
+        <li><a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a></li>
+      </ul>
+      <p class="hub-link"><a href="/wiki/foundations/">Back to the Foundations hub â†’</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Bee Planet Connection Â· Foundations</p>
+  </footer>
+</body>
+</html>
+
+

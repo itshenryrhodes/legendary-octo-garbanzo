@@ -1,0 +1,195 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Smoker basics | Bee Planet Connection</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="What a bee smoker does, safe fuel choices, how to light it reliably, and how to use cool, thin smoke during inspections without stressing colonies." />
+  <link rel="canonical" href="https://www.beeplanetconnection.org/wiki/foundations/smoker-basics.html" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Smoker basics" />
+  <meta property="og:description" content="What a bee smoker does, safe fuel choices, how to light it reliably, and how to use cool, thin smoke during inspections." />
+  <meta property="og:type" content="article" />
+  <meta property="article:section" content="foundations" />
+  <meta property="article:modified_time" content="2025-10-25" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Smoker basics",
+    "dateModified": "2025-10-25",
+    "about": ["beekeeping tools", "bee smoker", "hive inspection"],
+    "articleSection": "foundations",
+    "author": { "@type": "Organization", "name": "Bee Planet Connection" },
+    "mainEntityOfPage": "https://www.beeplanetconnection.org/wiki/foundations/smoker-basics.html"
+  }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
+    header, main, footer { max-width: 72rem; margin: 0 auto; padding: 1rem; }
+    .crumbs a { color: inherit; text-decoration: none; }
+    .crumbs { font-size: .875rem; opacity: .85; margin-bottom: .5rem; }
+    .lede { font-size: 1.125rem; margin-top: .25rem; color: #555; }
+    .meta { font-size: .875rem; opacity: .8; margin: .75rem 0 1.25rem; }
+    .callout { background: rgba(0,0,0,.04); padding: .75rem 1rem; border-radius: .5rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+    h1, h2 { line-height: 1.25; }
+    nav.toc { border-left: 4px solid rgba(0,0,0,.1); padding-left: 1rem; margin: 1rem 0 2rem; }
+    nav.toc a { text-decoration: none; }
+    ul.related { list-style: square; }
+    code.kbd { background: rgba(0,0,0,.06); padding: .1rem .3rem; border-radius: .25rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .875rem; }
+  </style>
+<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/css/wiki.css" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+<header>
+  <p class="crumbs"><a href="/wiki/">Wiki</a> â€º <a href="/wiki/foundations/">Foundations</a></p>
+  <h1>Smoker basics</h1>
+  <p class="lede">What a smoker does, how to light it reliably, which fuels to use, and how to apply cool, thin smoke so inspections stay calm and safe.</p>
+  <p class="meta">Level: newcomer Â· Updated: <time datetime="2025-10-25">25 Oct 2025</time> Â· Tags: tools, inspection, safety</p>
+</header>
+
+<main id="content">
+  <nav class="toc" aria-label="Table of contents">
+    <strong>On this page</strong>
+    <ol>
+      <li><a href="#why-smoke-works">Why smoke works</a></li>
+      <li><a href="#equipment">Equipment & parts</a></li>
+      <li><a href="#fuel">Good fuels (and what to avoid)</a></li>
+      <li><a href="#lighting">Lighting the smoker (step-by-step)</a></li>
+      <li><a href="#using">How to use smoke during inspections</a></li>
+      <li><a href="#when-not">When not to use smoke</a></li>
+      <li><a href="#safety">Safety & fire risk</a></li>
+      <li><a href="#troubleshoot">Troubleshooting</a></li>
+      <li><a href="#related">Related reading</a></li>
+    </ol>
+  </nav>
+
+  <section id="why-smoke-works">
+    <h2>Why smoke works</h2>
+    <p>Honey bees defend with alarm pheromones released near the sting site. Cool, thin smoke disrupts alarm signaling and encourages bees to retreat and gorge on nectar or honey, which makes stinging less likely. Historically this has been explained as smoke <em>masking</em> alarm pheromones (notably isopentyl acetate); modern reviews describe a combination of masking, sensory interference, and behavioral shift to ingestion and evacuation behavior. The effect is temporaryâ€”use sparingly and refresh only if needed.</p>
+  </section>
+
+  <section id="equipment">
+    <h2>Equipment & parts</h2>
+    <div class="grid">
+      <div class="callout">
+        <h3>Standard smoker</h3>
+        <p>Stainless steel firebox, heat guard, bellows, lid with spout, and a grate at the bottom for airflow. Sizes vary; a medium smoker (approx. 4Ã—10 in / 10Ã—25&nbsp;cm) suits most hobbyists.</p>
+      </div>
+      <div class="callout">
+        <h3>Useful add-ons</h3>
+        <ul>
+          <li>Starter cube (plain, untreated wood fiber) for easy lighting.</li>
+          <li>Long lighter or matches.</li>
+          <li>Cork or metal cap to snuff the smoker when done.</li>
+          <li>Fireproof base (metal tray, bare soil) to rest a hot smoker.</li>
+          <li>Small spray bottle with water for spot-damping ash.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="fuel">
+    <h2>Good fuels (and what to avoid)</h2>
+    <p>Choose clean, natural fuels that make <strong>cool, white/blue, non-acrid</strong> smoke:</p>
+    <ul>
+      <li>Hessian/burlap (untreated), dried pine needles, wood shavings, punky wood, dry leaves, clean cardboard egg trays, or dried herb stems.</li>
+      <li><strong>Avoid</strong> treated/painted/pressure-treated wood, glossy cardboard, plastics/synthetics, baler twine, cedar, or anything resinous or perfumed that can create irritant smoke.</li>
+    </ul>
+    <p>Pack loosely at first for airflow, then top up after ignition to create a slow, steady smolder.</p>
+  </section>
+
+  <section id="lighting">
+    <h2>Lighting the smoker (step-by-step)</h2>
+    <ol>
+      <li>Place the smoker on non-flammable ground. Open the lid; ensure the bottom grate is clear.</li>
+      <li>Ignite a small wad of starter fuel. Pump the bellows gently until you have a stable flame.</li>
+      <li>Add a handful of main fuel. Keep pumping until the flame works <em>through</em> the fuel.</li>
+      <li>Pack more fuel in small increments. Alternate: add fuel â†’ pump until flaming â†’ add fuel.</li>
+      <li>When smoke turns <em>cool and dense</em>, close the lid. Test on your wrist: it should feel warm, not hot.</li>
+      <li>During inspections, top up small amounts to maintain a steady, <em>cool</em> smolder.</li>
+    </ol>
+    <p><strong>Tip:</strong> If smoke is hot or sharp, youâ€™re burning, not smoldering. Open the lid, add more fuel, and reduce airflow with gentler puffs.</p>
+  </section>
+
+  <section id="using">
+    <h2>How to use smoke during inspections</h2>
+    <ul>
+      <li><strong>At the entrance:</strong> 1â€“2 small puffs, then wait ~30â€“60 seconds. This sends a calm signal without flooding the hive.</li>
+      <li><strong>Under the cover:</strong> After cracking the outer cover with your <a href="/wiki/foundations/hive-tool-basics.html">hive tool</a>, give a light puff across the top bars and pause.</li>
+      <li><strong>When moving frames:</strong> If bees crowd an area, waft a short puff <em>above</em> them and wait a few seconds.</li>
+      <li><strong>Use as little as needed:</strong> Over-smoking can mask queen pheromones and make bees leave the brood area; aim for minimal, well-timed cues.</li>
+    </ul>
+  </section>
+
+  <section id="when-not">
+    <h2>When not to use smoke</h2>
+    <ul>
+      <li><strong>During heavy nectar dearth + robbing pressure:</strong> Use sparingly; consider switching to a light sugar-water mist to avoid triggering defensive drift. See <a href="/wiki/operations/feeding-basics.html">Feeding basics</a>.</li>
+      <li><strong>On very windy, hot, or drought days:</strong> Fire risk may outweigh benefits. Postpone or use alternative calming methods.</li>
+      <li><strong>With known respiratory sensitivities:</strong> Keep downwind, use less, or work without smoke if colonies are already calm.</li>
+    </ul>
+  </section>
+
+  <section id="safety">
+    <h2>Safety & fire risk</h2>
+    <ul>
+      <li>Clear a 3â€“5&nbsp;m area of dry brush before lighting. Keep water or an extinguisher within reach.</li>
+      <li>Rest the smoker on bare soil or a metal standâ€”never on dry grass, wood, or a vehicle tailgate.</li>
+      <li>Do not dump embers. To snuff: insert a cork/plug, lay the smoker on its side to cut airflow, and allow to cool fully before cleaning.</li>
+      <li>Empty cold ash into a metal container with a lid. Store fuels dry, away from ignition sources.</li>
+    </ul>
+  </section>
+
+  <section id="troubleshoot">
+    <h2>Troubleshooting</h2>
+    <dl>
+      <dt>Goes out constantly</dt>
+      <dd>Fuel packed too tight (no airflow) or too loose (no heat core). Re-light, then alternate fuel and bellows to build a hot core.</dd>
+      <dt>Smoke is hot/acrid</dt>
+      <dd>You have active flame or resinous fuel. Add clean fuel and reduce pumping until the flame drops to a smolder.</dd>
+      <dt>Bellows weak</dt>
+      <dd>Check for splits/leaks. Many bellows use replaceable leather or silicone; patch or replace as needed.</dd>
+    </dl>
+  </section>
+
+  <section id="related" aria-labelledby="related-heading">
+    <h2 id="related-heading">Related reading</h2>
+    <ul class="related">
+      <li><a href="/wiki/foundations/hive-tool-basics.html">Hive tool basics</a> (safe leverage and frame handling)</li>
+      <li><a href="/wiki/operations/first-inspection-checklist.html">First inspection checklist</a> (prep & flow)</li>
+      <li><a href="/wiki/operations/swarm-signs-and-prevention.html">Swarm signs & prevention</a> (working bees when swarmy)</li>
+      <li><a href="/wiki/operations/feeding-basics.html">Feeding basics</a> (avoid robbing during dearth)</li>
+    </ul>
+    <p class="meta">This page appears in the <a href="/wiki/foundations/">Foundations hub</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Â© Bee Planet Connection Â· <a href="/wiki/">Wiki home</a></p>
+</footer>
+</body>
+</html>
+
+

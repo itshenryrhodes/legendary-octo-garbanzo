@@ -1,0 +1,168 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Queen replacement signs â€” Colony Health â€” Bee Planet Connection</title>
+  <meta name="description" content="How to recognise when a colony is preparing to replace its queen, and how to respond calmly and effectively.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/wiki/colony-health/queen-replacement-signs.html">
+  <link rel="stylesheet" href="/css/wiki.css">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Queen replacement signs â€” Colony Health â€” Bee Planet Connection">
+  <meta property="og:description" content="How to recognise when a colony is preparing to replace its queen, and how to respond calmly and effectively.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/wiki/colony-health/queen-replacement-signs.html">
+  <meta property="og:image" content="/img/share/queen-replacement-signs.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"name":"Wiki","item":"/wiki/" },
+      { "@type":"ListItem","position":2,"name":"Colony Health","item":"/wiki/colony-health/" },
+      { "@type":"ListItem","position":3,"name":"Queen replacement signs","item":"/wiki/colony-health/queen-replacement-signs.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Queen replacement signs",
+    "datePublished":"2025-10-24",
+    "dateModified":"2025-10-24",
+    "author":{ "@type":"Organization","name":"Bee Planet Connection" },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bee Planet Connection",
+      "logo":{ "@type":"ImageObject","url":"/img/logo.svg" }
+    },
+    "mainEntityOfPage":"/wiki/colony-health/queen-replacement-signs.html"
+  }
+  </script>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="wiki wallpaper">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection logo">
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" aria-label="Site">
+        <a href="/wiki/">Wiki</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a>
+      <span aria-hidden="true">â€º</span>
+      <a href="/wiki/colony-health/">Colony Health</a>
+      <span aria-hidden="true">â€º</span>
+      <span aria-current="page">Queen replacement signs</span>
+    </nav>
+
+    <article class="article">
+      <h1>Queen replacement signs</h1>
+      <p class="lede">How to recognise when a colony is preparing to replace its queen, and how to respond calmly and effectively.</p>
+
+      <div class="grid cols-3">
+        <section class="card" id="why">
+          <h2>Why queens are replaced</h2>
+          <ul class="list">
+            <li>Natural ageing â€” pheromone output and egg-laying rate decline.</li>
+            <li>Damage or deformity â€” injury or missing limbs/antennae can trigger supersedure.</li>
+            <li>Colony imbalance â€” uneven brood pattern or reduced queen scent distribution.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="cells">
+          <h2>Recognising queen cells</h2>
+          <ul class="list">
+            <li><strong>Supersedure cells:</strong> one or two, often mid-frame, well-fed, not numerous.</li>
+            <li><strong>Swarm cells:</strong> many, usually along frame bottoms, in strong colonies pre-swarm.</li>
+            <li><strong>Emergency cells:</strong> rough, quickly built, often at edges of open brood.</li>
+          </ul>
+          <p class="muted">Location and number tell the storyâ€”supersedure is calm, swarm prep is energetic.</p>
+        </section>
+
+        <section class="card" id="timeline">
+          <h2>Timeline of replacement</h2>
+          <ul class="list">
+            <li>Day 0â€“3: new eggs laid in queen cups.</li>
+            <li>Day 8: cells capped; old queen may remain until new one emerges.</li>
+            <li>Day 16: virgin queen emerges, dispatches rivals, then mates over next 1â€“2 weeks.</li>
+            <li>Day 25â€“30: new queen begins laying; brood pattern visible again within 10 days.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="inspection">
+        <h2>During inspection</h2>
+        <ul class="list">
+          <li>Do not destroy single, centred supersedure cellsâ€”colonies usually know best.</li>
+          <li>If multiple large cells are charged and queen present, monitor weekly before intervening.</li>
+          <li>Mark old and new queens (different colours) to confirm successful transition later.</li>
+        </ul>
+        <p class="notice">A temporary brood break is normal; patience prevents double-queen accidents.</p>
+      </section>
+
+      <section id="after">
+        <h2>After replacement</h2>
+        <ul class="list">
+          <li>Watch for normal egg-laying within 2â€“3 weeks.</li>
+          <li>Assess temperament and brood pattern before deciding to requeen artificially.</li>
+          <li>Update colony records with new queen details and date of emergence.</li>
+        </ul>
+      </section>
+
+      <section id="intervention">
+        <h2>When intervention may help</h2>
+        <ul class="list">
+          <li>Emergency cells raised from very young larvae after accidental queen loss â€” consider uniting or introducing a mated queen.</li>
+          <li>Multiple poor supersedures in one season â€” underlying disease or genetic issues likely.</li>
+          <li>Colonies repeatedly failing to requeen â€” consider combining with a strong neighbour.</li>
+        </ul>
+      </section>
+
+      <aside class="card" aria-labelledby="on-this-page">
+        <h2 id="on-this-page">On this page</h2>
+        <ul class="toc">
+          <li><a href="#why">Why queens are replaced</a></li>
+          <li><a href="#cells">Recognising queen cells</a></li>
+          <li><a href="#timeline">Timeline of replacement</a></li>
+          <li><a href="#inspection">During inspection</a></li>
+          <li><a href="#after">After replacement</a></li>
+          <li><a href="#intervention">When intervention may help</a></li>
+        </ul>
+      </aside>
+
+      <section id="links">
+        <h2>Next steps</h2>
+        <p>Explore more in <a href="/wiki/colony-health/">Colony Health</a>. Related reading:</p>
+        <ul class="list">
+          <li><a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa monitoring schedule</a></li>
+          <li><a href="/wiki/colony-health/hygienic-behaviour-testing.html">Hygienic behaviour testing</a></li>
+          <li><a href="/wiki/foundations/bee-castes-and-lifecycle.html">Bee castes &amp; lifecycle</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer class="muted" style="margin-top:1.5rem">
+      <small>Updated 2025-10-24 â€¢ Colony Health â€¢ Level: intermediate â€¢ Tags: queens, supersedure, inspection, health</small>
+      <p><a href="/wiki/colony-health/">Back to Colony Health hub</a></p>
+    </footer>
+  </main>
+
+  <script defer src="/js/site.js"></script>
+</body>
+</html>
+

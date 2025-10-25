@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Planting for pollinators â€” Habitat â€” Bee Planet Connection</title>
+  <meta name="description" content="Design a bee-friendly garden or landscape with continuous nectar and pollen from early spring to late autumn.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/wiki/habitat/planting-for-pollinators.html">
+  <link rel="stylesheet" href="/css/wiki.css">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Planting for pollinators â€” Habitat â€” Bee Planet Connection">
+  <meta property="og:description" content="Design a bee-friendly garden or landscape with continuous nectar and pollen from early spring to late autumn.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/wiki/habitat/planting-for-pollinators.html">
+  <meta property="og:image" content="/img/share/planting-for-pollinators.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"name":"Wiki","item":"/wiki/" },
+      { "@type":"ListItem","position":2,"name":"Habitat","item":"/wiki/habitat/" },
+      { "@type":"ListItem","position":3,"name":"Planting for pollinators","item":"/wiki/habitat/planting-for-pollinators.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Planting for pollinators",
+    "datePublished":"2025-10-24",
+    "dateModified":"2025-10-24",
+    "author":{ "@type":"Organization","name":"Bee Planet Connection" },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bee Planet Connection",
+      "logo":{ "@type":"ImageObject","url":"/img/logo.svg" }
+    },
+    "mainEntityOfPage":"/wiki/habitat/planting-for-pollinators.html"
+  }
+  </script>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="wiki wallpaper">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection logo">
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" aria-label="Site">
+        <a href="/wiki/">Wiki</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a>
+      <span aria-hidden="true">â€º</span>
+      <a href="/wiki/habitat/">Habitat</a>
+      <span aria-hidden="true">â€º</span>
+      <span aria-current="page">Planting for pollinators</span>
+    </nav>
+
+    <article class="article">
+      <h1>Planting for pollinators</h1>
+      <p class="lede">Design a bee-friendly garden or landscape with continuous nectar and pollen from early spring to late autumn.</p>
+
+      <div class="grid cols-3">
+        <section class="card" id="principles">
+          <h2>Core principles</h2>
+          <ul class="list">
+            <li><strong>Continuity:</strong> ensure blooms across the whole seasonâ€”early, mid, and late.</li>
+            <li><strong>Diversity:</strong> mix flower shapes (open, tubular, composite) and colours.</li>
+            <li><strong>Native-first:</strong> prefer locally adapted species; add hardy herbs and shrubs.</li>
+          </ul>
+          <p class="muted">Even a small patch helps if planted densely and pesticide-free.</p>
+        </section>
+
+        <section class="card" id="structure">
+          <h2>Garden structure</h2>
+          <ul class="list">
+            <li><strong>Trees & shrubs</strong> for early forage (willow, fruit trees, hawthorn, mahonia).</li>
+            <li><strong>Perennials</strong> for summer backbone (echinacea, rudbeckia, sedum/stonecrop).</li>
+            <li><strong>Herbs</strong> for sustained bloom and aroma (thyme, rosemary, sage, lavender, mint).</li>
+          </ul>
+        </section>
+
+        <section class="card" id="water-shelter">
+          <h2>Water & shelter</h2>
+          <ul class="list">
+            <li>Provide shallow water with landing stones; refresh weekly.</li>
+            <li>Leave some rough ground, leaf litter, and hollow stems for nesting and overwintering insects.</li>
+            <li>Windbreaks (hedges/fences) create warm flight corridors.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="calendar">
+        <h2>Bloom calendar (examples, UK-leaning)</h2>
+
+        <h3 id="early">Early season (Febâ€“Apr)</h3>
+        <ul class="list">
+          <li>Willow (<em>Salix</em> spp.), hazel, flowering currant, mahonia, hellebore, crocus, snowdrop.</li>
+          <li>Herbs under cloches: chives, thyme (early flushes).</li>
+        </ul>
+
+        <h3 id="mid">Mid season (Mayâ€“Jul)</h3>
+        <ul class="list">
+          <li>Fruit trees, hawthorn, bramble, clover, borage, thyme, sage, foxglove, catmint.</li>
+          <li>Ornamentals: single-flowered roses, cosmos (single), cornflower.</li>
+        </ul>
+
+        <h3 id="late">Late season (Augâ€“Oct)</h3>
+        <ul class="list">
+          <li>Heather, ivy, sedum (stonecrop), asters, rudbeckia, goldenrod, verbena bonariensis.</li>
+          <li>Veg/herbs: mint allowed to flower, courgette blossoms.</li>
+        </ul>
+
+        <p class="notice">Choose <em>single</em>-flower forms; double/pompom flowers often hide nectar and pollen.</p>
+      </section>
+
+      <section id="pesticides">
+        <h2>Pesticides & safe practice</h2>
+        <ul class="list">
+          <li>Avoid insecticides; never spray open blooms.</li>
+          <li>If treatment is unavoidable, apply at dusk, choose bee-friendly options, and follow the label exactly.</li>
+          <li>Source plants that are not pre-treated with systemic insecticides.</li>
+        </ul>
+      </section>
+
+      <section id="patches">
+        <h2>Making small spaces work</h2>
+        <ul class="list">
+          <li>Container mixes: lavender + thyme + oregano for a balcony â€œbee barâ€.</li>
+          <li>Succession in pots: swap out spent annuals to keep colour and nectar running.</li>
+          <li>Community verge/hedgerow projects extend forage beyond your garden.</li>
+        </ul>
+      </section>
+
+      <aside class="card" aria-labelledby="on-this-page">
+        <h2 id="on-this-page">On this page</h2>
+        <ul class="toc">
+          <li><a href="#principles">Core principles</a></li>
+          <li><a href="#structure">Garden structure</a></li>
+          <li><a href="#water-shelter">Water &amp; shelter</a></li>
+          <li><a href="#calendar">Bloom calendar</a></li>
+          <li><a href="#pesticides">Pesticides &amp; safety</a></li>
+          <li><a href="#patches">Small-space tips</a></li>
+        </ul>
+      </aside>
+
+      <section id="links">
+        <h2>Next steps</h2>
+        <p>Explore more in <a href="/wiki/habitat/">Habitat</a> and related topics:</p>
+        <ul class="list">
+          <li><a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a></li>
+          <li><a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa monitoring schedule</a></li>
+          <li><a href="/wiki/foundations/bee-communication.html">Bee communication</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer class="muted" style="margin-top:1.5rem">
+      <small>Updated 2025-10-24 â€¢ Habitat â€¢ Level: newcomer â€¢ Tags: habitat, forage, planting, calendar</small>
+      <p><a href="/wiki/habitat/">Back to Habitat hub</a></p>
+    </footer>
+  </main>
+
+  <script defer src="/js/site.js"></script>
+</body>
+</html>
+

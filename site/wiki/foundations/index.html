@@ -1,14 +1,14 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Foundations — Bee Planet Connection</title>
+  <title>Foundations â€” Bee Planet Connection</title>
 
-  <meta name="description" content="Start here: bee castes & lifecycle, parts of a hive, healthy brood, and more—organised by newcomer, intermediate, and advanced paths." />
-  <link rel="stylesheet" href="/css/site.css" />
-  <link rel="stylesheet" href="/css/wiki.css" />
-  <script src="/js/ga.js"></script>
+  <meta name="description" content="Start here: bee castes & lifecycle, parts of a hive, healthy brood, and moreâ€”organised by newcomer, intermediate, and advanced paths." />
+  <link rel="stylesheet" href="../../../../../../../css/site.css" />
+  <link rel="stylesheet" href="../../../../../../../css/wiki.css" />
+  <script src="../../../../../../../js/ga.js"></script>
   <style>
     .wrap { max-width: 960px; margin: 0 auto; padding: 1rem; }
     .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
@@ -21,23 +21,23 @@
 <body class="wallpaper wiki">
   <header class="site-header" role="banner">
     <div class="container">
-      <a class="brand" href="/"><img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" /><span class="brand-text">Bee Planet Connection</span></a>
+      <a class="brand" href="../../../../../../../"><img class="brand-logo" src="../../../../../../../img/logo.svg" alt="Bee Planet Connection" /><span class="brand-text">Bee Planet Connection</span></a>
       <nav class="nav" role="navigation" aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/wiki/">Wiki</a>
-        <a href="/tools/">Tools</a>
-        <a href="/directory/">Directory</a>
-        <a href="/blog/">Blog</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/forum/">Forum</a>
+        <a href="../../../../../../../">Home</a>
+        <a href="../../../../../../../wiki/">Wiki</a>
+        <a href="../../../../../../../tools/">Tools</a>
+        <a href="../../../../../../../directory/">Directory</a>
+        <a href="../../../../../../../blog/">Blog</a>
+        <a href="../../../../../../../about/">About</a>
+        <a href="../../../../../../../contact/">Contact</a>
+        <a href="../../../../../../../forum/">Forum</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="/wiki/">Wiki</a> › Foundations
+      <a href="../../../../../../../wiki/">Wiki</a> â€º Foundations
     </nav>
 
     <h1>Foundations</h1>
@@ -74,7 +74,7 @@
         advanced: document.getElementById('advanced-list')
       };
 
-      Object.values(LEVEL_MAP).forEach(ul => ul.innerHTML = '<li class="muted">Loading…</li>');
+      Object.values(LEVEL_MAP).forEach(ul => ul.innerHTML = '<li class="muted">Loadingâ€¦</li>');
 
       const linkFor = (it) => {
         if (it && typeof it.url === 'string' && it.url.startsWith('/')) return it.url;
@@ -122,7 +122,7 @@
               if (it.summary) {
                 const span = document.createElement('span');
                 span.className = 'muted';
-                span.textContent = ' — ' + it.summary;
+                span.textContent = ' â€” ' + it.summary;
                 li.appendChild(span);
               }
 
@@ -139,3 +139,4 @@
   </script>
 </body>
 </html>
+

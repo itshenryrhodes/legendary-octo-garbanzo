@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Comb architecture basics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How honeybee comb is built and organized: cell sizes, orientations, brood vs. honey zones, and what healthy comb patterns look like.">
+  <link rel="canonical" href="/wiki/foundations/comb-architecture-basics.html">
+<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/css/wiki.css" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <header>
+    <nav aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a> â€º
+      <a href="/wiki/foundations/">Foundations</a> â€º
+      Comb architecture basics
+    </nav>
+    <h1>Comb architecture basics</h1>
+    <p class="lede">Comb is the colonyâ€™s living infrastructure: nursery, pantry, and walkway system. Reading its pattern helps you judge health, space, and next actions.</p>
+  </header>
+
+  <main>
+    <section id="why-comb">
+      <h2>Why comb matters</h2>
+      <p>Comb stores brood, nectar, honey, and pollen; guides traffic and thermoregulation; and records the colonyâ€™s history. Good comb supports efficient inspections and healthy growth.</p>
+    </section>
+
+    <section id="cell-sizes">
+      <h2>Cell sizes &amp; purposes</h2>
+      <ul>
+        <li><strong>Worker cells (~5.2â€“5.4&nbsp;mm)</strong> â€” majority of brood area; compact, even capping when healthy.</li>
+        <li><strong>Drone cells (~6.2â€“6.6&nbsp;mm)</strong> â€” larger, domed cappings; typically at frame edges or dedicated patches.</li>
+        <li><strong>Storage cells</strong> â€” the same hexagons extended a little deeper for nectar/honey; pollen cells often rimmed with multicoloured granules (â€œbee breadâ€).</li>
+      </ul>
+      <p>Foundation sheets bias size; natural (foundationless) comb shows more variation, especially early season.</p>
+    </section>
+
+    <section id="orientation">
+      <h2>Orientation &amp; â€œbee spaceâ€</h2>
+      <p>Bees keep a walkable gap (about 6â€“9&nbsp;mm) between comb faces. Too little: they propolise; too much: they add burr/bridge comb. Straight comb and consistent spacing make inspections faster and gentler.</p>
+    </section>
+
+    <section id="layout">
+      <h2>Typical frame layout</h2>
+      <ul>
+        <li><strong>Center frames:</strong> worker brood with a pollen fringe and honey arc above (â€œrainbow frameâ€).</li>
+        <li><strong>Outer frames:</strong> more nectar and capped honey, less brood.</li>
+        <li><strong>Drone patches:</strong> at lower corners or edges, or on frames the colony has â€œchosenâ€ for drones.</li>
+      </ul>
+      <p>This pattern shifts with season and flow; heavy flows push nectar into brood areas until nurses reclaim cells after emergence.</p>
+    </section>
+
+    <section id="reading-comb">
+      <h2>Reading comb quality</h2>
+      <ul>
+        <li><strong>Even brood pattern:</strong> few empty cells among capped worker brood suggests a well-mated queen.</li>
+        <li><strong>Scattered brood (â€œshotgunâ€):</strong> consider queen age, nutrition, disease pressure; cross-check your <a href="/wiki/colony-health/varroa-monitoring-schedule.html">varroa counts</a>.</li>
+        <li><strong>Excess drone comb:</strong> fine in spring; persistent excess can hint at queen issues or mis-spaced frames.</li>
+        <li><strong>Cross/bridge comb:</strong> indicates spacing or level issues; correcting early prevents chronic damage during inspections.</li>
+      </ul>
+    </section>
+
+    <section id="management">
+      <h2>Comb management basics</h2>
+      <ol>
+        <li><strong>Guide straight builds:</strong> keep frames tight together; use drawn comb as a ladder between new sheets.</li>
+        <li><strong>Rotate dark comb out:</strong> old black comb (heavy, brittle) can harbor residues and spores; cycle a few frames out each season.</li>
+        <li><strong>Add space at the right time:</strong> super before the main flow to prevent honey back-filling brood space (see <a href="/wiki/operations/swarm-signs-and-prevention.html">Swarm signs &amp; prevention</a>).</li>
+        <li><strong>Fix cross comb early:</strong> on warm days, cut and press straight; secure with elastic bands if needed.</li>
+      </ol>
+    </section>
+
+    <section id="natural-vs-foundation">
+      <h2>Foundation vs foundationless</h2>
+      <p><strong>Foundation:</strong> faster, straighter starts and predictable cell size; good for beginners. <strong>Foundationless:</strong> flexible, lighter equipment, and easy cut-comb; requires careful keeping frames plumb and tight.</p>
+    </section>
+
+    <section id="inspection-cues">
+      <h2>Inspection cues</h2>
+      <ul>
+        <li><strong>Fresh white comb:</strong> colony is in building mode; good time to expand.</li>
+        <li><strong>Honey back-fill in brood nest:</strong> add space; check for swarm cues such as charged queen cups.</li>
+        <li><strong>Uneven cappings or perforations:</strong> look for chilled brood, varroa damage, or hygienic removal (see <a href="/wiki/colony-health/hygienic-behaviour-testing.html">Hygienic behaviour testing</a>).</li>
+      </ul>
+    </section>
+
+    <section id="handling">
+      <h2>Handling to protect comb</h2>
+      <ul>
+        <li>Work when comb is warm enough to flex without tearing.</li>
+        <li>Lift frames vertically; donâ€™t lever tight frames against soft comb faces.</li>
+        <li>Keep propolis off top bars so frames seat squarely and maintain bee space.</li>
+      </ul>
+    </section>
+
+    <section id="related">
+      <h2>Related reading</h2>
+      <ul>
+        <li><a href="/wiki/foundations/hive-tool-basics.html">Hive tool basics</a></li>
+        <li><a href="/wiki/operations/first-inspection-checklist.html">First inspection checklist</a></li>
+        <li><a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a></li>
+      </ul>
+      <p class="hub-link"><a href="/wiki/foundations/">Back to the Foundations hub â†’</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Bee Planet Connection Â· Foundations</p>
+  </footer>
+</body>
+</html>
+
+

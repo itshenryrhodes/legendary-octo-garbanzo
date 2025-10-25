@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bee castes & lifecycle (queen, worker, drone timelines) — Bee Planet Connection</title>
+
+  <!-- Taxonomy / index hints -->
+  <meta name="bpc:section" content="foundations" />
+  <meta name="bpc:path" content="newcomer" />
+  <meta name="bpc:level" content="beginner" />
+  <meta name="description" content="Understand queen, worker, and drone castes and the honey bee lifecycle. Clear timelines (16/21/24 days), brood stages, and field checks that link to deeper guides." />
+
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/wiki.css" />
+  <script src="/js/ga.js"></script>
+
+  <!-- Structured data: Article + Breadcrumbs + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Wiki","item":"https://www.beeplanetconnection.org/wiki/"},
+          {"@type":"ListItem","position":2,"name":"Foundations","item":"https://www.beeplanetconnection.org/wiki/foundations/"},
+          {"@type":"ListItem","position":3,"name":"Bee castes & lifecycle"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Bee castes & lifecycle (queen, worker, drone timelines)",
+        "about": ["Apis mellifera","bee castes","honey bee development","brood stages"],
+        "author": {"@type":"Organization","name":"Bee Planet Connection"},
+        "publisher": {
+          "@type":"Organization",
+          "name":"Bee Planet Connection",
+          "logo":{"@type":"ImageObject","url":"https://www.beeplanetconnection.org/img/logo.svg"}
+        },
+        "datePublished": "2025-10-19",
+        "dateModified": "2025-10-19",
+        "wordCount": "1500"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"How long does it take for each caste to develop?","acceptedAnswer":{"@type":"Answer","text":"Queens ~16 days, workers ~21 days, drones ~24 days from egg to adult under normal brood-nest conditions."}},
+          {"@type":"Question","name":"What do “open” and “capped” brood mean?","acceptedAnswer":{"@type":"Answer","text":"Open brood are eggs and larvae in uncapped cells fed by nurses. Capped brood are sealed pupae developing until emergence."}},
+          {"@type":"Question","name":"Why am I seeing mostly drone brood?","acceptedAnswer":{"@type":"Answer","text":"Common reasons include a failing or unmated queen, drone-laying workers after queen loss, or heavily built drone comb."}},
+          {"@type":"Question","name":"Can workers lay eggs?","acceptedAnswer":{"@type":"Answer","text":"Yes—when colonies are queenless or pheromone signals are disrupted, some workers lay unfertilized (drone) eggs."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="wallpaper wiki wiki-deep">
+  <!-- Canonical site header (already present site-wide) -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/wiki/">Wiki</a>
+        <a href="/tools/">Tools</a>
+        <a href="/directory/">Directory</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/forum/">Forum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a> › <a href="/wiki/foundations/">Foundations</a> › Newcomer
+    </nav>
+
+    <h1>Bee castes & lifecycle (quick tour → deep dive)</h1>
+    <p class="lede">
+      Honey bee colonies are superorganisms made of three castes—<strong>queen</strong>, <strong>workers</strong>, and <strong>drones</strong>.
+      Each develops through recognizable brood stages on a reliable timeline:
+      <strong>queen ≈ 16 days</strong>, <strong>worker ≈ 21 days</strong>, <strong>drone ≈ 24 days</strong>.
+      Learn the essentials here, then jump to focused guides on brood health, frame reading, nutrition, and more.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Quick anchors compatible with the taxonomy text you used earlier -->
+    <a id="queen-worker-drone-at-a-glance"></a>
+    <a id="egg-larva-pupa-adult-timeline"></a>
+
+    <section id="castes-at-a-glance">
+      <h2>Castes at a glance</h2>
+      <p><em>Snapshot first; deeper notes below.</em></p>
+      <ul class="list">
+        <li><strong>Queen</strong> — the single fertile female in normal colonies. She lays eggs and emits pheromones that help organize colony behavior and suppress worker ovary activation. A good queen can lay thousands of eggs per day in peak season and live 1–3+ years in managed colonies.</li>
+        <li><strong>Workers</strong> — sterile females that perform age-related tasks (nursing, comb building, guarding, foraging). They make up the vast majority of the colony and typically live 4–6 weeks in the active season, much longer as overwintering bees.</li>
+        <li><strong>Drones</strong> — males whose primary role is to mate with queens. They do not forage nectar or pollen and have no sting. Colonies raise drones seasonally and often reduce drone numbers going into winter.</li>
+      </ul>
+      <p class="muted">
+        Next: see <a href="#worker-tasks-by-age">worker jobs by age</a>, or jump to <a href="#queen-production">queen production & replacement</a>.
+        For body-plan differences and pheromone detail, continue into our <a href="/wiki/intermediate/communication-pheromones.html">communication & pheromones</a> article.
+      </p>
+    </section>
+
+    <section id="brood-development-timeline">
+      <h2>Brood development timeline</h2>
+      <p>
+        All honey bees begin as eggs laid at the bottom of hexagonal wax cells. Development proceeds through
+        <em>egg → larva (open brood) → pupa (capped) → adult emergence</em>.
+        Timing varies by caste and temperature; the following ranges are typical for <em>Apis mellifera</em> in a well-regulated brood nest.
+      </p>
+
+      <table class="table">
+        <thead>
+          <tr><th>Caste</th><th>Egg</th><th>Larva (open)</th><th>Pupa (capped)</th><th>Emergence</th><th>Total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Queen</td><td>~3 days</td><td>~5 days</td><td>~8 days</td><td>Day ~16</td><td>≈ 16 days</td></tr>
+          <tr><td>Worker</td><td>~3 days</td><td>~6 days</td><td>~12 days</td><td>Day ~21</td><td>≈ 21 days</td></tr>
+          <tr><td>Drone</td><td>~3 days</td><td>~7 days</td><td>~14 days</td><td>Day ~24</td><td>≈ 24 days</td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        “Open brood” are eggs and larvae in cells without cappings—pearlescent larvae float in worker jelly and curl into “C” shapes.
+        When a larva reaches full size, workers cap the cell with a porous wax dome for metamorphosis. This sealed stage is “capped brood.”
+      </p>
+
+      <p class="muted">
+        Want photo checklists? See <a href="/wiki/foundations/healthy-brood.html">What healthy brood looks like</a>. For hands-on tips,
+        see <a href="/wiki/intermediate/reading-frames.html">Reading frames: what to look for</a>.
+      </p>
+    </section>
+
+    <section id="inside-the-cell">
+      <h2>Inside the cell: nutrition & conditions</h2>
+      <p>
+        Nutrition and microclimate drive development speed and queen quality. All larvae receive worker jelly initially,
+        but <strong>future queens</strong> are provisioned continuously with copious <em>royal jelly</em> and reared in vertical queen cells.
+        Worker and drone larvae switch to diets that include fermented pollen (<em>bee bread</em>) after the first days.
+      </p>
+      <ul class="list">
+        <li><strong>Temperature:</strong> Nurses regulate brood nest temperatures tightly (~34–35&nbsp;°C / 93–95&nbsp;°F). Prolonged chilling slows or disrupts development.</li>
+        <li><strong>Humidity:</strong> Moderate humidity helps prevent desiccation of eggs and larvae.</li>
+        <li><strong>Protein & lipids:</strong> Adequate, diverse pollen sources support robust larval growth and gland development in nurses.</li>
+      </ul>
+      <p class="muted">Deep dive: <a href="/wiki/intermediate/nutrition.html">Nutrition & diet diversity</a> · <a href="/wiki/foundations/parts-of-a-hive.html">Parts of a hive</a> (how equipment affects brood climate)</p>
+    </section>
+
+    <section id="queen-production">
+      <h2>Queen production & replacement</h2>
+      <p>
+        Colonies raise queens in three contexts, which you can often diagnose by where cells occur:
+      </p>
+      <ul class="list">
+        <li><strong>Swarm cells</strong> — along the bottoms or edges of brood frames prior to reproductive swarming.</li>
+        <li><strong>Supersedure cells</strong> — on the face of brood comb when replacing an aging or underperforming queen.</li>
+        <li><strong>Emergency cells</strong> — patched onto worker cells after sudden queen loss; workers select very young larvae and convert them to queens.</li>
+      </ul>
+      <p>
+        After emergence at ~day 16, a virgin queen takes orientation and mating flights (weather allowing) and, if well-mated,
+        begins laying 1–2 weeks later. Poor mating or cool, rainy periods can delay or compromise this phase.
+      </p>
+      <p class="muted">Related guides: <a href="/wiki/intermediate/swarming.html">Swarming</a> · <a href="/wiki/intermediate/communication-pheromones.html">Queen pheromones & colony organization</a></p>
+    </section>
+
+    <section id="worker-tasks-by-age">
+      <h2>Worker age-polyethism: jobs by age</h2>
+      <p>
+        Workers transition through tasks as they age, guided by physiology, pheromones, and colony needs—a pattern called
+        <em>age-polyethism</em>. Exact timing varies with season and colony strength, but a common pattern looks like this:
+      </p>
+      <ul class="list">
+        <li><strong>Days 1–3:</strong> Housekeeping, warming, and cell cleaning; some nurse behavior begins.</li>
+        <li><strong>Days 4–10:</strong> Nursing (feeding brood and the queen) as hypopharyngeal glands peak.</li>
+        <li><strong>Days 10–20:</strong> Comb building, nectar ripening, guarding, receiving foragers.</li>
+        <li><strong>Day 20+:</strong> Foraging flights for nectar, pollen, water, and propolis.</li>
+      </ul>
+      <p class="muted">See also: <a href="/wiki/intermediate/reading-frames.html">Reading frames</a> · <a href="/wiki/intermediate/nutrition.html">Nutrition</a></p>
+    </section>
+
+    <section id="drones-purpose">
+      <h2>Drones: why colonies invest in males</h2>
+      <p>
+        Drones develop from unfertilized (haploid) eggs and exist chiefly to mate with queens from other colonies—critical for genetic mixing.
+        They gather in <em>drone congregation areas</em>, where virgin queens mate in flight with many partners. Colonies raise more drones in spring and early summer;
+        by late season, drones are often evicted as resources tighten.
+      </p>
+      <p class="muted">Background: <a href="/wiki/advanced/genetics-haplodiploidy.html">Haplodiploidy & colony genetics</a></p>
+    </section>
+
+    <section id="healthy-brood-checklist">
+      <h2>What healthy brood looks like (field checklist)</h2>
+      <ul class="list">
+        <li><strong>Eggs:</strong> one per cell, centered at the bottom; stand upright day 1, tilt by day 3.</li>
+        <li><strong>Open larval brood:</strong> white and pearly, “C” shaped, floating in jelly; no discoloration or sunken appearance.</li>
+        <li><strong>Capped brood:</strong> tan domed cappings for workers; larger bullet-shaped caps for drones; uniform, solid pattern around the brood nest.</li>
+        <li><strong>Pattern:</strong> Few skipped cells in the core (good “shot pattern”); spotty patterns can indicate problems.</li>
+        <li><strong>Smell & texture:</strong> healthy brood is odorless; foul smell or ropey larval remains are red flags.</li>
+      </ul>
+      <p class="muted">
+        Full photo guide: <a href="/wiki/foundations/healthy-brood.html">Healthy brood (diagnostics)</a> · Troubleshooting: <a href="#deviations">common deviations</a>
+      </p>
+    </section>
+
+    <section id="deviations">
+      <h2>Common deviations & what they may imply</h2>
+      <ul class="list">
+        <li><strong>Spotty brood pattern:</strong> Could be a failing queen, poor nutrition, disease pressure, chilled brood, or heavy mite loads. Confirm with targeted inspections and check nutrition sources.</li>
+        <li><strong>Multiple eggs per cell / eggs on walls:</strong> Suggests drone-laying workers (often queenless) or an inexperienced young queen. Look for queenright signs and fresh eggs centered at the cell base.</li>
+        <li><strong>Excess drone brood:</strong> Normal on the comb periphery in spring, but widespread drone brood in worker cells indicates queen issues or thick drone comb.</li>
+        <li><strong>Sunken or perforated cappings / discoloration / odor:</strong> Investigate for brood disease; compare with the dedicated pages before taking action.</li>
+      </ul>
+      <p class="muted">
+        Continue to: <a href="/wiki/foundations/healthy-brood.html">Healthy brood</a> ·
+        <a href="/wiki/intermediate/reading-frames.html">Reading frames</a> ·
+        <a href="/wiki/intermediate/nutrition.html">Nutrition</a>
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>How long until a queen emerges?</dt>
+        <dd>About 16 days from egg to adult under typical brood nest temperatures. Add ~1–2 weeks for mating and the onset of laying.</dd>
+
+        <dt>What’s the difference between open and capped brood?</dt>
+        <dd>Open brood includes eggs and larvae in uncapped cells; capped brood are sealed pupae. “Open” and “capped” look and behave differently on the frame and help date colony events.</dd>
+
+        <dt>Why am I seeing mostly drone brood?</dt>
+        <dd>Seasonal drone rearing is normal, but predominately drone brood can indicate an unmated/failed queen or worker-laying colony. Confirm with egg placement and the presence of a queen.</dd>
+
+        <dt>Can workers lay eggs?</dt>
+        <dd>Yes—without queen and brood pheromones, some workers’ ovaries activate. They lay unfertilized (drone) eggs, often multiple per cell and placed off-center.</dd>
+      </dl>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="next-steps">
+      <h2>Next steps</h2>
+      <p>
+        Ready to read frames and evaluate brood in the field? Try these next:
+      </p>
+      <ul class="list">
+        <li><a href="/wiki/foundations/parts-of-a-hive.html">Parts of a hive</a> — gear and layout that shape brood-nest conditions.</li>
+        <li><a href="/wiki/foundations/healthy-brood.html">What healthy brood looks like</a> — photo-rich checklist and common look-alikes.</li>
+        <li><a href="/wiki/intermediate/reading-frames.html">Reading frames</a> — practical pattern recognition during inspections.</li>
+        <li><a href="/wiki/intermediate/communication-pheromones.html">Communication & pheromones</a> — queen, brood, and worker signals.</li>
+        <li><a href="/wiki/intermediate/nutrition.html">Nutrition</a> — pollen diversity, nectar flows, and protein needs.</li>
+        <li><a href="/wiki/advanced/genetics-haplodiploidy.html">Genetics & haplodiploidy</a> — why queen mating numbers matter.</li>
+      </ul>
+      <p class="muted">Or head back to the <a href="/wiki/foundations/">Foundations</a> index.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="references">
+      <h2>References & further reading</h2>
+      <p class="muted">A short selection used to ground the timelines and concepts above. See also our topic-specific pages for additional citations.</p>
+      <ul class="list">
+        <li>Winston, M. L. <em>The Biology of the Honey Bee.</em> Harvard University Press.</li>
+        <li>Seeley, T. D. <em>The Wisdom of the Hive</em> & <em>Honeybee Democracy</em>. Princeton University Press.</li>
+        <li>Rangel, J.; Tarpy, D. R. Queen quality and mating biology (various papers, Journal of Apicultural Research).</li>
+        <li>Penn State Extension — Honey Bee Biology & Management (extension fact sheets).</li>
+        <li>University of Florida IFAS — <em>Honey Bee Biology</em> EDIS series.</li>
+        <li>NC State Apiculture Program — <em>Beekeeping Notes</em> and queen/worker development overviews.</li>
+        <li>USDA-ARS Bee Research Laboratory — technical notes on brood development and colony health.</li>
+        <li>Cornell Dyce Lab for Honey Bee Studies — outreach material on development and queen rearing.</li>
+      </ul>
+    </section>
+
+    <p class="muted">Last reviewed: 19 Oct 2025 • Level: Newcomer</p>
+  </main>
+</body>
+</html>

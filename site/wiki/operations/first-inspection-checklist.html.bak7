@@ -1,0 +1,172 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>First inspection checklist â€” Operations â€” Bee Planet Connection</title>
+  <meta name="description" content="A calm, step-by-step checklist for safe, useful hive inspections: what to prepare, what to look for, and when to stop.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/wiki/operations/first-inspection-checklist.html">
+  <link rel="stylesheet" href="/css/wiki.css">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="First inspection checklist â€” Operations â€” Bee Planet Connection">
+  <meta property="og:description" content="A calm, step-by-step checklist for safe, useful hive inspections: what to prepare, what to look for, and when to stop.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/wiki/operations/first-inspection-checklist.html">
+  <meta property="og:image" content="/img/share/first-inspection-checklist.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"name":"Wiki","item":"/wiki/" },
+      { "@type":"ListItem","position":2,"name":"Operations","item":"/wiki/operations/" },
+      { "@type":"ListItem","position":3,"name":"First inspection checklist","item":"/wiki/operations/first-inspection-checklist.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"First inspection checklist",
+    "datePublished":"2025-10-24",
+    "dateModified":"2025-10-24",
+    "author":{ "@type":"Organization","name":"Bee Planet Connection" },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bee Planet Connection",
+      "logo":{ "@type":"ImageObject","url":"/img/logo.svg" }
+    },
+    "mainEntityOfPage":"/wiki/operations/first-inspection-checklist.html"
+  }
+  </script>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="wiki wallpaper">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection logo">
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" aria-label="Site">
+        <a href="/wiki/">Wiki</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a>
+      <span aria-hidden="true">â€º</span>
+      <a href="/wiki/operations/">Operations</a>
+      <span aria-hidden="true">â€º</span>
+      <span aria-current="page">First inspection checklist</span>
+    </nav>
+
+    <article class="article">
+      <h1>First inspection checklist</h1>
+      <p class="lede">A calm, step-by-step checklist for safe, useful hive inspections: what to prepare, what to look for, and when to stop.</p>
+
+      <div class="grid cols-3">
+        <section class="card" id="prep">
+          <h2>Before you go</h2>
+          <ul class="list">
+            <li>Weather OK (dry, >14&nbsp;Â°C, light wind)? Midday is friendliest.</li>
+            <li>Kit packed: <a href="/wiki/foundations/smoker-basics.html">smoker</a>, fuel, lighter; <a href="/wiki/foundations/hive-tool-basics.html">hive tool</a>; clean veil/gloves.</li>
+            <li>Spare equipment: queen clip, markers, elastic bands, spare frames/box if needed.</li>
+            <li>Record sheet or app; camera for brood pattern photos.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="opening">
+          <h2>At the hive (opening)</h2>
+          <ul class="list">
+            <li>Stand behind or to one side of the entrance (out of the flight line).</li>
+            <li>Two gentle puffs at the entrance; wait 20â€“30 seconds.</li>
+            <li>Lift roof and crown board carefully; another light puff if needed.</li>
+            <li>Create a <strong>working gap</strong>: ease an outside frame sideways first.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="three-qs">
+          <h2>The â€œ3 Qsâ€ â€” what to confirm</h2>
+          <ul class="list">
+            <li><strong>Queen-right?</strong> Look for eggs or very young larvae if the queen isnâ€™t seen.</li>
+            <li><strong>Quantity?</strong> Enough bees to cover brood and guard stores; note temperament.</li>
+            <li><strong>Quality?</strong> Solid brood pattern with few holes; healthy pearly larvae, flat worker cappings.</li>
+          </ul>
+          <p class="muted">If any â€œQâ€ is off, make a note and plan a follow-up; donâ€™t overwork the colony today.</p>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="what-to-look-for">
+        <h2>What to look for (frame by frame)</h2>
+        <ul class="list">
+          <li><strong>Eggs/larvae:</strong> single egg per cell, C-shaped larvae in jelly.</li>
+          <li><strong>Brood pattern:</strong> mostly continuous; scattered drone brood on worker frames can signal queen issues.</li>
+          <li><strong>Stores:</strong> nectar ring and pollen arcs; check weight by tilting the box.</li>
+          <li><strong>Queen cells:</strong> charged cells or cups? Note position (bottom/face) and number.</li>
+          <li><strong>Health signs:</strong> chalky mummies, ropey larval remains, or deformed wings â†’ investigate.</li>
+        </ul>
+        <p class="notice">Keep brood <em>covered and shaded</em>. Return frames gentlyâ€”rolling bees risks injuring the queen.</p>
+      </section>
+
+      <section id="when-to-stop">
+        <h2>When to stop</h2>
+        <ul class="list">
+          <li>Bees becoming defensive; smoke no longer settles them.</li>
+          <li>Temperature drops, rain, or strong wind picks up.</li>
+          <li>Youâ€™ve answered your purpose (the 3 Qs) and taken notes.</li>
+        </ul>
+      </section>
+
+      <section id="records">
+        <h2>Record the visit</h2>
+        <ul class="list">
+          <li>Date, weather, colony strength, brood pattern notes, stores.</li>
+          <li>Any queen cells and action taken.</li>
+          <li>Next check date and specific follow-ups.</li>
+        </ul>
+      </section>
+
+      <aside class="card" aria-labelledby="on-this-page">
+        <h2 id="on-this-page">On this page</h2>
+        <ul class="toc">
+          <li><a href="#prep">Before you go</a></li>
+          <li><a href="#opening">At the hive</a></li>
+          <li><a href="#three-qs">The â€œ3 Qsâ€</a></li>
+          <li><a href="#what-to-look-for">What to look for</a></li>
+          <li><a href="#when-to-stop">When to stop</a></li>
+          <li><a href="#records">Record the visit</a></li>
+        </ul>
+      </aside>
+
+      <section id="links">
+        <h2>Next steps</h2>
+        <p>Build confidence with these related pages:</p>
+        <ul class="list">
+          <li><a href="/wiki/foundations/smoker-basics.html">Smoker basics</a></li>
+          <li><a href="/wiki/foundations/hive-tool-basics.html">Hive tool basics</a></li>
+          <li><a href="/wiki/foundations/bee-castes-and-lifecycle.html">Bee castes &amp; lifecycle</a></li>
+          <li><a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa monitoring schedule</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer class="muted" style="margin-top:1.5rem">
+      <small>Updated 2025-10-24 â€¢ Operations â€¢ Level: newcomer â€¢ Tags: inspection, checklist, records</small>
+      <p><a href="/wiki/operations/">Back to Operations hub</a></p>
+    </footer>
+  </main>
+
+  <script defer src="/js/site.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bee biology basics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A clear tour of honey bee body systemsâ€”how head, thorax, and abdomen work together to power foraging, brood care, comb building, and colony defense.">
+  <link rel="canonical" href="/wiki/foundations/bee-biology-basics.html">
+<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/css/wiki.css" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <header>
+    <nav aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a> â€º
+      <a href="/wiki/foundations/">Foundations</a> â€º
+      Bee biology basics
+    </nav>
+    <h1>Bee biology basics</h1>
+    <p class="lede">A clear tour of honey bee body systemsâ€”how head, thorax, and abdomen work together to power foraging, brood care, comb building, and colony defense.</p>
+  </header>
+
+  <main>
+    <section id="why-it-matters">
+      <h2>Why bee biology matters to every beekeeper</h2>
+      <p>Good beekeeping is mostly good observation. Knowing what youâ€™re seeing on framesâ€”and why bees behave the way they doâ€”comes from a basic grasp of their biology. This article gives you a practical overview you can use during inspections: what each body region does, how the sensory and digestive systems support foraging, why brood warms faster than honey, and how stings, wax, and propolis are made.</p>
+      <ul>
+        <li><strong>Better inspections:</strong> spot normal vs. abnormal brood, evaluate foraging condition, and avoid accidental harm when handling frames.</li>
+        <li><strong>Better decisions:</strong> time feeding, supering, and treatments to the colonyâ€™s natural rhythms.</li>
+        <li><strong>Better safety:</strong> understand defensive behavior and how to reduce it.</li>
+      </ul>
+    </section>
+
+    <section id="body-plan">
+      <h2>The honey bee body plan at a glance</h2>
+      <p>All adult honey beesâ€”workers, drones, and queensâ€”share the same three-part plan: <em>head</em>, <em>thorax</em>, and <em>abdomen</em>. Workers are the focus here because you see them most during inspections.</p>
+
+      <article id="head-overview">
+        <h3>Head: sensing and sampling</h3>
+        <p>The head concentrates the primary senses and the mouthparts that let bees sample, shape, and share food and wax. When you see a worker â€œtestingâ€ nectar or cleaning a cell, this is the system at work.</p>
+        <ul>
+          <li><strong>Compound eyes:</strong> excellent motion detection and polarized light navigation. Bees see ultraviolet patterns on flowers that guide them to nectar.</li>
+          <li><strong>Ocelli:</strong> three simple eyes that aid in light/dark detection and horizon stability during flight.</li>
+          <li><strong>Antennae:</strong> the multi-sensor toolkitâ€”smell, taste, humidity, temperature, and vibration. Antennal contact spreads social information rapidly through the colony. See <a href="/wiki/foundations/glossary-antenna.html">Antenna</a> for a bite-size glossary entry.</li>
+          <li><strong>Mouthparts (proboscis):</strong> a flexible tongue-like structure for sipping nectar and handling liquids during trophallaxis (food sharing).</li>
+        </ul>
+        <p>Because smell is dominant, even light smoke briefly masks alarm odors and buys you calm seconds; combine smoke with smooth handling (<a href="/wiki/foundations/hive-tool-basics.html">Hive tool basics</a>).</p>
+        <p>Deeper dives: <a href="/wiki/foundations/anatomy-head.html">Anatomy: head</a>, <a href="/wiki/foundations/bee-communication.html">Bee communication</a>.</p>
+      </article>
+
+      <article id="thorax-overview">
+        <h3>Thorax: power and movement</h3>
+        <p>The thorax houses the flight muscles and legsâ€”think of it as the beeâ€™s engine compartment.</p>
+        <ul>
+          <li><strong>Flight muscles:</strong> indirect muscles vibrate the thorax to flap paired wings; wing hooks (hamuli) couple fore- and hindwings into one surface for efficient flight.</li>
+          <li><strong>Legs:</strong> tools in their own right. Pollen is packed into the corbicula (â€œpollen basketâ€) on the hind legs; forelegs groom antennae; mid-legs help manipulate wax and debris.</li>
+        </ul>
+        <p>Thorax temperature rises during flight; on hot days, fanners at the entrance ventilate the hive while foragers evaporate water to cool brood areas. See <a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a> for siting that supports airflow.</p>
+        <p>Deeper dive: <a href="/wiki/foundations/anatomy-thorax.html">Anatomy: thorax</a>.</p>
+      </article>
+
+      <article id="abdomen-overview">
+        <h3>Abdomen: digestion, wax, defense, and reproduction</h3>
+        <p>The abdomen is a multi-tool: it handles incoming nectar, wax secretion, reproduction (queen, drones), and defense (workers).</p>
+        <ul>
+          <li><strong>Honey stomach (â€œcropâ€):</strong> a storage sac that carries nectar and water back to the hive; enzymes added during transport begin the conversion to honey.</li>
+          <li><strong>Wax glands (workers):</strong> active in young workers building comb. Wax scales are extruded and kneaded by mandibular mouthparts into hexagonal cells.</li>
+          <li><strong>Sting apparatus (workers):</strong> barbed lancets deliver venom and release alarm pheromone. Gentle manipulation prevents accidental stings and the cascade they trigger.</li>
+          <li><strong>Reproductive organs:</strong> developed in queens and drones; worker ovaries are usually suppressed by queen mandibular pheromone and brood pheromone.</li>
+        </ul>
+        <p>Deeper dive: <a href="/wiki/foundations/anatomy-abdomen.html">Anatomy: abdomen</a> and <a href="/wiki/foundations/comb-construction-basics.html">Comb construction basics</a>.</p>
+      </article>
+    </section>
+
+    <section id="internal-systems">
+      <h2>Key internal systems youâ€™ll notice during inspections</h2>
+
+      <article id="digestive-system">
+        <h3>Digestive system: from nectar to honey</h3>
+        <p>Foragers fill the crop with nectar, add enzymes (notably invertase), and return it for house bees to process. In warm, ventilated conditions, bees evaporate water content and ripen the nectar until it reaches stable moisture and is capped as honey.</p>
+        <ul>
+          <li><strong>What you see:</strong> glistening, uncapped nectar near the brood nest that later becomes capped honey in supers.</li>
+          <li><strong>Why it matters:</strong> heavy nectar inflow without space causes congestion and swarm pressureâ€”time supering accordingly (<a href="/wiki/operations/supering-when-and-how.html">Supering: when and how</a>).</li>
+        </ul>
+        <p>Related reading: <a href="/wiki/foundations/nectar-to-honey.html">Nectar to honey</a>, <a href="/wiki/operations/feeding-basics.html">Feeding basics</a>.</p>
+      </article>
+
+      <article id="nervous-sensory-system">
+        <h3>Nervous &amp; sensory systems: how bees share information</h3>
+        <p>Bees rely on chemical signals and vibration. Pheromones coordinate tasks, mark threats, and keep the colony cohesive; dances encode distance and direction to rich forage.</p>
+        <ul>
+          <li><strong>What you see:</strong> waggle runs on crowded comb; workers forming â€œchainsâ€ during comb building; fanners at the entrance releasing Nasonov pheromone.</li>
+          <li><strong>Why it matters:</strong> interruptions in communication (rough handling, dropped frames, excessive smoke) increase stress and defensive behavior.</li>
+        </ul>
+        <p>Related reading: <a href="/wiki/foundations/bee-communication.html">Bee communication</a>, <a href="/wiki/foundations/waggle-dance-explained.html">Waggle dance explained</a>, <a href="/wiki/foundations/pheromones-overview.html">Pheromones overview</a>.</p>
+      </article>
+
+      <article id="thermoregulation">
+        <h3>Thermoregulation: why brood feels warmer</h3>
+        <p>Workers keep brood at a narrow temperature range using endothermic heat from flight muscles, fanning, and water evaporation. Honey areas can be cooler; a warm center and cooler honey arc is normal.</p>
+        <ul>
+          <li><strong>What you see:</strong> bees densely covering brood on cool days; water foragers arriving even when nectar is scarce.</li>
+          <li><strong>Why it matters:</strong> insulation, ventilation, and adequate stores reduce stressâ€”key for <a href="/wiki/operations/winter-prep-checklist.html">winter prep</a>.</li>
+        </ul>
+      </article>
+
+      <article id="exocrine-glands">
+        <h3>Exocrine glands: pheromones, wax, royal jelly</h3>
+        <p>Mandibular, Nasonov, and other glands produce signals youâ€™ll smell at the entrance; hypopharyngeal glands in young workers produce jelly for feeding brood and queens; wax glands supply comb construction.</p>
+        <ul>
+          <li><strong>What you see:</strong> young workersâ€™ pearly white wax scales; nurse bees with glistening head glands; fanners â€œtail upâ€ releasing Nasonov scent.</li>
+          <li><strong>Why it matters:</strong> colony age balance affects productivityâ€”brood breaks and splits temporarily shift this balance (see <a href="/wiki/operations/splitting-colonies-basics.html">Splitting colonies</a>).</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="castes-and-roles">
+      <h2>Castes and roles (fast orientation)</h2>
+      <p>Although youâ€™ll meet all castes, workers are your day-to-day focus. The queen lays eggs; drones exist to mate; workers cycle through tasks as they age (<em>age polyethism</em>).</p>
+      <ul>
+        <li><strong>Young workers (days 1â€“10):</strong> cell cleaning, nursing, comb building. Most wax work happens here.</li>
+        <li><strong>Middle-aged workers:</strong> food processing, receiving nectar, guarding.</li>
+        <li><strong>Older workers:</strong> foraging, water collection, and scouting.</li>
+      </ul>
+      <p>Related reading: <a href="/wiki/foundations/bee-castes-and-lifecycle.html">Bee castes &amp; lifecycle</a>, <a href="/wiki/colony-health/healthy-brood-patterns.html">Healthy brood patterns</a>.</p>
+    </section>
+
+    <section id="practical-implications">
+      <h2>Practical implications for inspections</h2>
+      <article>
+        <h3>1) Handle frames with biology in mind</h3>
+        <ul>
+          <li>Keep brood frames <strong>warm and upright</strong>. Prolonged exposure or shaking can chill or dislodge larvae.</li>
+          <li>Use the hive tool to break propolis seals in small steps; avoid tearing the soft white wax of new comb.</li>
+          <li>Return frames to the <strong>same order and orientation</strong> to preserve stores and brood layout.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>2) Read patterns, not individual cells</h3>
+        <ul>
+          <li>Solid, compact brood with few missed cells suggests a strong queen; scattered â€œshotgunâ€ patterns may indicate disease or queen issues (see <a href="/wiki/colony-health/brood-disease-spotting.html">Brood disease spotting</a>).</li>
+          <li>Fresh eggs in many cells? The queen has been present within ~3 daysâ€”even if you donâ€™t see her.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>3) Time space and feeding to digestive reality</h3>
+        <ul>
+          <li>During nectar flow, provide space before comb gets backfilled; consider <a href="/wiki/operations/supering-when-and-how.html">supering</a> to prevent congestion.</li>
+          <li>When feeding syrup, watch for robbing signals (bees fighting, frantic flight). Use reduced entrances and tidy handling (see <a href="/wiki/operations/robbing-prevention-response.html">Robbing prevention &amp; response</a>).</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>4) Match health checks to the life cycle</h3>
+        <ul>
+          <li>Varroa populations track brood availability; sampling (e.g., <a href="/wiki/colony-health/alcohol-wash-method.html">alcohol wash</a>) gives real status, not guesses.</li>
+          <li>Drone brood is a varroa hotspotâ€”manage with timing-aware IPM (see <a href="/wiki/operations/drone-brood-management.html">Drone brood management</a>).</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="quick-faq">
+      <h2>Quick FAQ</h2>
+      <details>
+        <summary>Why is brood â€œwarmâ€ but capped honey feels cool?</summary>
+        <p>Workers actively heat brood to a narrow range for proper development. Honey stores are passive and may feel cooler, especially with airflow at the comb surface.</p>
+      </details>
+      <details>
+        <summary>Is bright white soft comb a problem?</summary>
+        <p>Noâ€”this is new wax, most often built by young workers. Be gentle: it deforms easily and tears if frames are pried carelessly.</p>
+      </details>
+      <details>
+        <summary>Do bees really â€œseeâ€ ultraviolet?</summary>
+        <p>Yes. UV reflectance patterns guide foragers to nectar and pollen sources; combined with scent cues, they dramatically speed up foraging.</p>
+      </details>
+    </section>
+
+    <section id="related-reading">
+      <h2>Related reading</h2>
+      <ul>
+        <li><a href="/wiki/foundations/bee-communication.html">Bee communication</a></li>
+        <li><a href="/wiki/foundations/brood-development-timing.html">Brood development timing</a></li>
+        <li><a href="/wiki/foundations/comb-construction-basics.html">Comb construction basics</a></li>
+        <li><a href="/wiki/colony-health/healthy-brood-patterns.html">Healthy brood patterns</a></li>
+        <li><a href="/wiki/operations/supering-when-and-how.html">Supering: when and how</a></li>
+      </ul>
+      <p class="hub-link"><a href="/wiki/foundations/">Back to the Foundations hub â†’</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Bee Planet Connection Â· Foundations</p>
+  </footer>
+</body>
+</html>
+
+

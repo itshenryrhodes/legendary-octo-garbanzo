@@ -1,0 +1,184 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Hygienic behaviour testing â€” Colony Health â€” Bee Planet Connection</title>
+  <meta name="description" content="Simple field tests to gauge how effectively a colony detects and removes unhealthy brood.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/wiki/colony-health/hygienic-behaviour-testing.html">
+  <link rel="stylesheet" href="/css/wiki.css">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Hygienic behaviour testing â€” Colony Health â€” Bee Planet Connection">
+  <meta property="og:description" content="Simple field tests to gauge how effectively a colony detects and removes unhealthy brood.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/wiki/colony-health/hygienic-behaviour-testing.html">
+  <meta property="og:image" content="/img/share/hygienic-behaviour-testing.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"name":"Wiki","item":"/wiki/" },
+      { "@type":"ListItem","position":2,"name":"Colony Health","item":"/wiki/colony-health/" },
+      { "@type":"ListItem","position":3,"name":"Hygienic behaviour testing","item":"/wiki/colony-health/hygienic-behaviour-testing.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Hygienic behaviour testing",
+    "datePublished":"2025-10-24",
+    "dateModified":"2025-10-24",
+    "author":{ "@type":"Organization","name":"Bee Planet Connection" },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bee Planet Connection",
+      "logo":{ "@type":"ImageObject","url":"/img/logo.svg" }
+    },
+    "mainEntityOfPage":"/wiki/colony-health/hygienic-behaviour-testing.html"
+  }
+  </script>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="wiki wallpaper">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection logo">
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" aria-label="Site">
+        <a href="/wiki/">Wiki</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a>
+      <span aria-hidden="true">â€º</span>
+      <a href="/wiki/colony-health/">Colony Health</a>
+      <span aria-hidden="true">â€º</span>
+      <span aria-current="page">Hygienic behaviour testing</span>
+    </nav>
+
+    <article class="article">
+      <h1>Hygienic behaviour testing</h1>
+      <p class="lede">Simple field tests to gauge how effectively a colony detects and removes unhealthy brood.</p>
+
+      <div class="grid cols-3">
+        <section class="card" id="why">
+          <h2>Why it matters</h2>
+          <ul class="list">
+            <li>Hygienic colonies identify and remove diseased or mite-infested brood early.</li>
+            <li>Improves resistance to <strong>Varroa</strong> and brood diseases like AFB/EFB.</li>
+            <li>Supports breeding decisions by identifying resilient stock.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="methods">
+          <h2>Common testing methods</h2>
+          <ul class="list">
+            <li><strong>Pin test:</strong> manually perforate capped brood cells and measure removal within 24 hours.</li>
+            <li><strong>Liquid nitrogen test:</strong> kills a patch of capped brood; record removal after 24â€“48 hours.</li>
+            <li><strong>Freeze-killed brood test:</strong> uses freezer-treated comb section reintroduced to the hive.</li>
+          </ul>
+          <p class="muted">All methods measure removal rate: % of dead brood cleared in a fixed period.</p>
+        </section>
+
+        <section class="card" id="equipment">
+          <h2>Equipment checklist</h2>
+          <ul class="list">
+            <li>Frame of <strong>sealed brood</strong> (flat, uniform area).</li>
+            <li><strong>Marker</strong> to outline test patch (usually 100 cells).</li>
+            <li><strong>Pin</strong> or needle; or <strong>liquid nitrogen cup</strong> (100&nbsp;ml size).</li>
+            <li>Timer, notebook or phone app, and camera for documentation.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="pin-test">
+        <h2>Running a pin test</h2>
+        <ol class="list">
+          <li>Select a flat area of sealed worker brood (approx. 10x10 cells).</li>
+          <li>Pierce each capped cell vertically through the centre with a pin or fine needle.</li>
+          <li>Mark the area edge with drawing pins or marker for reference.</li>
+          <li>Return the frame to its original colony position.</li>
+          <li>After 24 hours, count how many punctured cells have been <em>uncapped and cleaned out</em>.</li>
+        </ol>
+        <p><strong>Scoring:</strong> â‰¥95% removal = highly hygienic; 80â€“95% = moderate; &lt;80% = low.</p>
+      </section>
+
+      <section id="liquid-nitrogen">
+        <h2>Running a liquid nitrogen test</h2>
+        <ol class="list">
+          <li>Cut the base from a drinks can to form a cylinder (~80&nbsp;mm diameter).</li>
+          <li>Press it into sealed brood comb to isolate a circular patch (~100 cells).</li>
+          <li>Pour in 100&nbsp;ml of liquid nitrogen to freeze-kill brood; allow to thaw.</li>
+          <li>Return the frame to the colony; check after 24â€“48&nbsp;hours.</li>
+          <li>Count cells fully cleaned out of wax cappings and contents.</li>
+        </ol>
+        <p class="muted">Use gloves and protective eyewear. Liquid nitrogen handling requires care.</p>
+      </section>
+
+      <section id="interpreting">
+        <h2>Interpreting results</h2>
+        <ul class="list">
+          <li>High removal rates correlate with better Varroa resistance and lower brood disease incidence.</li>
+          <li>Scores can vary with weather, nectar flow, and colony size.</li>
+          <li>Retest in a different season to confirm consistency.</li>
+        </ul>
+        <p class="notice">Compare colonies under similar conditions â€” never between hives with different brood ages or flows.</p>
+      </section>
+
+      <section id="breeding">
+        <h2>Breeding and record-keeping</h2>
+        <ul class="list">
+          <li>Mark queens from hygienic colonies; note scores, date, and test method.</li>
+          <li>Use results to select breeders or queens for splits.</li>
+          <li>Share data with local associations to strengthen regional breeding programmes.</li>
+        </ul>
+      </section>
+
+      <aside class="card" aria-labelledby="on-this-page">
+        <h2 id="on-this-page">On this page</h2>
+        <ul class="toc">
+          <li><a href="#why">Why it matters</a></li>
+          <li><a href="#methods">Common testing methods</a></li>
+          <li><a href="#equipment">Equipment checklist</a></li>
+          <li><a href="#pin-test">Running a pin test</a></li>
+          <li><a href="#liquid-nitrogen">Liquid nitrogen test</a></li>
+          <li><a href="#interpreting">Interpreting results</a></li>
+          <li><a href="#breeding">Breeding &amp; record-keeping</a></li>
+        </ul>
+      </aside>
+
+      <section id="links">
+        <h2>Next steps</h2>
+        <p>Continue exploring <a href="/wiki/colony-health/">Colony Health</a>. Related reading:</p>
+        <ul class="list">
+          <li><a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa monitoring schedule</a></li>
+          <li><a href="/wiki/foundations/bee-castes-and-lifecycle.html">Bee castes &amp; lifecycle</a></li>
+          <li><a href="/wiki/foundations/bee-anatomy.html">Bee anatomy</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer class="muted" style="margin-top:1.5rem">
+      <small>Updated 2025-10-24 â€¢ Colony Health â€¢ Level: intermediate â€¢ Tags: hygiene, behaviour, testing, health</small>
+      <p><a href="/wiki/colony-health/">Back to Colony Health hub</a></p>
+    </footer>
+  </main>
+
+  <script defer src="/js/site.js"></script>
+</body>
+</html>
+

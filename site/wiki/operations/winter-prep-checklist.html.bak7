@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Winter prep checklist â€” Operations â€” Bee Planet Connection</title>
+  <meta name="description" content="A practical, step-by-step checklist to prepare colonies for winter: stores, health, equipment, ventilation, and emergency plans.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/wiki/operations/winter-prep-checklist.html">
+  <link rel="stylesheet" href="/css/wiki.css">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Winter prep checklist â€” Operations â€” Bee Planet Connection">
+  <meta property="og:description" content="A practical, step-by-step checklist to prepare colonies for winter: stores, health, equipment, ventilation, and emergency plans.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/wiki/operations/winter-prep-checklist.html">
+  <meta property="og:image" content="/img/share/winter-prep-checklist.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"name":"Wiki","item":"/wiki/" },
+      { "@type":"ListItem","position":2,"name":"Operations","item":"/wiki/operations/" },
+      { "@type":"ListItem","position":3,"name":"Winter prep checklist","item":"/wiki/operations/winter-prep-checklist.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Winter prep checklist",
+    "datePublished":"2025-10-24",
+    "dateModified":"2025-10-24",
+    "author":{ "@type":"Organization","name":"Bee Planet Connection" },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bee Planet Connection",
+      "logo":{ "@type":"ImageObject","url":"/img/logo.svg" }
+    },
+    "mainEntityOfPage":"/wiki/operations/winter-prep-checklist.html"
+  }
+  </script>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="wiki wallpaper">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection logo">
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" aria-label="Site">
+        <a href="/wiki/">Wiki</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a>
+      <span aria-hidden="true">â€º</span>
+      <a href="/wiki/operations/">Operations</a>
+      <span aria-hidden="true">â€º</span>
+      <span aria-current="page">Winter prep checklist</span>
+    </nav>
+
+    <article class="article">
+      <h1>Winter prep checklist</h1>
+      <p class="lede">A practical, step-by-step checklist to prepare colonies for winter: stores, health, equipment, ventilation, and emergency plans.</p>
+
+      <div class="grid cols-3">
+        <section class="card" id="timeline">
+          <h2>Timing at a glance</h2>
+          <ul class="list">
+            <li><strong>Late summer:</strong> final harvest, monitor mites, treat if indicated.</li>
+            <li><strong>Early autumn:</strong> heavy syrup feeding to target winter weight.</li>
+            <li><strong>Late autumn:</strong> weatherproofing, entrance reducers, mouse guards.</li>
+            <li><strong>Mid-winter:</strong> quick checks only; emergency fondant if needed.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="stores">
+          <h2>Stores & target weights</h2>
+          <ul class="list">
+            <li><strong>Heft</strong> each hive; aim for robust stores before cold sets in.</li>
+            <li>Guides: National ~20â€“25&nbsp;kg; Langstroth ~30â€“35&nbsp;kg of honey/syrup equivalent.</li>
+            <li>If light, feed <strong>heavy syrup</strong> (2:1 by volume) until target weight is reached.</li>
+          </ul>
+          <p class="muted">Stop syrup once consistently cold; switch to fondant for emergencies only.</p>
+        </section>
+
+        <section class="card" id="health">
+          <h2>Health checks</h2>
+          <ul class="list">
+            <li>Confirm low <a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa</a> counts post-treatment.</li>
+            <li>Inspect brood pattern late autumn; note queen status and temperament.</li>
+            <li>Remove old/black comb and excess burr comb that impedes bee space.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="hardware">
+        <h2>Hardware & weatherproofing</h2>
+        <ul class="list">
+          <li><strong>Roof:</strong> sound, watertight, and weighted against wind.</li>
+          <li><strong>Entrances:</strong> fit mouse guards; reduce width to deter robbing and wasps.</li>
+          <li><strong>Stands:</strong> level and secure; ensure drainage under hives.</li>
+          <li><strong>Spare kit:</strong> dry supers and frames stored moth-safe.</li>
+        </ul>
+      </section>
+
+      <section id="ventilation">
+        <h2>Ventilation & insulation</h2>
+        <ul class="list">
+          <li>Maintain a small <strong>top vent</strong> or breathable crown board to prevent condensation.</li>
+          <li>Consider a thin insulation board over the crown board in very cold areas.</li>
+          <li>Leave an upper bee space to avoid squashing clustered bees when checking.</li>
+        </ul>
+        <p class="notice">Cold + dry beats warm + damp. Aim to <em>avoid condensation dripping</em> on the winter cluster.</p>
+      </section>
+
+      <section id="feeding">
+        <h2>Feeding options</h2>
+        <ul class="list">
+          <li><strong>Heavy syrup (autumn):</strong> rapid feeder or contact feeder above the brood box.</li>
+          <li><strong>Fondant (winter emergency):</strong> directly above the cluster under the crown board.</li>
+          <li>Feed in evening; avoid spills; keep entrances reduced.</li>
+        </ul>
+      </section>
+
+      <section id="records">
+        <h2>Records & planning</h2>
+        <ul class="list">
+          <li>Log weight/heft, mite checks, feed amounts, queen status, and equipment changes.</li>
+          <li>Note colonies needing early spring attention (light, small, requeening candidates).</li>
+          <li>Prepare sugar, fondant, and spare equipment now to avoid mid-winter shortages.</li>
+        </ul>
+      </section>
+
+      <aside class="card" aria-labelledby="on-this-page">
+        <h2 id="on-this-page">On this page</h2>
+        <ul class="toc">
+          <li><a href="#timeline">Timing at a glance</a></li>
+          <li><a href="#stores">Stores &amp; target weights</a></li>
+          <li><a href="#health">Health checks</a></li>
+          <li><a href="#hardware">Hardware &amp; weatherproofing</a></li>
+          <li><a href="#ventilation">Ventilation &amp; insulation</a></li>
+          <li><a href="#feeding">Feeding options</a></li>
+          <li><a href="#records">Records &amp; planning</a></li>
+        </ul>
+      </aside>
+
+      <section id="links">
+        <h2>Next steps</h2>
+        <p>Build your seasonal workflow in <a href="/wiki/operations/">Operations</a>. Related pages:</p>
+        <ul class="list">
+          <li><a href="/wiki/operations/feeding-basics.html">Feeding basics</a></li>
+          <li><a href="/wiki/colony-health/varroa-monitoring-schedule.html">Varroa monitoring schedule</a></li>
+          <li><a href="/wiki/operations/first-inspection-checklist.html">First inspection checklist</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer class="muted" style="margin-top:1.5rem">
+      <small>Updated 2025-10-24 â€¢ Operations â€¢ Level: newcomer â€¢ Tags: winter, preparation, feeding, ventilation, records</small>
+      <p><a href="/wiki/operations/">Back to Operations hub</a></p>
+    </footer>
+  </main>
+
+  <script defer src="/js/site.js"></script>
+</body>
+</html>
+

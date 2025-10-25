@@ -1,0 +1,168 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Bee communication â€” Foundations â€” Bee Planet Connection</title>
+  <meta name="description" content="How honeybees share information through dances, pheromones, and vibration â€” a social language evolved for survival.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/wiki/foundations/bee-communication.html">
+  <link rel="stylesheet" href="/css/wiki.css">
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Bee communication â€” Foundations â€” Bee Planet Connection">
+  <meta property="og:description" content="How honeybees share information through dances, pheromones, and vibration â€” a social language evolved for survival.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/wiki/foundations/bee-communication.html">
+  <meta property="og:image" content="/img/share/bee-communication.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"name":"Wiki","item":"/wiki/" },
+      { "@type":"ListItem","position":2,"name":"Foundations","item":"/wiki/foundations/" },
+      { "@type":"ListItem","position":3,"name":"Bee communication","item":"/wiki/foundations/bee-communication.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Bee communication",
+    "datePublished":"2025-10-24",
+    "dateModified":"2025-10-24",
+    "author":{ "@type":"Organization","name":"Bee Planet Connection" },
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bee Planet Connection",
+      "logo":{ "@type":"ImageObject","url":"/img/logo.svg" }
+    },
+    "mainEntityOfPage":"/wiki/foundations/bee-communication.html"
+  }
+  </script>
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body class="wiki wallpaper">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection logo">
+        <span class="brand-text">Bee Planet Connection</span>
+      </a>
+      <nav class="nav" aria-label="Site">
+        <a href="/wiki/">Wiki</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/wiki/">Wiki</a>
+      <span aria-hidden="true">â€º</span>
+      <a href="/wiki/foundations/">Foundations</a>
+      <span aria-hidden="true">â€º</span>
+      <span aria-current="page">Bee communication</span>
+    </nav>
+
+    <article class="article">
+      <h1>Bee communication</h1>
+      <p class="lede">How honeybees share information through dances, pheromones, and vibration â€” a social language evolved for survival.</p>
+
+      <div class="grid cols-3">
+        <section class="card" id="overview">
+          <h2>Communication essentials</h2>
+          <ul class="list">
+            <li>Bees coordinate complex behaviour with minimal sound and no sight inside the hive.</li>
+            <li>Information flows through <strong>chemical signals</strong>, <strong>touch</strong>, and <strong>movement</strong>.</li>
+            <li>Collective decisions (swarming, foraging, defence) depend on constant feedback loops.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="pheromones">
+          <h2>Pheromones â€” chemical language</h2>
+          <ul class="list">
+            <li><strong>Queen mandibular pheromone:</strong> keeps colony cohesion, signals queen presence.</li>
+            <li><strong>Brood pheromone:</strong> regulates worker roles and foraging drive.</li>
+            <li><strong>Nasanov pheromone:</strong> guides orientation and home scent recognition.</li>
+            <li><strong>Alarm pheromone:</strong> triggers defensive clustering and stinging response.</li>
+          </ul>
+          <p class="muted">Each caste produces and responds to a unique mix â€” like chemical â€œsentences.â€</p>
+        </section>
+
+        <section class="card" id="dances">
+          <h2>Dance language</h2>
+          <ul class="list">
+            <li><strong>Waggle dance:</strong> direction and distance of forage sources relative to the sun.</li>
+            <li><strong>Round dance:</strong> nearby nectar or water (<50 m from hive).</li>
+            <li>Bees interpret angle, tempo, and buzz duration to navigate precisely.</li>
+          </ul>
+          <p class="muted">Discovered by Karl von Frisch â€” a milestone in animal behaviour science.</p>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section id="vibrations">
+        <h2>Vibrations &amp; touch</h2>
+        <ul class="list">
+          <li><strong>Stop signal:</strong> a brief headbutt and buzz to interrupt dancers â€” regulates recruitment.</li>
+          <li><strong>Tremble dance:</strong> adjusts forager-labour balance when nectar inflow exceeds processing rate.</li>
+          <li>Antennal contact conveys recognition, dominance, and colony mood.</li>
+        </ul>
+      </section>
+
+      <section id="decision">
+        <h2>Collective decision-making</h2>
+        <ul class="list">
+          <li>Scout bees debate potential nest sites through waggle dances and inhibition signals.</li>
+          <li>Consensus builds when ~80% of scouts align â€” swarm then departs.</li>
+          <li>Demonstrates â€œdistributed intelligenceâ€: no single leader, only feedback.</li>
+        </ul>
+      </section>
+
+      <section id="humans">
+        <h2>Human parallels</h2>
+        <ul class="list">
+          <li>Similar to neural networks â€” simple agents processing local signals to reach global consensus.</li>
+          <li>Inspired models for swarm robotics and AI collective behaviour.</li>
+        </ul>
+        <p class="muted">Understanding bee communication helps decode resilience in complex systems.</p>
+      </section>
+
+      <aside class="card" aria-labelledby="on-this-page">
+        <h2 id="on-this-page">On this page</h2>
+        <ul class="toc">
+          <li><a href="#overview">Communication essentials</a></li>
+          <li><a href="#pheromones">Pheromones</a></li>
+          <li><a href="#dances">Dance language</a></li>
+          <li><a href="#vibrations">Vibrations &amp; touch</a></li>
+          <li><a href="#decision">Collective decision-making</a></li>
+          <li><a href="#humans">Human parallels</a></li>
+        </ul>
+      </aside>
+
+      <section id="links">
+        <h2>Next steps</h2>
+        <p>Explore related <a href="/wiki/foundations/">Foundations</a> topics:</p>
+        <ul class="list">
+          <li><a href="/wiki/foundations/bee-anatomy.html">Bee anatomy</a></li>
+          <li><a href="/wiki/foundations/bee-castes-and-lifecycle.html">Bee castes &amp; lifecycle</a></li>
+          <li><a href="/wiki/foundations/hive-types-overview.html">Hive types overview</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer class="muted" style="margin-top:1.5rem">
+      <small>Updated 2025-10-24 â€¢ Foundations â€¢ Level: intermediate â€¢ Tags: communication, pheromones, dance, behaviour</small>
+      <p><a href="/wiki/foundations/">Back to Foundations hub</a></p>
+    </footer>
+  </main>
+
+  <script defer src="/js/site.js"></script>
+</body>
+</html>
+
