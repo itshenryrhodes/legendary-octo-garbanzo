@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Data Management for Beekeepers</title>
+  <meta name="description" content="A practical framework to collect, organize, validate, analyze, and share hive data so it improves decisions without becoming a burden." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Data Management for Beekeepers</h1>
+      <p class="summary">A practical framework to collect, organize, validate, analyze, and share hive data so it improves decisions without becoming a burden.</p>
+      <nav aria-label="Pillar hub">
+        <a href="/wiki/data-sensing/">← Back to Data Sensing</a>
+      </nav>
+    </header>
+
+    <section id="why">
+      <h2>Why manage data at all?</h2>
+      <p>Good management turns scattered notes, sensor feeds, and harvest logs into knowledge: when to super, whether a queen failed, which forage drives weight gain, and when to feed. Poor management creates silos, duplicates, and doubt. This page outlines a lightweight, durable approach suitable for a backyard beekeeper or a multi-yard operation.</p>
+    </section>
+
+    <section id="principles">
+      <h2>Five guiding principles</h2>
+      <ol>
+        <li><strong>Start with questions.</strong> Decide what decisions you’ll make with the data (e.g., “trigger feed if weight loss exceeds X kg/week”).</li>
+        <li><strong>Prefer tidy, tabular formats.</strong> Use row-based logs with clear units and timestamps; avoid complicated, app-specific exports you can’t read later.</li>
+        <li><strong>Keep metadata with the data.</strong> Devices, placements, treatments, and events must be recorded alongside measurements.</li>
+        <li><strong>Automate repetition.</strong> Collection, backups, and reports should run on schedules.</li>
+        <li><strong>Plan for handoffs.</strong> Future you—or a collaborator—should understand your folders, file names, and code without guessing.</li>
+      </ol>
+    </section>
+
+    <section id="lifecycle">
+      <h2>The beekeeping data lifecycle</h2>
+      <p>Manage data in stages: <em>Collect → Validate → Store → Enrich → Analyze → Act → Archive/Share</em>. Each stage adds value and protects integrity.</p>
+      <ul>
+        <li><strong>Collect:</strong> Sensors (<a href="/wiki/data-sensing/hive-temperature-humidity-sensors.html">temperature/humidity</a>, <a href="/wiki/data-sensing/hive-weight-monitoring.html">weight</a>, acoustics), mobile apps, spreadsheets, inspection forms.</li>
+        <li><strong>Validate:</strong> Range checks, unit checks, spike filters, clock alignment; see <a href="/wiki/data-sensing/data-logging-best-practices.html">Data Logging Best Practices</a>.</li>
+        <li><strong>Store:</strong> Append-only CSV or a small database; daily backups.</li>
+        <li><strong>Enrich:</strong> Join with yard weather, bloom notes, treatment logs, and event markers (adding supers, moves).</li>
+        <li><strong>Analyze:</strong> Simple charts first: weight trend, internal temp stability, feed events versus outcomes.</li>
+        <li><strong>Act:</strong> Alerts and checklists translate patterns into actions, not noise.</li>
+        <li><strong>Archive/Share:</strong> Downsample old data, publish summaries to collaborators or <a href="/wiki/sustainability-environment/pollinator-citizen-science.html">citizen science</a> projects when appropriate.</li>
+      </ul>
+    </section>
+
+    <section id="schema">
+      <h2>A simple, durable schema</h2>
+      <p>Favor one row per observation, with explicit units and identifiers. Recommended columns:</p>
+      <ul>
+        <li><code>timestamp_utc</code> (ISO 8601, UTC), <code>apiary_id</code>, <code>hive_id</code>, <code>colony_id</code>, <code>device_id</code></li>
+        <li><code>sensor</code> (e.g., <code>temp_internal</code>, <code>rh_internal</code>, <code>weight</code>), <code>value</code>, <code>unit</code></li>
+        <li><code>qc_flag</code> (e.g., <code>ok</code>, <code>spike</code>, <code>lid_open</code>, <code>lifted</code>)</li>
+      </ul>
+      <p>Keep lookups in small companion tables:</p>
+      <ul>
+        <li><strong>hives.csv:</strong> <code>hive_id, apiary_id, model, box_config, install_date</code></li>
+        <li><strong>colonies.csv:</strong> <code>colony_id, hive_id, queen_line, queen_introduced, notes</code></li>
+        <li><strong>devices.csv:</strong> <code>device_id, type, firmware, calibration_offset, placement</code></li>
+        <li><strong>events.csv:</strong> <code>timestamp_utc, hive_id, event_type, details</code> (e.g., <em>feed 2 kg fondant; add super; mite treatment</em>)</li>
+      </ul>
+      <p>These tables let you join measurements with context later without rewriting historical files.</p>
+    </section>
+
+    <section id="file-naming">
+      <h2>File naming and folder structure</h2>
+      <p>Consistent names stop files from vanishing in your own folders. A practical layout:</p>
+      <pre><code>data/
+  raw/
+    year=2025/month=10/day=25/  # partitions for fast queries & simple archiving
+      sensors-Y01-H07-2025-10-25.csv
+  processed/
+    hive-metrics-2025-10-25.csv
+  lookups/
+    hives.csv
+    colonies.csv
+    devices.csv
+    apiaries.csv
+  events/
+    events-2025.csv
+backup/
+  daily/
+docs/
+  data-dictionary.md
+  workflows.md</code></pre>
+      <p>Include a <strong>data-dictionary.md</strong> explaining each column, unit, and allowable value, and a <strong>workflows.md</strong> describing how data moves from raw to processed.</p>
+    </section>
+
+    <section id="collection">
+      <h2>Collection workflows</h2>
+      <p>Whether you use a notebook, a mobile app, or a gateway computer, keep input friction low.</p>
+      <ul>
+        <li><strong>Inspection forms:</strong> One line per hive visit: queen-right, brood pattern (1–5), stores, temperament, mite count method and result, actions taken, photos.</li>
+        <li><strong>Sensor gateways:</strong> Store locally first (SD card or on-device database), then sync to your <code>data/raw/...</code> folder daily.</li>
+        <li><strong>Barcodes/QR:</strong> Label hives and devices to reduce ID errors at the yard.</li>
+      </ul>
+      <p>For weight and temp logging best practices see: <a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a> and <a href="/wiki/data-sensing/hive-temperature-humidity-sensors.html">Hive Temperature and Humidity Sensors</a>.</p>
+    </section>
+
+    <section id="validation">
+      <h2>Validation and quality control</h2>
+      <p>Automate checks as soon as data lands in <code>data/raw</code>:</p>
+      <ul>
+        <li><strong>Schema check:</strong> Required columns present; types numeric where expected.</li>
+        <li><strong>Range check:</strong> Reject or flag impossible values (e.g., 80&nbsp;°C internal temp; −20&nbsp;kg hive weight).</li>
+        <li><strong>Unit consistency:</strong> Store a single canonical unit per sensor; convert at ingest if devices differ.</li>
+        <li><strong>Clock sanity:</strong> No timestamps from the future; no duplicate timestamps for same device unless justified.</li>
+      </ul>
+      <p>Write flags back to a <code>qc_flag</code> column rather than deleting records; context is often recovered later (e.g., “hive moved” event explains a weight jump).</p>
+    </section>
+
+    <section id="automation">
+      <h2>Automation: repeatable, not heroic</h2>
+      <p>Automate three jobs:</p>
+      <ol>
+        <li><strong>Ingest:</strong> Copy new files from devices or apps into <code>data/raw</code>, rename to your convention, and append to a daily index.</li>
+        <li><strong>Transform:</strong> Validate, standardize units, compute daily metrics per hive (min/mean/max temp, weight change), and write to <code>processed</code>.</li>
+        <li><strong>Backup:</strong> Mirror both <code>raw</code> and <code>processed</code> plus the <code>lookups</code> and <code>events</code> folders to a second disk or cloud bucket nightly.</li>
+      </ol>
+      <p>If you use spreadsheets, standardize sheet names and column headings so formulas and scripts don’t break month to month.</p>
+    </section>
+
+    <section id="analysis">
+      <h2>Analysis that informs action</h2>
+      <p>Prioritize a short, reliable set of outputs:</p>
+      <ul>
+        <li><strong>Weight trend chart:</strong> 7-day rolling change per hive; alert if weekly loss exceeds a threshold (potential starvation) or sudden gain suggests honey flow.</li>
+        <li><strong>Brood temperature stability:</strong> Standard deviation per day; rising variance can indicate queen issues or ventilation problems.</li>
+        <li><strong>Mite pressure vs. interventions:</strong> Overlay monitoring results and treatment events to evaluate timing and efficacy.</li>
+        <li><strong>Apiary comparisons:</strong> Normalize by hive and compare percent changes to spot outliers quickly.</li>
+      </ul>
+      <p>Keep alerts “sticky” with hysteresis to avoid chattering (e.g., alert only after 60 minutes below threshold rather than on momentary dips).</p>
+    </section>
+
+    <section id="governance">
+      <h2>Governance, privacy, and sharing</h2>
+      <p>Yard locations and incident notes can be sensitive. Before sharing:</p>
+      <ul>
+        <li><strong>Minimize PII:</strong> Remove names/addresses. Consider rounding or masking coordinates.</li>
+        <li><strong>Add license and citation:</strong> Include a file (e.g., <code>LICENSE.txt</code>) indicating how others may use your data and how to attribute it.</li>
+        <li><strong>Summaries over raw:</strong> For many uses, daily aggregates (hourly average temp; daily weight change) suffice and protect privacy.</li>
+      </ul>
+      <p>When contributing to <a href="/wiki/sustainability-environment/pollinator-citizen-science.html">citizen science</a> or <a href="/wiki/data-sensing/open-data-beekeeping.html">open data</a> initiatives, include your data dictionary so external users can interpret fields correctly.</p>
+    </section>
+
+    <section id="security">
+      <h2>Security and integrity</h2>
+      <p>Data integrity matters when claims depend on evidence (e.g., pesticide incidents). Recommended steps:</p>
+      <ul>
+        <li><strong>Checksums:</strong> Keep per-file hashes in a manifest to detect corruption.</li>
+        <li><strong>Append-only history:</strong> Avoid editing raw logs; corrections should be documented transformations that produce new files.</li>
+        <li><strong>Access control:</strong> If using a shared drive or cloud, grant read-only access to most users; only a few should write to <code>raw</code>.</li>
+        <li>See <a href="/wiki/data-sensing/internet-security-hives.html">Internet Security for Smart Hives</a> for device-level security.</li>
+      </ul>
+    </section>
+
+    <section id="tools">
+      <h2>Tools: choose what you will maintain</h2>
+      <p>Pick tools you or your team can support for years:</p>
+      <ul>
+        <li><strong>Spreadsheet-first:</strong> Works for 1–3 hives; standardize columns, keep each apiary in a separate file, and export CSV for charts.</li>
+        <li><strong>Lightweight databases:</strong> A small SQLite file per year handles 10–100 hives comfortably and is easy to back up.</li>
+        <li><strong>Dashboards:</strong> Any charting tool is fine; the important part is consistent ingestion and clear, shared views.</li>
+      </ul>
+      <p>Commercial <a href="/wiki/data-sensing/remote-monitoring-systems.html">monitoring systems</a> can simplify collection. Export your data regularly so you are not locked in.</p>
+    </section>
+
+    <section id="playbook">
+      <h2>90-day playbook for a new data program</h2>
+      <ol>
+        <li><strong>Week 1–2:</strong> Define decisions and alerts; set folder structure; create data dictionary and ID lists.</li>
+        <li><strong>Week 3–4:</strong> Instrument two representative hives; begin automated ingest; test backups.</li>
+        <li><strong>Week 5–6:</strong> Add inspection forms and events; validate joins between sensors and notes.</li>
+        <li><strong>Week 7–8:</strong> Build three core charts and one alert; iterate thresholds.</li>
+        <li><strong>Week 9–10:</strong> Add apiary-level weather; compare hives; tune QC flags and dashboards.</li>
+        <li><strong>Week 11–12:</strong> Document, downsample older data, and plan a modest sharing strategy if desired.</li>
+      </ol>
+    </section>
+
+    <section id="pitfalls">
+      <h2>Common pitfalls (and fixes)</h2>
+      <ul>
+        <li><strong>Duplicate IDs:</strong> Two devices labeled <code>D-TH-02</code> will scramble joins. Fix by assigning unique IDs and updating the device table.</li>
+        <li><strong>Mixed units:</strong> Weight logged in pounds and kilograms creates phantom jumps. Normalize at ingest to a single unit (e.g., kg).</li>
+        <li><strong>Floating time zones:</strong> Switching between DST and standard time creates gaps/overlaps. Store UTC, convert only for display.</li>
+        <li><strong>Photos without context:</strong> A good brood photo is useless without hive, date, and frame position. Include a filename convention or embed EXIF notes.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <nav class="related">
+        <h2>Related pages</h2>
+        <ul>
+          <li><a href="/wiki/data-sensing/data-logging-best-practices.html">Data Logging Best Practices</a></li>
+          <li><a href="/wiki/data-sensing/hive-temperature-humidity-sensors.html">Hive Temperature and Humidity Sensors</a></li>
+          <li><a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a></li>
+          <li><a href="/wiki/data-sensing/apiary-weather-stations.html">Apiary Weather Stations</a></li>
+          <li><a href="/wiki/data-sensing/remote-monitoring-systems.html">Remote Hive Monitoring Systems</a></li>
+          <li><a href="/wiki/data-sensing/internet-security-hives.html">Internet Security for Smart Hives</a></li>
+          <li><a href="/wiki/data-sensing/machine-learning-beehealth.html">Machine Learning for Bee Health</a></li>
+          <li><a href="/wiki/data-sensing/open-data-beekeeping.html">Open Data in Beekeeping</a></li>
+        </ul>
+      </nav>
+      <p><strong>File location:</strong> <code>/site/wiki/data-sensing/data-management-practices.html</code></p>
+    </footer>
+  </article>
+</body>
+</html>
