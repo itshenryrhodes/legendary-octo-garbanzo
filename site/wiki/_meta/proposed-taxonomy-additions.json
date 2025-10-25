@@ -1,0 +1,101 @@
+﻿[
+    {
+        "title":  "Anatomy: abdomen (worker honey bee)",
+        "summary":  "Whatâ€™s inside a workerâ€™s abdomen: wax glands, Nasonov and alarm pheromones, sting apparatus, gut and honey stomach, fat body, and what keepers can infer at the hive.",
+        "slug":  "anatomy-abdomen",
+        "url":  "/wiki/foundations/anatomy-abdomen.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Anatomy: head (worker honey bee)",
+        "summary":  "A practical tour of the honey bee head: compound eyes, ocelli, antennae, mouthparts, and the sensory systems that drive foraging, communication, and nest work.",
+        "slug":  "anatomy-head",
+        "url":  "/wiki/foundations/anatomy-head.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Anatomy: legs \u0026amp; pollen baskets (worker honey bee)",
+        "summary":  "How worker legs collect, pack, and carry pollen and propolis; what corbiculae, scopae, and pollen presses are; and what these signs tell a beekeeper.",
+        "slug":  "anatomy-legs-and-pollen-baskets",
+        "url":  "/wiki/foundations/anatomy-legs-and-pollen-baskets.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Anatomy: thorax (worker honey bee)",
+        "summary":  "A practical tour of the honey bee thorax: flight muscles, wings and hamuli, legs and pollen baskets, ventilation and heatâ€”what to look for during inspections.",
+        "slug":  "anatomy-thorax",
+        "url":  "/wiki/foundations/anatomy-thorax.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Anatomy: wings \u0026amp; flight (worker honey bee)",
+        "summary":  "How honey bee wings work: coupling hooks, flight muscles, ventilation, orientation, and what flight behaviour tells a beekeeper during inspections.",
+        "slug":  "anatomy-wings-and-flight",
+        "url":  "/wiki/foundations/anatomy-wings-and-flight.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Bee anatomy",
+        "summary":  "External and internal structures that drive behaviour and colony work.",
+        "slug":  "bee-anatomy",
+        "url":  "/wiki/foundations/bee-anatomy.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Bee biology basics",
+        "summary":  "A clear tour of honey bee body systemsâ€”how head, thorax, and abdomen work together to power foraging, brood care, comb building, and colony defense.",
+        "slug":  "bee-biology-basics",
+        "url":  "/wiki/foundations/bee-biology-basics.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Comb architecture basics",
+        "summary":  "How honeybee comb is built and organized: cell sizes, orientations, brood vs. honey zones, and what healthy comb patterns look like.",
+        "slug":  "comb-architecture-basics",
+        "url":  "/wiki/foundations/comb-architecture-basics.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Frame handling basics",
+        "summary":  "How to lift, inspect, and return frames safely: spacing, orientation, and gentle techniques that protect bees and brood.",
+        "slug":  "frame-handling-basics",
+        "url":  "/wiki/foundations/frame-handling-basics.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Protective clothing \u0026amp; PPE basics",
+        "summary":  "What beekeeping PPE you actually need, how to choose and fit it, when to wear it, and how to clean and store it so you stay safe and comfortable.",
+        "slug":  "ppe-basics",
+        "url":  "/wiki/foundations/ppe-basics.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    },
+    {
+        "title":  "Smoker basics",
+        "summary":  "What a bee smoker does, safe fuel choices, how to light it reliably, and how to use cool, thin smoke during inspections without stressing colonies.",
+        "slug":  "smoker-basics",
+        "url":  "/wiki/foundations/smoker-basics.html",
+        "pillar":  "foundations",
+        "level":  "newcomer",
+        "updated":  "2025-10-26"
+    }
+]
