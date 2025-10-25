@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Geospatial Mapping of Apiaries</title>
+  <meta name="description" content="How to plan, analyze, and manage apiaries with GIS: siting, forage modeling, access, risk buffers, data standards, privacy, and practical mapping workflows for beekeepers." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Geospatial Mapping of Apiaries</h1>
+      <p class="summary">Plan smarter apiaries with maps. This guide shows how to use GIS to choose sites, understand forage, reduce risks, and manage operations with reliable spatial data.</p>
+      <nav aria-label="Pillar hub"><a href="/wiki/data-sensing/">← Back to Data &amp; Sensing</a></nav>
+    </header>
+
+    <section id="why-gis">
+      <h2>Why map apiaries?</h2>
+      <p>
+        Beekeeping is spatial. Colonies forage across landscapes that vary in bloom timing, pesticide exposure, wind, water, and access. Geospatial tools help you see those patterns clearly so decisions—where to place a yard, when to move colonies, which routes to use—are backed by evidence. Mapping also sharpens communication with landowners and regulators, and supports long-term learning as seasons, weather, and land use change.
+      </p>
+    </section>
+
+    <section id="core-concepts">
+      <h2>Core GIS concepts (quick primer)</h2>
+      <ul>
+        <li><strong>Layers:</strong> Each dataset (roads, land cover, water, apiary points) is a layer you can toggle and style.</li>
+        <li><strong>Vector vs raster:</strong> Vector = points/lines/polygons (apiaries, tracks, management zones). Raster = gridded values (elevation, vegetation index, temperature).</li>
+        <li><strong>Coordinate systems:</strong> Use a consistent projection. For field work, WGS84 latitude/longitude is fine; for distance/area analysis, pick a local projected CRS (e.g., UTM zone for your region).</li>
+        <li><strong>Attributes:</strong> Tables attached to features—e.g., each apiary point can store hive count, mite level, last inspection, weight sensor ID.</li>
+        <li><strong>Scale &amp; resolution:</strong> Don’t over-interpret coarse data. Match the detail of your question to the data’s grain size.</li>
+      </ul>
+    </section>
+
+    <section id="questions">
+      <h2>Questions mapping can answer</h2>
+      <ul>
+        <li>Where are the best <strong>new yard locations</strong> within a 10–15&nbsp;km radius of existing forage?</li>
+        <li>Which sites have <strong>diverse flowering habitats</strong> within a 2–3&nbsp;km flight radius?</li>
+        <li>How can we <strong>buffer risks</strong> (nearby pesticide applications, roads, schools, riparian zones)?</li>
+        <li>What are the <strong>access routes</strong> with least slope and fewest gate constraints for moving supers at night?</li>
+        <li>Which apiaries showed <strong>weight gains</strong> during a nectar flow and how does that correlate with mapped bloom?</li>
+      </ul>
+    </section>
+
+    <section id="data-sources">
+      <h2>Data you can use</h2>
+      <ul>
+        <li><strong>Basemaps:</strong> Satellite imagery, topographic maps, aerial photos.</li>
+        <li><strong>Elevation &amp; terrain:</strong> Digital elevation models (DEM) for slope, aspect, cold-air drainage, and access planning.</li>
+        <li><strong>Land cover &amp; vegetation:</strong> Public land-cover maps, local habitat inventories, vegetation indices (NDVI/EVI) from satellites to infer greenness and drought stress.</li>
+        <li><strong>Water &amp; wetlands:</strong> Rivers, ponds, riparian buffers—useful for water access and for setting protective setbacks.</li>
+        <li><strong>Roads &amp; gates:</strong> Drivable vs. seasonal roads, bridge weight limits, locked gates; add your own field-verified access notes.</li>
+        <li><strong>Boundaries:</strong> Parcels, conservation areas, zoning districts to respect permissions and compliance.</li>
+        <li><strong>Bloom &amp; phenology:</strong> Regional bloom calendars, local plant lists, and your own phenology logs geocoded to sites.</li>
+        <li><strong>Apiary &amp; sensor points:</strong> Exact hive yard locations; weights, temperature/humidity sensors, and weather stations.</li>
+      </ul>
+    </section>
+
+    <section id="privacy-ethics">
+      <h2>Privacy, safety, and ethics</h2>
+      <p>
+        Exact yard coordinates can attract theft or conflict. Keep a private “working” map and a generalized “public” map. For shared exports, round coordinates to the nearest 250–500&nbsp;m or show only polygons (e.g., “forage region”) rather than points. Store landowner contact details in secure attributes and respect access agreements.
+      </p>
+    </section>
+
+    <section id="workflow">
+      <h2>A practical mapping workflow</h2>
+      <ol>
+        <li><strong>Set the projection:</strong> Choose a local projected CRS for distance/area accuracy; keep lat/long for mobile collection.</li>
+        <li><strong>Create base layers:</strong> Add basemap, elevation, water, land cover, roads, and parcel boundaries.</li>
+        <li><strong>Add apiary points:</strong> Use your phone or a handheld GPS to capture coordinates. Record attributes: <em>apiary_id, hives, queen-lines, last_inspection, scale_id</em>.</li>
+        <li><strong>Build buffers:</strong> Draw 2&nbsp;km and 3&nbsp;km buffers around yards to approximate typical forage ranges. These rings help visualize resource coverage and overlap.</li>
+        <li><strong>Score forage diversity:</strong> Intersect buffers with land-cover types and count classes (e.g., woodland edge, orchards, meadows). More classes and edge length often predict steadier flows.</li>
+        <li><strong>Flag risks:</strong> Add boolean fields like <em>near_pesticide_zone</em>, <em>near_road</em>, <em>floodplain</em>, populated via spatial joins with risk layers.</li>
+        <li><strong>Access planning:</strong> Trace ingress routes as line features. Attribute with gate codes, slope percent, surface (gravel, dirt), and turning radius notes for trailers.</li>
+        <li><strong>Relate sensors:</strong> Link weight scales and weather stations to yard points via a <em>scale_id</em> or <em>station_id</em> field. This lets you graph weight and rainfall by site.</li>
+        <li><strong>Style the map:</strong> Use consistent symbols and colours: yards as strong contrasting points, 2/3&nbsp;km rings as subtle outlines, risky buffers (roads, spray blocks) in translucent overlays.</li>
+        <li><strong>Export &amp; share:</strong> For field devices, export GeoJSON/MBTiles; for reports, export a PDF with legend, scale bar, and in-map notes.</li>
+      </ol>
+    </section>
+
+    <section id="siting">
+      <h2>Site selection with buffers and terrain</h2>
+      <p>
+        For new yards, start with candidate points placed on accessible, well-drained ground near diverse cover. Exclude locations within set distances of sensitive features:
+      </p>
+      <ul>
+        <li><strong>Roads &amp; trails:</strong> 50–100&nbsp;m from busy roads or bikes to reduce conflict and exhaust exposure.</li>
+        <li><strong>Residences &amp; livestock areas:</strong> Local norms vary—map setbacks (e.g., 25–100&nbsp;m) and hedge screens where appropriate.</li>
+        <li><strong>Spray blocks:</strong> If you coordinate with growers, map their blocks and typical application windows; set conservative buffers and communication notes.</li>
+        <li><strong>Floodplains &amp; cold pockets:</strong> Use elevation and flow lines to avoid pooling cold air and inundation.</li>
+      </ul>
+      <p>
+        Combine these constraints in a suitability map: score each factor (0–3) and sum them. The highest-scoring spots typically align with edges (forest-meadow transitions) and safe access.
+      </p>
+    </section>
+
+    <section id="forage-modeling">
+      <h2>Forage modeling and phenology</h2>
+      <p>
+        A simple but powerful model is to track “forage capacity” within each yard’s 2&nbsp;km ring. Intersect the ring with your <em>meadow</em>, <em>orchard</em>, <em>hedgerow</em>, and <em>shrub</em> polygons and multiply area by a bloom-quality score that varies by month. Summing those month-by-month gives a <em>season curve</em> predicting when weights should rise. As you collect real weight curves from hive scales, compare predicted and observed curves to learn which habitats punch above (or below) their mapped category.
+      </p>
+    </section>
+
+    <section id="data-collection">
+      <h2>Field data collection (phones, GPS, and notes)</h2>
+      <ul>
+        <li><strong>Phones:</strong> Most phones are accurate to 3–10&nbsp;m in open sky. Under canopy, take multiple readings and average; or step into a clearing and offset the point by measured distance and bearing.</li>
+        <li><strong>Waypoints &amp; tracks:</strong> Save the yard entrance, parking, loading area, and any hazards (soft shoulders, low branches).</li>
+        <li><strong>Attributes:</strong> Capture <em>shade_percent, wind_exposure, water_source</em> presence, and <em>fence_status</em> for wildlife risk.</li>
+        <li><strong>Photos:</strong> Geotagged photos of approaches and gate signage speed up future visits and help new team members.</li>
+      </ul>
+    </section>
+
+    <section id="tools">
+      <h2>Tools and formats</h2>
+      <ul>
+        <li><strong>Desktop GIS:</strong> QGIS (free) or ArcGIS Pro (commercial) for analysis and map layout.</li>
+        <li><strong>Mobile:</strong> Any app that records GPS waypoints and exports GeoJSON/GPX; some record forms directly to your layers.</li>
+        <li><strong>Web maps:</strong> Leaflet or MapLibre for simple interactive maps; host tiles and GeoJSON or publish static PDFs.</li>
+        <li><strong>Formats:</strong> Use <em>GeoJSON</em> for easy sharing, <em>GPKG</em> (GeoPackage) for robust multi-layer storage, and <em>CSV</em> for attribute exchange. Keep a <em>README</em> describing fields and units.</li>
+      </ul>
+    </section>
+
+    <section id="quality">
+      <h2>Data quality and versioning</h2>
+      <p>
+        Name fields consistently (<em>apiary_id, hives, last_inspection</em>) and validate entries (e.g., numeric ranges). Keep a change log when yards move or close. If multiple people edit, store the master GeoPackage in a version-controlled folder and export “field copies” to prevent conflicts. Periodically reconcile field edits into the master and regenerate published products.
+      </p>
+    </section>
+
+    <section id="operations">
+      <h2>Operational applications</h2>
+      <ul>
+        <li><strong>Route planning:</strong> Build evening routes that minimize backtracking and steep grades. Add estimated stop durations and generate printable itineraries.</li>
+        <li><strong>Emergency response:</strong> Map alternate access if gates are blocked or storms down trees; annotate safe turn-arounds for trailers.</li>
+        <li><strong>Treatment windows:</strong> Overlay phenology and spray calendars to plan safe, effective timings.</li>
+        <li><strong>Communications:</strong> Share a simplified map with landowners showing the apiary footprint, access track, and contact info.</li>
+      </ul>
+    </section>
+
+    <section id="checklist">
+      <h2>Quick checklist</h2>
+      <ul>
+        <li>Choose a consistent CRS and organize layers.</li>
+        <li>Capture accurate yard points with essential attributes.</li>
+        <li>Create 2–3&nbsp;km forage buffers and intersect with habitat types.</li>
+        <li>Map risks (roads, spray blocks, flood, residences) and apply setbacks.</li>
+        <li>Trace access routes with notes on gates, slope, and surfaces.</li>
+        <li>Link sensor IDs so weight and weather data are site-aware.</li>
+        <li>Export a private working map and a redacted public version.</li>
+      </ul>
+    </section>
+
+    <section id="related">
+      <h2>Related pages</h2>
+      <ul>
+        <li><a href="/wiki/data-sensing/apiary-weather-stations.html">Apiary Weather Stations</a></li>
+        <li><a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a></li>
+        <li><a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a></li>
+        <li><a href="/wiki/data-sensing/data-logging-best-practices.html">Data Logging Best Practices</a></li>
+        <li><a href="/wiki/operations/apiary-siting.html">Selecting an Apiary Site</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        <strong>Public URL:</strong> <code>/wiki/data-sensing/geospatial-bee-mapping.html</code><br />
+        <strong>File location:</strong> <code>/site/wiki/data-sensing/geospatial-bee-mapping.html</code>
+      </p>
+    </footer>
+  </article>
+</body>
+</html>
