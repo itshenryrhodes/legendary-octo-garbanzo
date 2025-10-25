@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bee Magnetoreception and Navigation</title>
+  <meta name="description" content="How honey bees sense direction and find their way—sun compass, polarized light, landmarks, and possible magnetic sensing mechanisms." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Bee Magnetoreception and Navigation</h1>
+      <p class="summary">Honey bees navigate with a sun compass, polarized light, landmarks, odors, and internal odometry. Evidence also suggests a magnetic sense that may help with orientation and calibration.</p>
+      <nav aria-label="Pillar hub">
+        <a href="/wiki/foundations/">← Back to Foundations</a>
+      </nav>
+    </header>
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Foragers travel hundreds to thousands of meters to locate flowers, then return to a small entrance in a moving, living structure. They achieve this by combining multiple cues: the Sun’s position, the sky’s polarization pattern, panoramic landmarks, odors, and distance estimation from flight effort. Bees also communicate routes via the waggle dance, encoding the outbound direction and distance relative to the Sun. On top of these well-established systems, experimental evidence indicates bees detect magnetic fields, a capability called <strong>magnetoreception</strong>. Magnetic cues appear to play a supporting role—useful for orientation, backup calibration, and perhaps in low-light conditions—rather than serving as the primary compass under normal daylight.</p>
+    </section>
+
+    <section id="sun-compass">
+      <h2>Sun compass and polarized light</h2>
+      <p>Bees maintain a time-compensated Sun compass. Their internal circadian clock adjusts for the Sun’s apparent motion across the sky, allowing a forager to keep the correct bearing to a food site throughout the day. When the Sun is obscured, bees can still orient using the <strong>polarization pattern</strong> of skylight, which provides a reliable proxy for the Sun’s azimuth.</p>
+      <ul>
+        <li><strong>Time compensation:</strong> The vector encoded in a waggle dance rotates with time. A morning dance for a northeast site will be “translated” into a different angle by afternoon, and recruits still arrive at the correct place.</li>
+        <li><strong>UV and polarization sensitivity:</strong> Specialized photoreceptors in the dorsal rim area of the compound eye detect polarized light, extending functionality into hazy or partially cloudy conditions.</li>
+        <li><strong>Cloud cover strategy:</strong> If both direct Sun and polarization cues are weak, bees rely more heavily on landmarks and odor trails until celestial cues reappear.</li>
+      </ul>
+      <p>For background on how direction and distance are encoded behaviorally, see <a href="/wiki/foundations/bee-communication.html">Bee communication</a> (published) and the planned deep dive <a href="/wiki/foundations/bee-communication-dance-language.html">Waggle Dance and Communication</a>.</p>
+    </section>
+
+    <section id="landmarks-odometry">
+      <h2>Landmarks, odors, and odometry</h2>
+      <p>Close to the goal, bees shift from compass-like navigation to <em>pilotage</em>—matching memorized visual scenes and odor cues to guide the last part of the route. They also estimate distance with an internal odometer based primarily on <strong>optic flow</strong>, the apparent motion of the ground and surrounding features across the visual field during flight.</p>
+      <ul>
+        <li><strong>Panoramic memory:</strong> Bees memorize snapshots of sky–horizon–terrain relationships. Consistent silhouettes (trees, fences, walls) create strong guidance.</li>
+        <li><strong>Odor plumes:</strong> Floral scents and hive odors form plumes that bees can track upwind. Odors help confirm identity rather than provide precise bearings.</li>
+        <li><strong>Optic-flow odometer:</strong> Flights just above textured surfaces “feel” longer than flights high over uniform water. This can cause over- or underestimation of distance if terrain changes.</li>
+      </ul>
+      <p>Good apiary placement increases landmark clarity and reduces confusion. See <a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a> (published).</p>
+    </section>
+
+    <section id="magnetoreception">
+      <h2>What is magnetoreception?</h2>
+      <p>Magnetoreception is the ability to detect the Earth’s magnetic field (EMF). In honey bees, this capability has been suggested by experiments showing altered orientation or learning when magnetic fields are manipulated. Two broad mechanisms are discussed in the scientific literature:</p>
+      <ol>
+        <li><strong>Particle-based mechanisms (magnetite):</strong> Tiny crystals of magnetite embedded in tissues could couple to the EMF and tug on mechanoreceptors, providing directional information. Magnetite has been detected in several insects, and bees show magnetic remanence changes after exposure to strong fields in some studies.</li>
+        <li><strong>Light-dependent mechanisms (radical pairs in cryptochrome):</strong> A photoreceptor protein, cryptochrome, can generate radical pairs whose quantum spin states are influenced by weak magnetic fields. This can modulate neural signals in a direction-dependent way, potentially giving bees a visual “magnetic overlay,” especially under blue/UV illumination.</li>
+      </ol>
+      <p>Different cues likely dominate in different contexts. During well-lit foraging, celestial and visual cues carry most of the load; magnetic input may help stabilize the compass or provide redundancy. During <em>orientation flights</em>, over new terrain, or at dusk when the Sun’s position is ambiguous, magnetic cues could contribute more.</p>
+    </section>
+
+    <section id="evidence">
+      <h2>Evidence for a magnetic sense in bees</h2>
+      <ul>
+        <li><strong>Training and conditioning:</strong> Bees can be trained in laboratory paradigms to associate changes in magnetic fields with a reward, implying perception rather than mere physiological disturbance.</li>
+        <li><strong>Field manipulation:</strong> Coils placed around hives that distort the local field have produced shifts in orientation in some experiments. Shielding tests and magnet attachments can also alter homing accuracy.</li>
+        <li><strong>Magnetic particles:</strong> Reports of magnetite-like material in bee tissues suggest a substrate for magnetic sensing, though anatomical localization and function remain under debate.</li>
+        <li><strong>Light dependence:</strong> Some effects disappear under specific lighting, consistent with cryptochrome-based magnetoreception being active primarily in particular spectral ranges.</li>
+      </ul>
+      <p>Results vary across studies, labs, and methods. The conservative interpretation is that bees possess magnetic sensitivity that can aid orientation, but it is not their dominant navigational cue in normal daylight foraging.</p>
+    </section>
+
+    <section id="integration-model">
+      <h2>How bees combine cues</h2>
+      <p>Bees blend information in a hierarchical, context-dependent way:</p>
+      <ol>
+        <li><strong>Global compass:</strong> Sun position and polarization provide a robust, time-compensated heading.</li>
+        <li><strong>Path integration:</strong> Bees maintain an internal running estimate of distance and direction (from optic flow and course heading), enabling a direct home vector.</li>
+        <li><strong>Magnetic fallback and calibration:</strong> Subtle magnetic input may stabilize or reset the compass under low-sun or conflicting visual scenes.</li>
+        <li><strong>Local guidance:</strong> Landmarks, odors, and terrain textures dominate near the goal and hive.</li>
+      </ol>
+      <p>When cues conflict, bees can show brief disorientation, then re-weight the most reliable sources—often switching to landmark pilotage until higher-confidence compass cues return.</p>
+    </section>
+
+    <section id="orientation-flights">
+      <h2>Orientation flights and learning</h2>
+      <p>Young workers take short <strong>orientation flights</strong> near the hive entrance, backing away to memorize the façade, surrounding silhouettes, and the Sun’s position. If you move a hive within the same yard, additional re-orientation flights occur. During these flights, bees build the spatial “map” they will later use for efficient foraging.</p>
+      <ul>
+        <li><strong>Start small:</strong> Early flights are short arcs and loops; later ones extend higher and wider as the bee samples the skyline and landmark relationships.</li>
+        <li><strong>Multiple sessions:</strong> Orientation is reinforced across days; weather and lighting conditions diversify the stored views.</li>
+        <li><strong>Magnetic contribution:</strong> If magnetic cues are used at all, they likely help maintain a stable heading while the bee records visual scenes.</li>
+      </ul>
+    </section>
+
+    <section id="practical-implications">
+      <h2>Practical implications for beekeepers</h2>
+      <ul>
+        <li><strong>Stable landmarks help more than anything:</strong> Place hives where distinctive silhouettes (hedges, sheds, fence lines) are visible. This improves homing and reduces drifting between colonies.</li>
+        <li><strong>Avoid frequent micro-moves:</strong> Small shifts (tens of centimeters) can confuse returning foragers. If a move is necessary, either shift only a few centimeters or several meters and allow re-orientation flights.</li>
+        <li><strong>Minimize visual clutter at entrances:</strong> Keep the immediate approach clear so bees can lock onto stable reference points.</li>
+        <li><strong>Consider magnetic noise cautiously:</strong> Strong, time-varying magnetic fields (e.g., very close to large motors or transformers) could, in theory, interfere with orientation. However, in typical apiary settings, visual and celestial cues dominate. Prioritize landmark quality and flight-line safety.</li>
+        <li><strong>High, uniform surfaces:</strong> Foragers flying high over uniform water or smooth asphalt may mis-estimate distance by optic flow. Expect dance-communicated distances to vary with terrain.</li>
+      </ul>
+      <p>For layout and flight-line guidance, see <a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a> (published). For flight performance and energy costs, see planned <a href="/wiki/foundations/bee-flight-mechanics.html">Bee Flight Mechanics</a>.</p>
+    </section>
+
+    <section id="myths-pitfalls">
+      <h2>Myths and pitfalls</h2>
+      <ul>
+        <li><strong>“Bees navigate by magnetism alone.”</strong> Celestial and visual cues are primary; magnetic input, if used, is supplementary.</li>
+        <li><strong>“Any electromagnetic device will disorient bees.”</strong> Most everyday devices generate fields far weaker or of unsuitable frequency to override dominant cues outdoors.</li>
+        <li><strong>“A wrong dance means a broken compass.”</strong> Dance angles shift with time of day and terrain-dependent distance estimates. Validate by watching recruits at the feeding site, not by dance alone.</li>
+      </ul>
+    </section>
+
+    <section id="observing">
+      <h2>How to observe navigation in your apiary</h2>
+      <ol>
+        <li><strong>Watch orientation flights:</strong> On warm afternoons, face the entrance and note looping flights by young bees. Short, repeated loops indicate learning in progress.</li>
+        <li><strong>Run a simple feeder test:</strong> Offer a scented feeder at a known distance and direction. Compare dance angle changes over an hour to see time compensation.</li>
+        <li><strong>Alter landmarks thoughtfully:</strong> Add a distinctive board or painted pattern near one hive and see if drifting declines compared to unmarked neighbors.</li>
+        <li><strong>Terrain check:</strong> Place the same-distance feeder over varied terrain (mowed grass vs. tall vegetation) and compare reported dance distances—an optic flow demonstration.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <nav class="related">
+        <h2>Related pages</h2>
+        <ul>
+          <li><a href="/wiki/foundations/bee-communication.html">Bee communication</a> (published)</li>
+          <li><a href="/wiki/foundations/bee-communication-dance-language.html">Waggle Dance and Communication</a> (planned)</li>
+          <li><a href="/wiki/foundations/bee-senses-vision.html">Bee Vision and Light Perception</a> (planned)</li>
+          <li><a href="/wiki/operations/apiary-layout-basics.html">Apiary layout basics</a> (published)</li>
+          <li><a href="/wiki/foundations/bee-flight-mechanics.html">Bee Flight Mechanics</a> (planned)</li>
+        </ul>
+      </nav>
+    </footer>
+  </article>
+</body>
+</html>
