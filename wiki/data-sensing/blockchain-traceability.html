@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Blockchain for Honey Traceability</title>
+  <meta name="description" content="How blockchain can support end-to-end traceability for honey: architecture, data flows, benefits, limits, and practical steps for beekeepers and packers." />
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Blockchain for Honey Traceability</h1>
+      <p class="summary">How blockchain can support end-to-end traceability for honey: architecture, data flows, benefits, limits, and practical steps for beekeepers and packers.</p>
+      <nav aria-label="Pillar hub">
+        <a href="/wiki/data-sensing/">← Back to Data &amp; Sensing</a>
+      </nav>
+    </header>
+
+    <section id="why-traceability">
+      <h2>Why honey traceability matters</h2>
+      <p>Traceability links a retail jar of honey back to apiaries, harvest batches, processing steps, and quality checks. Strong traceability helps deter adulteration, improves recall management, supports fair pricing for producers, and builds trust with buyers. For beekeepers, it turns good record keeping into market value; for packers and retailers, it offers proof for claims like “single-origin,” “raw,” or “monofloral.”</p>
+    </section>
+
+    <section id="what-is-blockchain">
+      <h2>What blockchain does (and doesn’t) do</h2>
+      <p>A blockchain is a shared ledger managed by many computers. Once a record is written, it is extremely hard to alter without consensus. In a honey supply chain, blockchain can:</p>
+      <ul>
+        <li><strong>Anchor events immutably:</strong> harvest, transport, blending, filtration, pasteurization, and packing events can be recorded in order.</li>
+        <li><strong>Synchronize participants:</strong> beekeepers, transporters, processors, labs, and retailers see the same version of key records.</li>
+        <li><strong>Automate rules:</strong> “smart contracts” can enforce business logic (e.g., reject blending if lab results fail thresholds).</li>
+      </ul>
+      <p>However, blockchain cannot stop someone from entering bad data. If a moisture reading or origin claim is faked at the source, a blockchain will faithfully preserve the lie. The antidote is <em>verification</em> (sampling, testing, audits) and <em>sensorization</em> (devices that record automatically). See <a href="/wiki/colony-health/colony-diagnostics-tests.html">Colony Diagnostic Tests</a> (planned) and <a href="/wiki/data-sensing/remote-monitoring-systems.html">Remote Hive Monitoring Systems</a> (planned) for supporting tools.</p>
+    </section>
+
+    <section id="architecture">
+      <h2>System architecture for honey traceability</h2>
+      <p>A practical design uses a combination of on-chain and off-chain storage:</p>
+      <ul>
+        <li><strong>Off-chain data store:</strong> detailed records (PDF lab reports, photos, sensor timeseries) live in a database or content store. They can be large and private.</li>
+        <li><strong>On-chain anchors:</strong> small cryptographic fingerprints (hashes) and pointers to the off-chain files are written to the blockchain with timestamps and digital signatures.</li>
+        <li><strong>Identity &amp; keys:</strong> each participant has a cryptographic key pair to sign records. Keys can be issued by a cooperative or certification body.</li>
+        <li><strong>Access layer:</strong> a web portal and mobile app let users scan a QR code on the jar and view batch history.</li>
+      </ul>
+      <p>Permissioned blockchains (where participants are invited) often suit food supply chains because they allow private data channels and faster, cheaper transactions. Public chains can be used to notarize batch hashes for additional transparency.</p>
+    </section>
+
+    <section id="data-model">
+      <h2>What to record: a lean data model</h2>
+      <p>Start with a minimal set of fields that deliver value without burdening producers:</p>
+      <h3>Apiary &amp; harvest</h3>
+      <ul>
+        <li>Apiary identifier, geofenced polygon (coarse), and beekeeper ID.</li>
+        <li>Hive batch or yard group, super IDs, extraction date range.</li>
+        <li>Basic QC: moisture (<span aria-label="percent">%</span>), temperature at extraction, visible contaminants check.</li>
+        <li>Optional sensor facts from <a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a> (planned) or <a href="/wiki/data-sensing/hive-temperature-humidity-sensors.html">Temperature &amp; Humidity Sensors</a> (planned) to show forage flow and colony stability around harvest.</li>
+      </ul>
+      <h3>Transportation &amp; storage</h3>
+      <ul>
+        <li>Container IDs (totes, drums), seals, weights, and chain-of-custody handoffs.</li>
+        <li>Temperature excursions during transit (optional IoT logger).</li>
+      </ul>
+      <h3>Processing</h3>
+      <ul>
+        <li>Decrystallization or warming steps, filtration grade, blending recipe (batch IDs and percentages).</li>
+        <li>Lab results: HMF, diastase, pollen profile, pesticide residues (hashes of reports on-chain, files off-chain).</li>
+      </ul>
+      <h3>Packing &amp; labeling</h3>
+      <ul>
+        <li>Jar lot and best-by; origin declarations (country/region), monofloral claims, organic/Bee-friendly certifications.</li>
+        <li>Retailer purchase order linkage.</li>
+      </ul>
+      <p>Align field names with your quality framework (see <a href="/wiki/community-policy/qap-qa-programs.html">Quality Assurance Programs for Honey</a> — planned) and with claims permitted by <a href="/wiki/community-policy/labeling-and-marketing.html">Honey Labeling and Marketing Laws</a> (planned) and <a href="/wiki/community-policy/labeling-hive-origin.html">Labeling Honey Origin</a> (planned).</p>
+    </section>
+
+    <section id="qr-story">
+      <h2>Consumer experience: the QR story</h2>
+      <p>Each jar carries a lot-specific QR code. A scan reveals a simple timeline: “Apiary cluster → Extraction → Lab test → Blending → Packing.” Keep it plain-language and visual. Include short profiles of participating beekeepers and “proof points” such as moisture % and a pollen fingerprint overview. Offer evidence but avoid overloading the shopper.</p>
+    </section>
+
+    <section id="smart-contracts">
+      <h2>Smart contracts &amp; business rules</h2>
+      <ul>
+        <li><strong>QC gates:</strong> automatically flag or block packing if HMF exceeds threshold or moisture is too high.</li>
+        <li><strong>Claim logic:</strong> monofloral claim only if pollen fraction exceeds a defined range and sensory descriptors match. (The contract enforces the rule; lab data proves it.)</li>
+        <li><strong>Recall triggers:</strong> if a contaminant alert is logged for a batch, downstream lots are located and notified automatically.</li>
+      </ul>
+      <p>Keep contracts small and upgradable. Complex analytics remain off-chain; only the pass/fail and hash of the underlying report go on-chain.</p>
+    </section>
+
+    <section id="governance">
+      <h2>Governance, privacy, and roles</h2>
+      <p>Traceability is social as much as technical. Decide who can read what, who can write what, and how disputes are handled.</p>
+      <ul>
+        <li><strong>Consortium:</strong> a cooperative, packer group, or certification body can run validator nodes and issue identities.</li>
+        <li><strong>Private channels:</strong> pricing and supplier lists may be private, while batch provenance is shared to all members and summarized to the public.</li>
+        <li><strong>Data minimization:</strong> store exact coordinates privately; present approximate region publicly to protect apiary locations.</li>
+      </ul>
+      <p>Document the scheme in a membership agreement and audit policy. Consider alignment with <a href="/wiki/sustainability-environment/international-standards.html">International Standards for Honey</a> (planned).</p>
+    </section>
+
+    <section id="chain-choice">
+      <h2>Choosing a blockchain</h2>
+      <p><strong>Permissioned networks</strong> (e.g., enterprise frameworks) offer fast, low-cost transactions and fine-grained privacy—good for consortia led by packers or co-ops. <strong>Public chains</strong> add an extra layer of tamper-evidence; a hybrid model can periodically anchor permissioned data to a public chain by posting batch hashes.</p>
+      <p>Evaluate: transaction cost, throughput, tooling, identity management, long-term support, and environmental profile. If sustainability claims are core to your brand, ensure your chain choice aligns with low-energy consensus and disclose that choice on the product page.</p>
+    </section>
+
+    <section id="verification">
+      <h2>Verification: making data trustworthy</h2>
+      <ul>
+        <li><strong>Sampling &amp; labs:</strong> third-party tests for HMF, diastase, adulterants, and residues; hash and anchor reports.</li>
+        <li><strong>Device data:</strong> weigh scales, temperature loggers, and GPS trackers can publish signed readings. See <a href="/wiki/data-sensing/hive-weight-monitoring.html">Hive Weight Monitoring</a> (planned) and <a href="/wiki/data-sensing/apiary-weather-stations.html">Apiary Weather Stations</a> (planned).</li>
+        <li><strong>Audit trails:</strong> scheduled inspections recorded as events; links to <a href="/wiki/community-policy/apiary-inspections.html">Government Apiary Inspections</a> and <a href="/wiki/community-policy/apiary-registration.html">Apiary Registration Requirements</a>.</li>
+      </ul>
+    </section>
+
+    <section id="costs-risks">
+      <h2>Costs, risks, and common pitfalls</h2>
+      <ul>
+        <li><strong>Onboarding burden:</strong> if the system demands too many fields, producers won’t keep up. Start lean, automate later.</li>
+        <li><strong>Bad inputs:</strong> immutable ledgers preserve errors; use validation rules and independent checks.</li>
+        <li><strong>Vendor lock-in:</strong> favor open data export and documented APIs so you can switch providers without losing history.</li>
+        <li><strong>Privacy leaks:</strong> avoid publishing bee yard coordinates or supplier contracts; present only what buyers need.</li>
+      </ul>
+    </section>
+
+    <section id="mvp">
+      <h2>Step-by-step: a minimal viable pilot</h2>
+      <ol>
+        <li><strong>Define scope:</strong> pick one packer, 10–20 apiaries, and a limited set of product lines.</li>
+        <li><strong>Standardize IDs:</strong> unique IDs for apiaries, drums, batches, and lots. Print durable labels with QR and human-readable text.</li>
+        <li><strong>Digitize records:</strong> use a simple mobile form tied to <a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a> (planned) to capture harvest and QC fields.</li>
+        <li><strong>Anchor on-chain:</strong> write signed event hashes to the ledger at each handoff (extraction → transport → processing → packing).</li>
+        <li><strong>Publish product pages:</strong> a public viewer shows the timeline, key QC values, and participating producers.</li>
+        <li><strong>Review &amp; extend:</strong> evaluate workload vs. benefit, then add lab result anchoring, device data, and smart contract gates.</li>
+      </ol>
+    </section>
+
+    <section id="interoperability">
+      <h2>Interoperability and exports</h2>
+      <p>Trade partners may use different platforms. Ensure you can export batch histories as signed JSON along with associated hashes, and import partner attestations the same way. Keep your internal records consistent with your <a href="/wiki/operations/record-keeping.html">Record-Keeping for Hives</a> (planned) so compliance reporting remains straightforward.</p>
+    </section>
+
+    <section id="sustainability">
+      <h2>Environmental considerations</h2>
+      <p>Traceability should strengthen, not undermine, sustainability claims. Prefer energy-efficient networks and minimize on-chain data size. Consider “anchor only” designs and periodic batch notarization rather than per-jar transactions to reduce footprint and cost.</p>
+    </section>
+
+    <section id="faq">
+      <h2>FAQs</h2>
+      <details>
+        <summary>Can smallholders participate without new hardware?</summary>
+        <p>Yes. Start with mobile forms and QR labels. Add sensors later where they reduce manual effort or add credibility.</p>
+      </details>
+      <details>
+        <summary>Do we need a public chain to claim transparency?</summary>
+        <p>No, but public anchoring adds third-party verifiability. A permissioned ledger with periodic public hash anchors balances privacy and transparency.</p>
+      </details>
+      <details>
+        <summary>What about recalls?</summary>
+        <p>Because batch relationships are explicit, affected lots can be located quickly. Smart contracts can notify downstream buyers automatically.</p>
+      </details>
+    </section>
+
+    <footer>
+      <nav class="related">
+        <h2>Related pages</h2>
+        <ul>
+          <li><a href="/wiki/data-sensing/data-management-practices.html">Data Management for Beekeepers</a> (planned)</li>
+          <li><a href="/wiki/community-policy/labeling-and-marketing.html">Honey Labeling and Marketing Laws</a> (planned)</li>
+          <li><a href="/wiki/community-policy/labeling-hive-origin.html">Labeling Honey Origin</a> (planned)</li>
+          <li><a href="/wiki/community-policy/qap-qa-programs.html">Quality Assurance Programs for Honey</a> (planned)</li>
+          <li><a href="/wiki/data-sensing/remote-monitoring-systems.html">Remote Hive Monitoring Systems</a> (planned)</li>
+          <li><a href="/wiki/sustainability-environment/international-standards.html">International Standards for Honey</a> (planned)</li>
+        </ul>
+      </nav>
+    </footer>
+  </article>
+</body>
+</html>
