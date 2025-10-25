@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="/css/wiki.css" />
   <script src="/js/ga.js"></script>
   <style>
-    /* Light safety styling in case CSS fails to load on first publish */
     .wrap { max-width: 960px; margin: 0 auto; padding: 1rem; }
     .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
     .card { border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem; background: #fff; }
@@ -75,50 +74,39 @@
         advanced: document.getElementById('advanced-list')
       };
 
-      // Defensive: clear lists with a tiny placeholder while we fetch
       Object.values(LEVEL_MAP).forEach(ul => ul.innerHTML = '<li class="muted">Loading…</li>');
 
-      // Fetch taxonomy (absolute path so it works from any subdirectory)
-      fetch('/wiki/_meta/taxonomy-full.json', { cache: 'no-store' })
-        .then(r => {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(json => {
-          // Normalize to array
-          const items = Array.isArray(json) ? json : [json];
+      // Build link from canonical URL; fallback constructs a safe path.
+      const linkFor = (it) => {
+        if (it && typeof it.url === 'string' && it.url.startsWith('/')) return it.url;
+        const slug = String(it?.slug || '').replace(/^\//,'');
+        if (!slug) return '#';
+        return `/wiki/foundations/${slug.endsWith('.html') ? slug : slug + '.html'}`;
+      };
 
-          // Filter to the Foundations pillar only
+      fetch('/wiki/_meta/taxonomy-full.json', { cache: 'no-store' })
+        .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(json => {
+          const items = Array.isArray(json) ? json : [json];
           const foundations = items.filter(x => (x.pillar || '').toLowerCase() === 'foundations');
 
-          // Group by level we know about
           const buckets = { newcomer: [], intermediate: [], advanced: [] };
           for (const it of foundations) {
             const level = (it.level || '').toLowerCase();
             if (buckets[level]) buckets[level].push(it);
           }
 
-          // Helper to make a safe URL for the article
-          const linkFor = (slug) => {
-            // If slug already ends with .html, keep it; otherwise treat as a folder page
-            if (typeof slug !== 'string' || !slug.length) return '#';
-            return `/wiki/foundations/${slug}`;
-          };
-
-          // Render each list. Keep the taxonomy order (we already inserted our canonical entry first).
           for (const level of Object.keys(buckets)) {
             const ul = LEVEL_MAP[level];
             const list = buckets[level];
-
             if (!ul) continue;
-            ul.innerHTML = ''; // clear "Loading…"
+            ul.innerHTML = '';
 
             if (!list.length) {
               ul.innerHTML = '<li class="muted">Nothing here yet.</li>';
               continue;
             }
 
-            // De-duplicate by (slug) to be safe
             const seen = new Set();
             for (const it of list) {
               if (!it.slug || seen.has(it.slug)) continue;
@@ -126,10 +114,9 @@
 
               const li = document.createElement('li');
               const a = document.createElement('a');
-              a.href = linkFor(it.slug);
+              a.href = linkFor(it);
               a.textContent = it.title || it.slug.replace(/[-_]/g, ' ');
               a.rel = 'bookmark';
-
               li.appendChild(a);
 
               if (it.summary) {
