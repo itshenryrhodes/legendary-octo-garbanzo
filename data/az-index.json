@@ -1,0 +1,52 @@
+[
+  {
+    "term": "Apiary",
+    "slug": "apiary",
+    "pillar": "Operations"
+  },
+  {
+    "term": "Bee Races",
+    "slug": "bee-races-genetics",
+    "pillar": "Foundations"
+  },
+  {
+    "term": "Biosecurity",
+    "slug": "biosecurity",
+    "pillar": "Colony Health"
+  },
+  {
+    "term": "Forage",
+    "slug": "nutrition-and-forage",
+    "pillar": "Colony Health"
+  },
+  {
+    "term": "IPM",
+    "slug": "disease-and-pests",
+    "pillar": "Colony Health"
+  },
+  {
+    "term": "Nectar Flow",
+    "slug": "seasonal-calendar",
+    "pillar": "Operations"
+  },
+  {
+    "term": "Pollination",
+    "slug": "pollination-basics",
+    "pillar": "Foundations"
+  },
+  {
+    "term": "Telemetry",
+    "slug": "sensors-and-telemetry",
+    "pillar": "Data & Sensing"
+  },
+  {
+    "term": "Varroa",
+    "slug": "disease-and-pests",
+    "pillar": "Colony Health"
+  },
+  {
+    "term": "Waggle Dance",
+    "slug": "bees-and-biology",
+    "pillar": "Foundations"
+  }
+]

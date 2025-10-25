@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preload" href="/css/site.css?v=862def4" as="style">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">  <script src="/js/site.js" defer></script>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+
+<!doctype html><meta charset="utf-8">
+<title>Reading brood patterns</title>
+<article>
+<h1>Reading brood patterns</h1>
+<p>Spotting scattered brood, drone layers and supersedure early prevents a poor season.</p>
+<small data-date="2025-10-03" data-tags="Health,Queen">3 Oct 2025 &mdash; Health</small>
+</article>
+
+</body>
+</html>

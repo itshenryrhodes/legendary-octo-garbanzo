@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Smart Hive ? Using Technology and Data ? Bee Planet Connection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Smart Hive ? Using Technology and Data cornerstone article ? Bee Planet Connection.">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <script src="/js/site.js" defer></script>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <!--#include file="../partials/header.html" -->
+  <main class="container">
+
+<section class="article">
+  <h1>The Smart Hive ? Using Technology and Data</h1>
+  <div class="meta">Last updated: 06 Oct 2025</div>
+  <p><em>Sensors, apps and open data can augment beekeeping decisions while keeping husbandry central.</em></p>
+  <h2>Key takeaways</h2>
+  <ul><li>Scales and temperature sensors provide 24/7 insights.</li><li>Digital logs enable evidence-based decisions and sharing.</li><li>Interpretation matters more than raw data.</li><li>Open-source projects democratise smart-hive tech.</li></ul>
+  <h2>Sections</h2>
+  <ul>
+    <li>Introduction</li>
+    <li>Core concepts</li>
+    <li>Applied practice</li>
+    <li>In practice</li>
+    <li>References</li>
+  </ul>
+  <p>This HTML is a lightweight reading version. See <code>/outputs/pages.md</code> for the full editorial copy with all sections, which you can paste in later.</p>
+</section>
+
+  </main>
+  <!--#include file="../partials/footer.html" -->
+</body>
+</html>

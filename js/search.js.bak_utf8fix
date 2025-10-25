@@ -1,0 +1,45 @@
+(function(){
+  const input = document.getElementById("wiki-search");
+  const list  = document.getElementById("wiki-results");
+  if(!input || !list) return;
+
+  let data = [];
+  fetch("/search-index.json", { cache: "no-store" })
+    .then(r => r.json())
+    .then(j => { data = j; render(data); })
+    .catch(()=>{ list.innerHTML = "<p>Search index not available.</p>"; });
+
+  function score(item, q){
+    const t = (item.title || "").toLowerCase();
+    const e = (item.excerpt || "").toLowerCase();
+    const s = (q||"").toLowerCase();
+    if(!s) return 0;
+    return (t.includes(s)?2:0) + (e.includes(s)?1:0);
+  }
+
+  function hl(text, q){
+    if(!q) return text;
+    const s = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return text.replace(new RegExp(`(${s})`,"gi"), "<mark>$1</mark>");
+  }
+
+  function render(items, q=""){
+    if(!items.length){ list.innerHTML = "<p>No results.</p>"; return; }
+    list.innerHTML = items.map(x => `
+      <a class="card" href="${x.url}">
+        <strong>${hl(x.title, q)}</strong>
+        <p>${hl((x.excerpt||"").slice(0,180), q)}…</p>
+      </a>
+    `).join("");
+  }
+
+  input.addEventListener("input", () => {
+    const q = input.value.trim();
+    if(!q) return render(data, "");
+    const ranked = data
+      .map(d => ({...d, _s: score(d,q)}))
+      .filter(d => d._s>0)
+      .sort((a,b)=> b._s - a._s || a.title.localeCompare(b.title));
+    render(ranked, q);
+  });
+})();

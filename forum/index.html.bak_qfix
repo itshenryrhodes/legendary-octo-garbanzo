@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forum ? Bee Planet Connection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join Bee Planet Connection community discussions on GitHub.">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <link rel="stylesheet" href="/css/site.css?v=20251011152805">
+  <script src="/js/site.js" defer></script>
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/img/logo.svg" alt="Bee Planet Connection" />
+      <span class="brand-text">Bee Planet Connection</span>
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <!--#include file="../partials/header.html" -->
+  <main class="container">
+
+<section class="hero">
+  <h1>Forum</h1>
+  <p>We use GitHub Discussions for Q&A, show-and-tell and community support. It?s free, searchable and easy to join.</p>
+</section>
+<section class="article">
+  <h2>How to participate</h2>
+  <ul>
+    <li>Browse categories (Beginners, Health, Operations, Data & Sensing, Environment).</li>
+    <li>Search before posting; add clear titles and context.</li>
+    <li>Share photos or logs (avoid personal data).</li>
+    <li>Mark helpful replies as answers.</li>
+    <li>Be kind; assume good intent.</li>
+    <li>Flag spam or unsafe advice.</li>
+  </ul>
+  <h2>Code of Conduct (summary)</h2>
+  <ul>
+    <li>Respectful, inclusive language.</li>
+    <li>No harassment or discrimination.</li>
+    <li>No medical or hazardous chemical advice beyond official guidance.</li>
+    <li>Credit sources; no plagiarism.</li>
+    <li>Moderators may edit/close threads to keep discussions constructive.</li>
+  </ul>
+  <p><a class="badge" href="https://github.com/" target="_blank" rel="noopener">Open Discussions</a></p>
+</section>
+
+  </main>
+  <!--#include file="../partials/footer.html" -->
+</body>
+</html>

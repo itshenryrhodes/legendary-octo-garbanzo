@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+System.Text.RegularExpressions.MatchEvaluator
+<body>
+System.Text.RegularExpressions.MatchEvaluator
+  <!--#include file="../partials/header.html" -->
+  <main class="container">
+
+<section class="hero">
+  <h1>Sustainability & Environment</h1>
+  <p>Habitat & forage, climate impacts, pesticides & mitigation, biodiversity, urban vs rural.</p>
+</section>
+<section class="article">
+  <h2>Start here</h2>
+  <p>Read the cornerstone article for a structured overview and practical tips.</p>
+  <p><a class="badge" href="/wiki/sustainability-environment/cornerstone.html">Read the cornerstone</a></p>
+</section>
+
+  </main>
+  <!--#include file="../partials/footer.html" -->
+</body>
+</html>

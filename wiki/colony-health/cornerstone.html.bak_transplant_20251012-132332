@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preload" href="/css/site.css" as="style">
+<meta charset="utf-8">
+  <title>Keeping the Hive Healthy &mdash; Threats and Remedies &mdash; Bee Planet Connection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keeping the Hive Healthy &mdash; Threats and Remedies cornerstone article &mdash; Bee Planet Connection.">
+  
+  
+  <script src="/js/site.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <img src="/img/logo.svg" alt="Bee Planet Connection" width="180" height="36"/>
+    </a>
+    <nav class="nav">
+      <a href="/wiki/">Wiki</a>
+      <a href="/tools/">Tools</a>
+      <a href="/directory/">Directory</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+  </div>
+</header>
+  <!--#include file="../partials/header.html" -->
+  <main class="container">
+
+<section class="article">
+  <h1>Keeping the Hive Healthy &mdash; Threats and Remedies</h1>
+  <div class="meta">Last updated: 06 Oct 2025</div>
+  <p><em>From Varroa to foulbrood, colony health depends on informed monitoring, nutrition and timely interventions grounded in IPM.</em></p>
+  <h2>Key takeaways</h2>
+  <ul><li>Varroa management is essential for survival in most regions.</li><li>IPM combines cultural, mechanical and chemical tools to limit pests.</li><li>Nutrition and diverse forage strengthen immunity and brood rearing.</li><li>Biosecurity and legal reporting protect your bees and your community.</li></ul>
+  <h2>Sections</h2>
+  <ul>
+    <li>Introduction</li>
+    <li>Core concepts</li>
+    <li>Applied practice</li>
+    <li>In practice</li>
+    <li>References</li>
+  </ul>
+  <p>This HTML is a lightweight reading version. See <code>/outputs/pages.md</code> for the full editorial copy with all sections, which you can paste in later.</p>
+</section>
+
+  </main>
+  <!--#include file="../partials/footer.html" -->
+</body>
+</html>
