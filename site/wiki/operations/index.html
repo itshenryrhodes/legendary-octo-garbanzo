@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Operations — Bee Planet Connection</title>
-  <meta name="description" content="Inspections, equipment, colony management, harvest & processing, safety, and seasonal planning." />
+  <meta name="description" content="Inspections, equipment, colony management, harvest &amp; processing, safety, and seasonal planning." />
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/css/wiki.css" />
   <script src="/js/ga.js" defer></script>
@@ -47,7 +47,7 @@
 
   <section class="hero">
     <h1>Operations</h1>
-    <p class="lede">Inspections, hive hardware, colony management, harvest & processing, safety, and seasonal planning.</p>
+    <p class="lede">Inspections, hive hardware, colony management, harvest &amp; processing, safety, and seasonal planning.</p>
     <p><a class="badge" href="/wiki/operations/cornerstone.html">Read the cornerstone</a></p>
   </section>
 
@@ -70,7 +70,7 @@
         <ul class="list-slim" id="advanced-list" aria-live="polite"><li class="muted">Loading…</li></ul>
       </div>
     </div>
-    <p class="muted" style="margin-top:.75rem">Lists are built from <code>/wiki/_meta/taxonomy-full.json</code>.</p>
+    <p class="muted" style="margin-top:.75rem">Lists are built from <code>/wiki/meta/taxonomy-full.json</code>.</p>
   </section>
 
   <section aria-labelledby="recent-title" style="margin-top:1.25rem">
@@ -119,7 +119,8 @@
     }
   };
 
-  fetch('/wiki/_meta/taxonomy-full.json', { cache: 'no-store' })
+  // NOTE: meta (no underscore) to match your repository
+  fetch('/wiki/meta/taxonomy-full.json', { cache: 'no-store' })
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(json => {
       const items = Array.isArray(json) ? json : [json];
@@ -131,12 +132,10 @@
         if (buckets[level]) buckets[level].push(it);
       }
 
-      // keep inherent taxonomy order
       renderBucket(LEVEL_MAP.newcomer, buckets.newcomer);
       renderBucket(LEVEL_MAP.intermediate, buckets.intermediate);
       renderBucket(LEVEL_MAP.advanced, buckets.advanced);
 
-      // recent = up to 8 most recently updated (string date desc), then by title
       const dated = ops
         .map(it => ({ ...it, _d: new Date(it.updated || 0).getTime() || 0 }))
         .sort((a,b) => (b._d - a._d) || String(a.title||'').localeCompare(String(b.title||'')))
