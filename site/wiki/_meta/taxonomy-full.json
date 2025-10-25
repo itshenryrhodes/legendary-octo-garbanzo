@@ -10,7 +10,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/colony-health/hygienic-behaviour-testing.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -23,7 +25,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/colony-health/queen-replacement-signs.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -36,7 +40,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/colony-health/varroa-monitoring-schedule.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -49,7 +55,9 @@
     "updated": "2025-10-18",
     "url": "/wiki/foundations/bee-castes-and-lifecycle.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -62,7 +70,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/foundations/bee-communication.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -75,7 +85,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/foundations/glossary-antenna.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -88,7 +100,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/foundations/hive-tool-basics.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -101,7 +115,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/foundations/hive-types-overview.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "habitat",
@@ -114,7 +130,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/habitat/planting-for-pollinators.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -127,7 +145,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/operations/apiary-layout-basics.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -140,7 +160,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/operations/feeding-basics.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -153,7 +175,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/operations/first-inspection-checklist.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -166,7 +190,9 @@
     "updated": "2025-10-24",
     "url": "/wiki/operations/swarm-signs-and-prevention.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -179,8 +205,12 @@
     "updated": "2025-10-24",
     "url": "/wiki/operations/winter-prep-checklist.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
+
+  // ===== Added entries (now published) =====
 
   {
     "pillar": "operations",
@@ -193,7 +223,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/operations/honey-supering.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -206,7 +238,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/operations/hive-swarming-prevention.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -219,7 +253,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/apiary-data-reporting.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -232,7 +268,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/glossary-apiary.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -245,7 +283,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/apiary-inspections.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -258,7 +298,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/bee-farm-management-software.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -271,7 +313,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/apiary-placement-ordinance.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -284,7 +328,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/apiary-registration.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -297,7 +343,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/apiology-basics.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -310,7 +358,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-anatomy-abdomen.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -323,7 +373,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-anatomy-head.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -336,7 +388,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/glossary-pollen-brick.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -349,7 +403,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/bee-counting-technologies.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -362,7 +418,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-grooming-behavior.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -375,7 +433,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-senses-magnetoreception.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -388,7 +448,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-senses-olfaction.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -401,7 +463,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-senses-taste.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -414,7 +478,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/ethics-and-responsibility.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -427,7 +493,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/beekeeping-associations.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -440,7 +508,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/zoning-and-urban-laws.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -453,7 +523,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/bees-in-agriculture.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "foundations",
@@ -466,7 +538,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/foundations/bee-products-beeswax.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -479,7 +553,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/biodiversity-enhancement.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -492,7 +568,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/blockchain-traceability.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -505,7 +583,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/operations/brood-nest-orientation.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -518,7 +598,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/carbon-footprint-honey.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -531,7 +613,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/chalkbrood-disease.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -544,7 +628,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/pollinator-citizen-science.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -557,7 +643,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/climate-change-impacts.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -570,7 +658,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/climate-adaptive-breeds.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -583,7 +673,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/colony-collapse-disorder.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -596,7 +688,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/colony-diagnostics-tests.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -609,7 +703,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/hive-health-assessment.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -622,7 +718,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/data-logging-best-practices.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -635,7 +733,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/data-management-practices.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -648,7 +748,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/deformed-wing-virus.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "habitat",
@@ -661,7 +763,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/habitat/bee-friendly-garden-design.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "habitat",
@@ -674,7 +778,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/habitat/flower-strip-design.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -687,7 +793,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/drone-brood-removal.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -700,7 +808,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/apiary-drones.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -713,7 +823,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/sustainable-apiaries.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -726,7 +838,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/emergency-response-plans.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "colony-health",
@@ -739,7 +853,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/colony-health/european-foulbrood.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "community-policy",
@@ -752,7 +868,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/community-policy/beekeeping-fair-trade.html",
     "status": "published",
-    "indexable": true
+    "priority": 3,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -765,7 +883,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/operations/feeding-fondant.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -778,7 +898,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/operations/feeding-pollen-supplements.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "operations",
@@ -791,7 +913,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/operations/feeding-sugar-syrup.html",
     "status": "published",
-    "indexable": true
+    "priority": 1,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -804,7 +928,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/forest-beekeeping-conservation.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "data-sensing",
@@ -817,7 +943,9 @@
     "updated": "2025-10-25",
     "url": "/wiki/data-sensing/geospatial-bee-mapping.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   },
   {
     "pillar": "sustainability-environment",
@@ -830,6 +958,8 @@
     "updated": "2025-10-25",
     "url": "/wiki/sustainability-environment/energy-saving-hive.html",
     "status": "published",
-    "indexable": true
+    "priority": 2,
+    "indexable": true,
+    "related": []
   }
 ]
