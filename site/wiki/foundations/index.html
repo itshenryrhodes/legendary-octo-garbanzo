@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <p class="muted" style="margin-top:1rem">Lists are built from <code>/wiki/_meta/taxonomy-full.json</code>.</p>
+    <p class="muted" style="margin-top:1rem">Lists are built from <code>/wiki/meta/taxonomy-full.json</code>.</p>
   </main>
 
   <script>
@@ -76,7 +76,6 @@
 
       Object.values(LEVEL_MAP).forEach(ul => ul.innerHTML = '<li class="muted">Loading…</li>');
 
-      // Build link from canonical URL; fallback constructs a safe path.
       const linkFor = (it) => {
         if (it && typeof it.url === 'string' && it.url.startsWith('/')) return it.url;
         const slug = String(it?.slug || '').replace(/^\//,'');
@@ -84,7 +83,8 @@
         return `/wiki/foundations/${slug.endsWith('.html') ? slug : slug + '.html'}`;
       };
 
-      fetch('/wiki/_meta/taxonomy-full.json', { cache: 'no-store' })
+      // NOTE: meta (no underscore) to match your repository
+      fetch('/wiki/meta/taxonomy-full.json', { cache: 'no-store' })
         .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
         .then(json => {
           const items = Array.isArray(json) ? json : [json];
